@@ -9,15 +9,21 @@ import {
 
 //Page imports below
 import Homepage from './components/Homepage';
+import StudentPanel from './components/StudentPanel/StudentPanel';
+
 
 function App() {
   return (
     <div className="App">
+
       <Router>
-        <Route path="/" exact>
-          <Homepage />
-        </Route>
-      </Router>      
+        <Switch>
+          <Route path="/" exact><Homepage /></Route>
+          <Route path="/s" exact component={StudentPanel} ></Route>
+        </Switch>
+        
+      </Router>  
+
     </div>
   );
 }
