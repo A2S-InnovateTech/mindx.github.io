@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    background: #10222E;
+}
+
+.logo{
+    
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.options{
+    display: flex;
+    margin-top: 35px;
+    height: 26px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFF5D1;
+    margin-left: 173px;
+}
+
+.option-1{
+    margin-right: 28px;
+    width: 71px;
+    height: 26px;
+}
+
+.option-2{
+    margin-right: 28px;
+    width: 118px;
+    height: 26px; 
+}
+
+.option-3{
+width: 118px;
+height: 26px;
+}
+
+.login-btn{
+    width: 172px;
+    height: 54px;
+    background: #10222E;
+    border: 4px solid #FFF5D1;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFF5D1;
+    margin-right: 14px;
+    margin-top: 19px;
+    outline: none;
+
+}
+
+.signup-btn{
+    width: 172px;
+    height: 54px;
+    background: #FFF5D1;
+    border: 4px solid #FFF5D1;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #10222E;
+    margin-right: 62px;
+    outline: none;
+
+}
+
+.title{
+    width: 136px;
+    height: 40px;
+    font-family: Fredoka One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    color: #FFF5D1;
+    margin-left: 85px;
+    display: inline-block;
+    margin-top: 25px;
+    
+}
+
+.form-1{
+    width: 448px;
+    height: 50px;
+    background: #EBE7DA;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 92px;
+    margin-top: 17px;
+}
+
+.form-2{
+    width: 448px;
+    height: 50px;
+    background: #EBE7DA;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 92px;
+    margin-top: 22px;
+}
+
+.final-btn{
+    width: 448px;
+    height: 48px;
+    background: #10222E;
+    border: 4px solid #FFF5D1;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-left: 92px;
+    margin-top: 27px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
+    color: #FFF5D1;
+    
+}
+
+.f-pass{
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 23px;
+  text-align: center;
+  margin-top: 24px;
+  margin-left: 217px;
+  width: 206px;
+  height: 16px;
+  color: #FFF5D1;
+  margin-bottom: 25px;
+  
+}
+
+.signup-l{
+    margin-left: 190px;
+    width: 260px;
+    height: 26px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFF5D1;
+
+
+}
+
+.blank{
+    width: 307px;
+    height: 401.37px;
+    background: #EBE7DA;
+    border-radius: 28px;
+    background: #EBE7DA;
+    border-radius: 28px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 376px;
+    margin-top: -360px;
+    z-index: 2;
+    position: relative;
+}
+
+.total-p{
+    display: flex;
+}
+
+.left-p{
+    display: flex;
+    flex-direction: column;
+}
+
+.picture{
+    width: 309px;
+    height: 407.64px;
+    border-radius: 28px;
+    margin-top: 70px;
+    margin-left: 340px;
+    z-index: 3;
+    position: relative;
+}
+
+.social{
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 19px;
+line-height: 28px;
+text-align: center;
+color: #EBE7DA;
+margin-top: 60px;
+margin-left: 86px;
+}
+
+.social-icons img{
+width: 28px;
+height: 28px;
+margin-right: 20px;
+}
+
+.social-icons{
+    margin-left: 222px;
+    margin-top: 26px;
+}
+
+::placeholder{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    
+}
+
+.line-1{
+    z-index: 0;
+    width: 309px;
+    height: 407.64px;
+    margin-top: -400px;
+    position: relative;
+    
+}
+
+.line-2{
+    width: 409px;
+    height: 507.64px;
+    margin-top: -500px;
+    margin-left: 300px;
+    position: relative;
+    z-index: 0;
+
+}
