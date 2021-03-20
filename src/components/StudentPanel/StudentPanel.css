@@ -1,0 +1,96 @@
+.header {
+  margin: 20px auto;
+}
+
+.header .arrow {
+  height: 46px;
+  width: 46px;
+  background-color: #10222E;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.header a img {
+  height: 26px;
+  width: 26px;
+  margin-top: 10px;
+}
+
+.header p {
+  font-family: Fredoka One;
+  font-style: Regular;
+  font-size: 30px;
+  /* font-size: 3vw; */
+  line-height: 48px;
+  color: #10222E;
+}
+
+.header .horizon {
+  border-bottom: 2px solid #10222E;
+  height: 0;
+  margin-top: 24px;
+}
+
+.dropdown {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.dropdown select {
+  width: 100%;
+  border: 2px solid #10222E;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #10222E;
+  padding: 5px;
+}
+
+h3{
+  font-family: Roboto;
+  font-style: Bold;
+  font-size: 40px;
+  line-height: 47px;
+  color:#10222E;
+  padding-bottom:15px;
+}
+
+
+.comp{
+  height: 232px;
+  width: 220px;
+  border-radius: 10px;
+  border: 2px solid #10222E;
+  background-color: #FFF5D1;
+  margin-bottom: 20px;
+}
+
+.comp .image{
+  background-color: #10222E;
+  text-align: center;
+}
+
+.comp .image img{
+   height: 78px;
+   width: 78px;
+   margin: 38px auto;
+}
+
+.comp p {
+  text-align: center;
+  font-family: Roboto;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 33px;
+  letter-spacing: 0em;
+  margin-top: 20px;
+  color: #10222E;
+}
+
+
