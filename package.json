@@ -11,6 +11,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3"
   },
+  "homepage": "http://edu-tekzila.github.io/mindx-website",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

@@ -6,7 +6,7 @@ import line2 from '../images/line2.png'
 
 function Login() {
     return (
-        <div>
+        <div className="login">
             <div className="navbar">
                 <div className="logo"><img src={logo}></img></div>
                 <div className="options">

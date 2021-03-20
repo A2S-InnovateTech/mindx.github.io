@@ -18,24 +18,24 @@ import Dashboard from './components/Dashboard';
 function App() {
   return (
     <div className="App">
-      <Sidebar />
-      <div className="Content">
       <Router>
         <Switch>
-          <Route path="/" exact><Homepage /></Route>
-          <Route path="/s" exact component={StudentPanel} ></Route>
-          <Route path="/dashboard" exact>
-            <Dashboard />
-          </Route>
-          <Route path="/login" exact>
+        <Route path="/login" exact>
             <Login/>
           </Route>
           <Route path="/signup" exact>
             <SignUp/>
           </Route>
+          <div className="Content">
+            <Route path="/" exact><Sidebar /><Homepage /></Route>
+            <Route path="/s" exact><Sidebar /><StudentPanel /></Route>
+            <Route path="/dashboard" exact>
+              <Sidebar />
+              <Dashboard />
+            </Route>
+        </div>
       </Switch>
-      </Router>
-      </div>      
+      </Router>      
     </div>
   );
 }
