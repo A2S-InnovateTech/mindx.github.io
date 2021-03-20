@@ -1,0 +1,8 @@
+.App{
+    display: flex;
+    flex-direction: row;
+}
+
+.Content{
+    margin-left: 20vw;
+}

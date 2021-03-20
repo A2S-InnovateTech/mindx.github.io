@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+.Sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20vw;
+    height: 100vh;
+    background-color: #10222E;
+    font-weight: 500;
+    font-family: 'Roboto';
+    color: white;
+    position:fixed;
+    left: 0px;
+    top: 0px;
+}
+
+.Sidebar__logo{
+    width: 189px;
+    height: 56px;
+}
+
+.Sidebar__profile_pic{
+    margin-top: 20px;
+}
+
+.Sidebar__name{
+    font-size: 28px;
+    margin: 5px;
+}
+
+.Sidebar__school{
+    font-size: 18px;
+    margin: 5px;
+    font-weight: 300;
+}
+
+.Sidebar__class{
+    font-size: 18px;
+    margin: 5px;
+    font-weight: 300;
+}
+
+.Sidebar__buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 34px;
+}
+
+.Sidebar__button{
+    border-radius: 10px;
+    height: 55px;
+    width: 228px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Sidebar__button.active{
+    border: 2px solid #FFF5D1;
+}
