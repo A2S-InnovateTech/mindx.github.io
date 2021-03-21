@@ -1,10 +1,34 @@
-import React from 'react'
+import React, { useCallback, useContext } from 'react'
 import './Login.css'
 import logo from '../images/logo.png';
 import line1 from '../images/line1.png'
 import line2 from '../images/line2.png'
+import app from '../firebase';
+ import { AuthContext } from '../Auth';
+import { Redirect, withRouter } from 'react-router';
 
-function Login() {
+function Login({ history }) {
+
+    const handleLogin = useCallback(async event => {
+        event.preventDefault();
+        const { email, password } = event.target.elements;
+        try {
+            await app
+            .auth()
+            .signInWithEmailAndPassword(email.value, password.value);
+            history.push("/");
+        } catch (error) {
+            alert(error);
+        }
+        
+},[history]);
+
+   const  currentUser  = useContext(AuthContext);
+
+   if (currentUser) {
+       return <Redirect to="/" />
+   }
+
     return (
         <div className="login">
             <div className="navbar">
@@ -21,17 +45,23 @@ function Login() {
                     </div>
                 </div>
                 <div className="buttons">
-                    <button className="login-btn">Login</button>
-                    <button className="signup-btn">SignUp</button>
+                <button className="login-btn">Login</button>
+                <a href="http://localhost:3000/signup"><button className="signup-btn">SignUp</button></a>
                 </div>
             </div>
              
             <div className="total-p">
             <div className="left-p">
             <span className="title">LOGIN</span>
-            <input className="form-1" placeholder="  Enter you mail id"></input>
-            <input className="form-2" placeholder="  Password" type="password"></input>
-            <button className="final-btn">Login</button>
+            <form onSubmit={handleLogin}>
+            <label>
+            <input name="email" type="email" className="form-1" placeholder="  Enter you mail id"></input>
+            </label>
+            <label>
+            <input name="password" className="form-2" placeholder="  Password" type="password"></input>
+            </label>
+            <button type="submit" className="final-btn">Login</button>
+            </form>
             <span className="f-pass">Forgot Password?</span>
             <span className="signup-l">New User? Signup Here</span>
             <span className="social">Or Login With:</span>
@@ -55,4 +85,4 @@ function Login() {
     )
 }
 
-export default Login
+export default withRouter(Login)

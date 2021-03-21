@@ -1,8 +1,26 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import './Signup.css';
 import logo from '../images/logo.png';
+import app from '../firebase';
+import { withRouter } from "react-router";
 
-function Signup() {
+function Signup({history}) {
+
+       const handleSignUp = useCallback(async event => {
+           event.preventDefault();
+           const { email, password } = event.target.elements;
+           try {
+               await app
+               .auth()
+               .createUserWithEmailAndPassword(email.value, password.value);
+               history.push("/");
+           } catch (error) {
+               alert(error);
+           }
+           
+   },[history]);
+
+
     return (
         <div className="login">
            <div className="navbar-s">
@@ -19,7 +37,7 @@ function Signup() {
                     </div>
                 </div>
                 <div className="buttons-s">
-                    <button className="login-btn-s">Login</button>
+                <a href="http://localhost:3000/login"> <button className="login-btn-s">Login</button></a>  
                     <button className="signup-btn-s">SignUp</button>
                 </div>
             </div>
@@ -30,39 +48,36 @@ function Signup() {
             </div>
                 <div className="right-p-s">
                 <span className="title-s">SIGNUP</span>
+                <form onSubmit={handleSignUp}>
                 <div className="forms-s">
+                    
                     <input className="form-1-s" type="text" placeholder="  Full Name"></input>
-                    <input className="form-2-s" type="text" placeholder="  Email Id"></input>
+                    <label>
+                    <input name="email" className="form-2-s" type="email" placeholder="  Email Id"></input>
+                    </label>
                     <span className="form-div">
                     <input className="form-3-s" type="text" placeholder="  Mobile No."></input>
                     <input className="form-4-s" type="text" placeholder="  Class"></input>
                     </span>
                     <input className="form-5-s" type="text" placeholder="  School Name"></input>
-                    <input className="form-6-s" type="text" placeholder="  Guardian's Name"></input>
+                    <label>
+                    <input name="password" className="form-6-s" type="password" placeholder="  Password"></input>
+                    </label>
                     <span className="form-div">
                     <input className="form-7-s" type="text" placeholder="  Relation"></input>
                     <input className="form-8-s" type="text" placeholder="  Mobile No."></input>
                     </span>
+                    
                 </div>
 
-                <button className="final-btn-s">SignUp</button>
+                <button type="submit" className="final-btn-s">SignUp</button>
+                </form>
                 <span className="footer-s">Already have an account? Login Now</span>
 
                 </div>
-                   
-
-
-                    
-                
-            
-                
-                
-               
-
-                
                 </div>
         </div>
     )
 }
 
-export default Signup
+export default withRouter(Signup);
