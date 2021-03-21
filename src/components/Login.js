@@ -30,7 +30,7 @@ function Login({ history }) {
    }
 
     return (
-        <div>
+        <div className="login">
             <div className="navbar">
                 <div className="logo"><img src={logo}></img></div>
                 <div className="options">
