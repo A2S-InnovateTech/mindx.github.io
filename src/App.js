@@ -1,7 +1,7 @@
 import './App.css';
 import React from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link
@@ -18,7 +18,7 @@ import Dashboard from './components/Dashboard';
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
         <Route path="/login" exact>
             <Login/>
