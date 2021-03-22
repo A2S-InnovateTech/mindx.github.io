@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/mindx-website/static/css/main.f8e6c5b3.chunk.css",
-    "main.js": "/mindx-website/static/js/main.ec8615d1.chunk.js",
-    "main.js.map": "/mindx-website/static/js/main.ec8615d1.chunk.js.map",
+    "main.js": "/mindx-website/static/js/main.dc3cace2.chunk.js",
+    "main.js.map": "/mindx-website/static/js/main.dc3cace2.chunk.js.map",
     "runtime-main.js": "/mindx-website/static/js/runtime-main.aa8db2d3.js",
     "runtime-main.js.map": "/mindx-website/static/js/runtime-main.aa8db2d3.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/mindx-website/static/css/2.4c97ca4f.chunk.css",
@@ -28,6 +28,6 @@
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.ae8a9eb5.chunk.js",
     "static/css/main.f8e6c5b3.chunk.css",
-    "static/js/main.ec8615d1.chunk.js"
+    "static/js/main.dc3cace2.chunk.js"
   ]
 }
