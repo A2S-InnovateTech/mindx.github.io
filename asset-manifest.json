@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/mindx-website/static/css/main.ac43f3df.chunk.css",
+    "main.css": "/mindx-website/static/css/main.4e587103.chunk.css",
     "main.js": "/mindx-website/static/js/main.efebc4bf.chunk.js",
     "main.js.map": "/mindx-website/static/js/main.efebc4bf.chunk.js.map",
     "runtime-main.js": "/mindx-website/static/js/runtime-main.aa8db2d3.js",
@@ -12,7 +12,7 @@
     "static/js/3.1f38e37e.chunk.js.map": "/mindx-website/static/js/3.1f38e37e.chunk.js.map",
     "index.html": "/mindx-website/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/mindx-website/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.ac43f3df.chunk.css.map": "/mindx-website/static/css/main.ac43f3df.chunk.css.map",
+    "static/css/main.4e587103.chunk.css.map": "/mindx-website/static/css/main.4e587103.chunk.css.map",
     "static/js/2.99da7552.chunk.js.LICENSE.txt": "/mindx-website/static/js/2.99da7552.chunk.js.LICENSE.txt",
     "static/media/google.ea71ae7d.png": "/mindx-website/static/media/google.ea71ae7d.png",
     "static/media/line1.549e7523.png": "/mindx-website/static/media/line1.549e7523.png",
@@ -25,7 +25,7 @@
     "static/js/runtime-main.aa8db2d3.js",
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.99da7552.chunk.js",
-    "static/css/main.ac43f3df.chunk.css",
+    "static/css/main.4e587103.chunk.css",
     "static/js/main.efebc4bf.chunk.js"
   ]
 }
