@@ -45,8 +45,8 @@ function Login({ history }) {
                     </div>
                 </div>
                 <div className="buttons">
-                <button className="login-btn">Login</button>
-                <a href="http://localhost:3000/signup"><button className="signup-btn">SignUp</button></a>
+                <button className="login-btn">LOGIN</button>
+                <a href="http://localhost:3000/signup"><button className="signup-btn">SIGNUP</button></a>
                 </div>
             </div>
              

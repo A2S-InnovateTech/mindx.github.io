@@ -20,8 +20,8 @@
     height: 26px;
     font-family: Roboto;
     font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: 300;
+    font-size: 22px;
     line-height: 23px;
     text-align: center;
     color: #FFF5D1;
@@ -55,7 +55,7 @@ height: 26px;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 28px;
     text-align: center;
     color: #FFF5D1;
@@ -75,7 +75,7 @@ height: 26px;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 28px;
     text-align: center;
     color: #10222E;
@@ -261,15 +261,11 @@ margin-right: 20px;
 }
 
 .login-btn:hover{
-    background: #FFF5D1;
-    border-color: #10222E;
-    color: #10222E;
+    opacity: 0.6;
 }
 
 .signup-btn:hover{
-    background-color: #10222E;
-    border-color: #EBE7DA;
-    color: #EBE7DA;
+    opacity: 0.6;
 }
 
 .final-btn:hover{

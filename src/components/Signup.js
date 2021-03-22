@@ -37,8 +37,8 @@ function Signup({history}) {
                     </div>
                 </div>
                 <div className="buttons-s">
-                <a href="http://localhost:3000/login"> <button className="login-btn-s">Login</button></a>  
-                    <button className="signup-btn-s">SignUp</button>
+                <a href="http://localhost:3000/login"> <button className="login-btn-s">LOGIN</button></a>  
+                    <button className="signup-btn-s">SIGNUP</button>
                 </div>
             </div>
             <div className="total-p-s">
