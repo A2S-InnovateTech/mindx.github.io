@@ -159,11 +159,12 @@ height: 26px;
   height: 16px;
   color: #FFF5D1;
   margin-bottom: 25px;
+  opacity: 0.6;
   
 }
 
 .signup-l{
-    margin-left: 190px;
+    margin-left: 245px;
     width: 260px;
     height: 26px;
     font-family: Roboto;
@@ -275,4 +276,57 @@ height: 28px;
 
 .final-btn:hover{
     opacity: 0.6;
+}
+
+@media only screen and (max-width: 768px){
+    .blank{
+        display: none;
+    }
+
+    .picture{
+        display:none;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .options{
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    .buttons{
+        display: none;
+    }
+
+    .signup-btn{
+        margin-top: 20px;
+    }
+
+    .left-p{
+        margin-left: -70px;
+    }
+
+    .form-1, .form-2{
+        width: 100%;
+    }
+
+    .final-btn{
+        width: 300px;
+    }
+
+    .f-pass{
+        margin-left: 150px;
+    }
+
+    .signup-l{
+        margin-left: 170px;
+    }
+
+    .social{
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+
 }

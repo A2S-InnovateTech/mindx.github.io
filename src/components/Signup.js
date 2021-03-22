@@ -54,28 +54,28 @@ function Signup({history}) {
                 <form onSubmit={handleSignUp}>
                 <div className="forms-s">
                     
-                    <input className="form-1-s" type="text" placeholder="  Full Name"></input>
+                    <input className="form-1-s" type="text" placeholder="  Full Name" required></input>
                     <label>
                     <input name="email" className="form-2-s" type="email" placeholder="  Email Id" required></input>
                     </label>
                     <span className="form-div">
-                    <input className="form-3-s" type="text" placeholder="  Mobile No."></input>
-                    <input className="form-4-s" type="text" placeholder="  Class"></input>
+                    <input className="form-3-s" type="text" placeholder="  Mobile No." required></input>
+                    <input className="form-4-s" type="text" placeholder="  Class" required></input>
                     </span>
-                    <input className="form-5-s" type="text" placeholder="  School Name"></input>
+                    <input className="form-5-s" type="text" placeholder="  School Name" required></input>
                     <label>
                     <input name="password" className="form-6-s" type="password" placeholder="  Password" required></input>
                     </label>
                     <span className="form-div">
-                    <input className="form-7-s" type="text" placeholder="  Relation"></input>
-                    <input className="form-8-s" type="text" placeholder="  Mobile No."></input>
+                    <input className="form-7-s" type="text" placeholder="  Relation" required></input>
+                    <input className="form-8-s" type="text" placeholder="  Mobile No." required></input>
                     </span>
                     
                 </div>
 
                 <button type="submit" className="final-btn-s">SignUp</button>
                 </form>
-                <span className="footer-s">Already have an account? Login Now</span>
+               <Link to="/login"><span className="footer-s">Already have an account? Login Now</span></Link>
 
                 </div>
                 </div>
