@@ -3,6 +3,7 @@ import './Signup.css';
 import logo from '../images/logo.png';
 import app from '../firebase';
 import { withRouter } from "react-router";
+import {Link} from "react-router-dom";
 
 function Signup({history}) {
 
@@ -22,12 +23,12 @@ function Signup({history}) {
 
 
     return (
-        <div>
+        <div className="login">
            <div className="navbar-s">
                 <div className="logo-s"><img src={logo}></img></div>
                 <div className="options-s">
                     <div className="option-1-s">
-                        Home
+                        <Link to="/" style={{textDecoration:"none", color:"#FFF5D1"}}>Home</Link>
                     </div>
                     <div className="option-2-s">
                         About Us
@@ -37,8 +38,10 @@ function Signup({history}) {
                     </div>
                 </div>
                 <div className="buttons-s">
-                <a href="http://localhost:3000/login"> <button className="login-btn-s">LOGIN</button></a>  
-                    <button className="signup-btn-s">SIGNUP</button>
+
+                <Link to="/login"> <button className="login-btn-s">Login</button></Link>  
+                    <button className="signup-btn-s">SignUp</button>
+
                 </div>
             </div>
             <div className="total-p-s">

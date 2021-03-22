@@ -3,11 +3,41 @@ import './Login.css'
 import logo from '../images/logo.png';
 import line1 from '../images/line1.png'
 import line2 from '../images/line2.png'
+import GoogleLogo from '../images/google.png';
 import app from '../firebase';
  import { AuthContext } from '../Auth';
 import { Redirect, withRouter } from 'react-router';
+import firebase from 'firebase/app';
+import {Link} from "react-router-dom";
 
 function Login({ history }) {
+
+    const handleGoogleLogin = () => {
+        var provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth()
+  .signInWithPopup(provider)
+  .then((result) => {
+    /** @type {firebase.auth.OAuthCredential} */
+    var credential = result.credential;
+
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    var token = credential.accessToken;
+    // The signed-in user info.
+    var user = result.user;
+    // ...
+    console.log(user);
+  }).catch((error) => {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+  });
+
+    } 
 
     const handleLogin = useCallback(async event => {
         event.preventDefault();
@@ -30,12 +60,12 @@ function Login({ history }) {
    }
 
     return (
-        <div>
+        <div className="login">
             <div className="navbar">
                 <div className="logo"><img src={logo}></img></div>
                 <div className="options">
                     <div className="option-1">
-                        Home
+                        <Link to="/" style={{textDecoration:"none", color:"#FFF5D1"}}>Home</Link>
                     </div>
                     <div className="option-2">
                         About Us
@@ -45,8 +75,10 @@ function Login({ history }) {
                     </div>
                 </div>
                 <div className="buttons">
-                <button className="login-btn">LOGIN</button>
-                <a href="http://localhost:3000/signup"><button className="signup-btn">SIGNUP</button></a>
+           
+
+                <button className="login-btn">Login</button>
+                <Link to="/signup"><button className="signup-btn">SignUp</button></Link>
                 </div>
             </div>
              
@@ -66,10 +98,7 @@ function Login({ history }) {
             <span className="signup-l">New User? Signup Here</span>
             <span className="social">Or Login With:</span>
             <span className="social-icons">
-                <img src="https://www.flaticon.com/svg/vstatic/svg/124/124010.svg?token=exp=1616077294~hmac=28d0e44e292769c23bb2a0efc999f9f2"></img>
-                <img src="https://www.flaticon.com/svg/vstatic/svg/124/124013.svg?token=exp=1616077407~hmac=b2166226be21fb3e12a210d5ef08a93a"></img>
-                <img src="https://www.flaticon.com/svg/vstatic/svg/174/174857.svg?token=exp=1616077454~hmac=bfeac35f5dd19605e3c04194872712f9"></img>
-                <img src="https://www.flaticon.com/svg/vstatic/svg/124/124021.svg?token=exp=1616077519~hmac=beb9d228f77b5e8a044d58bbd705855f"></img>
+                <img src={GoogleLogo} width="15px" onClick={()=>handleGoogleLogin()}></img>
             </span>
             </div>
             <div className="right-p">
