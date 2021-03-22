@@ -75,6 +75,8 @@ function Login({ history }) {
                     </div>
                 </div>
                 <div className="buttons">
+           
+
                 <button className="login-btn">Login</button>
                 <Link to="/signup"><button className="signup-btn">SignUp</button></Link>
                 </div>
@@ -85,10 +87,10 @@ function Login({ history }) {
             <span className="title">LOGIN</span>
             <form onSubmit={handleLogin}>
             <label>
-            <input name="email" type="email" className="form-1" placeholder="  Enter you mail id"></input>
+            <input name="email" type="email" className="form-1" placeholder="  Enter you mail id" required></input>
             </label>
             <label>
-            <input name="password" className="form-2" placeholder="  Password" type="password"></input>
+            <input name="password" className="form-2" placeholder="  Password" type="password" required></input>
             </label>
             <button type="submit" className="final-btn">Login</button>
             </form>

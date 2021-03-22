@@ -38,8 +38,10 @@ function Signup({history}) {
                     </div>
                 </div>
                 <div className="buttons-s">
+
                 <Link to="/login"> <button className="login-btn-s">Login</button></Link>  
                     <button className="signup-btn-s">SignUp</button>
+
                 </div>
             </div>
             <div className="total-p-s">
@@ -54,7 +56,7 @@ function Signup({history}) {
                     
                     <input className="form-1-s" type="text" placeholder="  Full Name"></input>
                     <label>
-                    <input name="email" className="form-2-s" type="email" placeholder="  Email Id"></input>
+                    <input name="email" className="form-2-s" type="email" placeholder="  Email Id" required></input>
                     </label>
                     <span className="form-div">
                     <input className="form-3-s" type="text" placeholder="  Mobile No."></input>
@@ -62,7 +64,7 @@ function Signup({history}) {
                     </span>
                     <input className="form-5-s" type="text" placeholder="  School Name"></input>
                     <label>
-                    <input name="password" className="form-6-s" type="password" placeholder="  Password"></input>
+                    <input name="password" className="form-6-s" type="password" placeholder="  Password" required></input>
                     </label>
                     <span className="form-div">
                     <input className="form-7-s" type="text" placeholder="  Relation"></input>
