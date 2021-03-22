@@ -19,10 +19,10 @@ import MobileHeader from './components/MobileHeader';
 function App() {
   var [showSidebar, setShowSidebar] = useState(true);
   return (
+    <Router basename={process.env.PUBLIC_URL}>
     <div className="OuterApp">
       <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
       <div className="App">
-        <Router basename={process.env.PUBLIC_URL}>
           <Switch>
           <Route path="/login" exact>
               <Login/>
@@ -39,9 +39,9 @@ function App() {
               </Route>
           </div>
         </Switch>
-        </Router>      
       </div>
     </div>
+    </Router>      
     
   );
 }
