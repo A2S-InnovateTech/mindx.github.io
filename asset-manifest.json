@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/mindx-website/static/css/main.2cb09556.chunk.css",
-    "main.js": "/mindx-website/static/js/main.29fa8531.chunk.js",
-    "main.js.map": "/mindx-website/static/js/main.29fa8531.chunk.js.map",
+    "main.css": "/mindx-website/static/css/main.cb56d2cc.chunk.css",
+    "main.js": "/mindx-website/static/js/main.ec8615d1.chunk.js",
+    "main.js.map": "/mindx-website/static/js/main.ec8615d1.chunk.js.map",
     "runtime-main.js": "/mindx-website/static/js/runtime-main.aa8db2d3.js",
     "runtime-main.js.map": "/mindx-website/static/js/runtime-main.aa8db2d3.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/mindx-website/static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.99da7552.chunk.js": "/mindx-website/static/js/2.99da7552.chunk.js",
-    "static/js/2.99da7552.chunk.js.map": "/mindx-website/static/js/2.99da7552.chunk.js.map",
+    "static/js/2.ae8a9eb5.chunk.js": "/mindx-website/static/js/2.ae8a9eb5.chunk.js",
+    "static/js/2.ae8a9eb5.chunk.js.map": "/mindx-website/static/js/2.ae8a9eb5.chunk.js.map",
     "static/js/3.1f38e37e.chunk.js": "/mindx-website/static/js/3.1f38e37e.chunk.js",
     "static/js/3.1f38e37e.chunk.js.map": "/mindx-website/static/js/3.1f38e37e.chunk.js.map",
     "index.html": "/mindx-website/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/mindx-website/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.2cb09556.chunk.css.map": "/mindx-website/static/css/main.2cb09556.chunk.css.map",
-    "static/js/2.99da7552.chunk.js.LICENSE.txt": "/mindx-website/static/js/2.99da7552.chunk.js.LICENSE.txt",
+    "static/css/main.cb56d2cc.chunk.css.map": "/mindx-website/static/css/main.cb56d2cc.chunk.css.map",
+    "static/js/2.ae8a9eb5.chunk.js.LICENSE.txt": "/mindx-website/static/js/2.ae8a9eb5.chunk.js.LICENSE.txt",
+    "static/media/close.164ef88f.svg": "/mindx-website/static/media/close.164ef88f.svg",
     "static/media/google.ea71ae7d.png": "/mindx-website/static/media/google.ea71ae7d.png",
+    "static/media/hamburger.e5bfc760.svg": "/mindx-website/static/media/hamburger.e5bfc760.svg",
     "static/media/line1.549e7523.png": "/mindx-website/static/media/line1.549e7523.png",
     "static/media/line2.4e0246c8.png": "/mindx-website/static/media/line2.4e0246c8.png",
     "static/media/logo.33fe0608.png": "/mindx-website/static/media/logo.33fe0608.png",
@@ -24,8 +26,8 @@
   "entrypoints": [
     "static/js/runtime-main.aa8db2d3.js",
     "static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.99da7552.chunk.js",
-    "static/css/main.2cb09556.chunk.css",
-    "static/js/main.29fa8531.chunk.js"
+    "static/js/2.ae8a9eb5.chunk.js",
+    "static/css/main.cb56d2cc.chunk.css",
+    "static/js/main.ec8615d1.chunk.js"
   ]
 }
