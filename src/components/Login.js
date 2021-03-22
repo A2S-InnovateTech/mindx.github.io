@@ -95,7 +95,7 @@ function Login({ history }) {
             <button type="submit" className="final-btn">Login</button>
             </form>
             <span className="f-pass">Forgot Password?</span>
-            <span className="signup-l">New User? Signup Here</span>
+            <Link to="/signup"><span className="signup-l">New User? Signup Here</span></Link>
             <span className="social">Or Login With:</span>
             <span className="social-icons">
                 <img src={GoogleLogo} width="15px" onClick={()=>handleGoogleLogin()}></img>
