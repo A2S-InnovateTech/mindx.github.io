@@ -1,5 +1,5 @@
 import './App.css';
-import React from "react";
+import React, {useState} from "react";
 import {
   HashRouter as Router,
   Switch,
@@ -17,9 +17,10 @@ import Dashboard from './components/Dashboard';
 import MobileHeader from './components/MobileHeader';
 
 function App() {
+  var [showSidebar, setShowSidebar] = useState(true);
   return (
     <div className="OuterApp">
-      <MobileHeader />
+      <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
       <div className="App">
         <Router basename={process.env.PUBLIC_URL}>
           <Switch>
@@ -29,11 +30,11 @@ function App() {
             <Route path="/signup" exact>
               <SignUp/>
             </Route>
+            <Route path="/" exact><Login /></Route>
             <div className="Content">
-              <Route path="/" exact><Sidebar /><Homepage /></Route>
-              <Route path="/s" exact><Sidebar /><StudentPanel /></Route>
+              <Route path="/s" exact><Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/><StudentPanel /></Route>
               <Route path="/dashboard" exact>
-                <Sidebar />
+                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Dashboard />
               </Route>
           </div>

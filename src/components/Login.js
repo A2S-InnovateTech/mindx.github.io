@@ -26,6 +26,7 @@ function Login({ history }) {
     var user = result.user;
     // ...
     console.log(user);
+    history.push("/dashboard");
   }).catch((error) => {
     // Handle Errors here.
     var errorCode = error.code;
@@ -46,7 +47,7 @@ function Login({ history }) {
             await app
             .auth()
             .signInWithEmailAndPassword(email.value, password.value);
-            history.push("/");
+            history.push("/dashboard");
         } catch (error) {
             alert(error);
         }

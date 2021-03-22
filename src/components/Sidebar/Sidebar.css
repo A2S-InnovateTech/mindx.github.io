@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     width: 20vw;
+    min-width: 250px;
     height: 100vh;
     background-color: #10222E;
     font-weight: 500;
@@ -13,6 +14,10 @@
     position:fixed;
     left: 0px;
     top: 0px;
+}
+
+.Sidebar__close{
+    margin: 10px;
 }
 
 .Sidebar__logo{
