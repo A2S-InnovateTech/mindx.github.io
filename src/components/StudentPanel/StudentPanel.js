@@ -1,6 +1,7 @@
 import './StudentPanel.css';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Link} from "react-router-dom";
 
 import { Row, Col } from 'react-bootstrap';
 
@@ -12,7 +13,7 @@ function StudentPanel() {
            <Row>
              <Col lg={1} md={1} sm={2} xs={2}>
                <div className="arrow">
-                  <a><img src={require('../../assets/images/arrow.png').default}  alt="arrow"/></a>
+                  <Link to="/"><img src={require('../../assets/images/arrow.png').default}  alt="arrow"/></Link>
                </div>
               </Col>
               <Col lg={3} md={4} sm={5} xs={7}>

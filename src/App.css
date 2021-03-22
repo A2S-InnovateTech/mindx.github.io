@@ -3,6 +3,16 @@
     flex-direction: row;
 }
 
+.OuterApp{
+    overflow-x: hidden;
+}
+
 .Content{
     margin-left: 20vw;
 }
+
+@media only screen and (max-width: 850px) {
+    .Content{
+        margin-left: 0px;
+    }
+  }

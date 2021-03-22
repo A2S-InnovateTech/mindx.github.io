@@ -6,6 +6,7 @@ import Chemistry from './chemistry.png';
 import Computer from './computer.png';
 import English from './english.png';
 import Literature from './literature.png';
+import {Link} from "react-router-dom";
 
 function Dashboard() {
     return (
@@ -35,36 +36,48 @@ function Dashboard() {
             </div>
 
             <div className="Dashboard__button_row">
+                <Link to="/s" style={{textDecoration:"none", color:"black"}}>
                 <div className="Dashboard__subject">
                     <img src={Maths} alt="Maths" className="Dashboard__subject_img"/>
                     <div className="Dashboard__subject_name">Maths</div>
                     <div className="Dashboard__subject_line" />
                 </div>
+                </Link>
+                <Link to="/s" style={{textDecoration:"none", color:"black"}}>
                 <div className="Dashboard__subject">
                     <img src={Physics} alt="Physics" className="Dashboard__subject_img"/>
                     <div className="Dashboard__subject_name">Physics</div>
                     <div className="Dashboard__subject_line" />
                 </div>
+                </Link>
+                <Link to="/s" style={{textDecoration:"none", color:"black"}}>
                 <div className="Dashboard__subject">
                     <img src={Chemistry} alt="Chemistry" className="Dashboard__subject_img"/>
                     <div className="Dashboard__subject_name">Chemistry</div>
                     <div className="Dashboard__subject_line" />
                 </div>
+                </Link>
+                <Link to="/s" style={{textDecoration:"none", color:"black"}}>
                 <div className="Dashboard__subject">
                     <img src={Computer} alt="Computer" className="Dashboard__subject_img"/>
                     <div className="Dashboard__subject_name">Computer</div>
                     <div className="Dashboard__subject_line" />
                 </div>
+                </Link>
+                <Link to="/s" style={{textDecoration:"none", color:"black"}}>
                 <div className="Dashboard__subject">
                     <img src={English} alt="English" className="Dashboard__subject_img"/>
                     <div className="Dashboard__subject_name">English</div>
                     <div className="Dashboard__subject_line" />
                 </div>
+                </Link>
+                <Link to="/s" style={{textDecoration:"none", color:"black"}}>
                 <div className="Dashboard__subject">
                     <img src={Literature} alt="Literature" className="Dashboard__subject_img"/>
                     <div className="Dashboard__subject_name">Literature</div>
                     <div className="Dashboard__subject_line" />
                 </div>
+                </Link>
             </div>
             
             <div className="Dashboard__heading_row">
@@ -73,7 +86,7 @@ function Dashboard() {
             </div>
 
             <div className="Dashboard__table">
-                <table>
+                <table className="table">
                     <tr>
                         <th>S.No.</th>
                         <th>Student</th>

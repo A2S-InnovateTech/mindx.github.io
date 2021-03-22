@@ -16,12 +16,15 @@
 }
 
 .Sidebar__logo{
-    width: 189px;
+    width: 20vw;
+    max-width: 186px;
     height: 56px;
 }
 
 .Sidebar__profile_pic{
     margin-top: 20px;
+    width: 20vw;
+    max-width: 186px;
 }
 
 .Sidebar__name{
@@ -52,7 +55,8 @@
 .Sidebar__button{
     border-radius: 10px;
     height: 55px;
-    width: 228px;
+    max-width: 228px;
+    width: 15vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,4 +64,10 @@
 
 .Sidebar__button.active{
     border: 2px solid #FFF5D1;
+}
+
+@media only screen and (max-width: 850px) {
+    .Sidebar{
+        display: none;
+    }
 }

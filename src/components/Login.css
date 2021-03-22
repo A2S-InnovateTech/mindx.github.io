@@ -227,12 +227,14 @@ margin-left: 86px;
 .social-icons img{
 width: 28px;
 height: 28px;
-margin-right: 20px;
 }
 
 .social-icons{
-    margin-left: 222px;
     margin-top: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 75px;
 }
 
 ::placeholder{

@@ -5,7 +5,7 @@
     flex-direction: row;
     margin: 30px 20px 20px 40px;
     align-items: center;
-    width: 75vw;
+    width: 70vw;
 }
 
 .Dashboard__title{
@@ -27,6 +27,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .Dashboard__button{
@@ -35,7 +36,8 @@
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 22px;
-    width: 240px;
+    width: 35vw;
+    max-width: 240px;
     height: 60px;
     display: flex;
     align-items: center;
@@ -46,7 +48,8 @@
 
 .Dashboard__subject{
     background-color: #FFF5D1;
-    width: 152px;
+    max-width: 152px;
+    width: 25vw;
     height: 180px;
     display: flex;
     align-items: center;
@@ -85,12 +88,17 @@ tr + tr > th { border-top: 1px solid indigo; }
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #EBE7DA;
     margin: 20px 50px 10px 50px;
 }
 
+.table{
+    width: 50vw;
+    background-color: #EBE7DA;
+}
+
 th{
-    width: 150px;
+    width: 5vw;
+    max-width: 150px;
     text-align: center;
 }
 
