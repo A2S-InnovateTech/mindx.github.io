@@ -15,6 +15,9 @@ import StudentPanel from './components/StudentPanel/StudentPanel';
 import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
 import MobileHeader from './components/MobileHeader';
+import Results from './components/Results';
+import Results2 from './components/Results2';
+
 
 function App() {
   return (
@@ -36,8 +39,14 @@ function App() {
                 <Sidebar />
                 <Dashboard />
               </Route>
+              <Route path="/results" exact>
+            <Results/>
+          </Route>
+          <Route path="/results2" exact>
+            <Results2/>
+          </Route>
           </div>
-        </Switch>
+          </Switch>
         </Router>      
       </div>
     </div>
