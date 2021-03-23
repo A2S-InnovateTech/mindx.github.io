@@ -13,7 +13,7 @@ function StudentPanel() {
            <Row>
              <Col lg={1} md={1} sm={2} xs={2}>
                <div className="arrow">
-                  <Link to="/"><img src={require('../../assets/images/arrow.png').default}  alt="arrow"/></Link>
+                  <Link to="/dashboard"><img src={require('../../assets/images/arrow.png').default}  alt="arrow"/></Link>
                </div>
               </Col>
               <Col lg={3} md={4} sm={5} xs={7}>

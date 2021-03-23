@@ -26,6 +26,7 @@ function Login({ history }) {
     var user = result.user;
     // ...
     console.log(user);
+    history.push("/dashboard");
   }).catch((error) => {
     // Handle Errors here.
     var errorCode = error.code;
@@ -35,6 +36,7 @@ function Login({ history }) {
     // The firebase.auth.AuthCredential type that was used.
     var credential = error.credential;
     // ...
+    console.log(error);
   });
 
     } 
@@ -46,9 +48,10 @@ function Login({ history }) {
             await app
             .auth()
             .signInWithEmailAndPassword(email.value, password.value);
-            history.push("/");
+            history.push("/dashboard");
         } catch (error) {
             alert(error);
+            console.log(error);
         }
         
 },[history]);
