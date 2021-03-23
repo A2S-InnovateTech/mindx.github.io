@@ -15,6 +15,9 @@ import StudentPanel from './components/StudentPanel/StudentPanel';
 import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
 import MobileHeader from './components/MobileHeader';
+import Results from './components/Results';
+import Results2 from './components/Results2';
+
 
 function App() {
   var [showSidebar, setShowSidebar] = useState(true);
@@ -37,6 +40,12 @@ function App() {
                 <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Dashboard />
               </Route>
+              <Route path="/results" exact>
+            <Results/>
+          </Route>
+          <Route path="/results2" exact>
+            <Results2/>
+          </Route>
           </div>
         </Switch>
       </div>
