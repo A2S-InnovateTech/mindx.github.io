@@ -87,19 +87,19 @@ margin-top: 10px;
 }
 
 .t-2{
-    margin-left: 50px;
+    margin-left: 70px;
 }
 
 .t-3{
-    margin-left: 170px;
+    margin-left: 130px;
 }
 
 .t-1{
-    margin-left:30px;
+    margin-left:20px;
 }
 
 .t-4, .t-5{
-    margin-left: 50px;
+    margin-left: 90px;
 }
 
 .table-r{
@@ -178,6 +178,15 @@ line-height: 21px;
 text-align: center;
 margin-top:45px;
 }
+
+table{
+    margin-left: 20px;
+    
+}
+tr.noBorder td {
+    border-style: hidden;
+  }
+
 
 @media only screen and (max-width: 768px){
     .table-t{
