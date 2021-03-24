@@ -135,40 +135,6 @@ margin-top: 5px;
 }
 
 
-
-.first-1, .second-1, .third-1, .fourth-1, .fifth-1{
-    margin-left: 40px;
-}
-
-.first-2, .second-2, .third-2, .fourth-2, .fifth-2{
-    margin-left: 70px;
-
-}
-
-.first-3, .second-3, .third-3, .fourth-3, .fifth-3{
-    margin-left: 140px;
-}
-
-.first-4, .second-4, .third-4, .fourth-4, .fifth-4{
-    margin-left: 34px;
-}
-
-.first-5, .second-5, .third-5, .fourth-5, .fifth-5{
-    margin-left: 40px;
-}
-
-.first-6, .second-6, .third-6, .fourth-6, .fifth-6{
-    margin-left: 82px;
-}
-
-.second-6{
-    margin-left: 99px;
-}
-
-.first-6{
-    margin-left: 87px;
-}
-
 .footer-a{
 font-family: Roboto;
 font-style: normal;
@@ -238,8 +204,9 @@ tr.noBorder td {
     }
 
     .table-c{
-        height: 70vh;
-        width: 10vw;
+        height: 50vh;
+        width: 90vw;
+        border-radius: 0 0 10px 10px;
     }
 
     .footer-a{
@@ -249,5 +216,29 @@ tr.noBorder td {
     .table-line{
         display: none;
     }
+
+    table{
+        /* background-color: #EBE7DA; */
+        margin-left: 10px;
+    }
     
+    .t-3{
+        margin-left: 90px;      
+    }
+
+    .t-4{
+        margin-left: 60px;
+    }
+
+    .t-5{
+        margin-left: 60px;
+    }
+
+    .noBorder{
+        /* background-color: #EBE7DA; */
+    }
+
+    .table-t{
+        width: 452px;
+    }
 }

@@ -66,6 +66,7 @@ function Assignment() {
                        <td>Ungraded</td>
                        <td>View</td>
                    </tr>
+                   
                </table>
             </span>
             <span className="table-line"></span>
