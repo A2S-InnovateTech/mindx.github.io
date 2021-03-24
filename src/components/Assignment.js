@@ -69,8 +69,6 @@ function Assignment() {
             <span className="table-line"></span>
             </div> 
             <span className="footer-a">All rights are reserved MindX 2021</span>
-           
-            <Sidebar/>
         </div>
     )
 }

@@ -181,36 +181,39 @@ margin-top:45px;
 
 @media only screen and (max-width: 768px){
     .table-t{
-        width: 700px;
-        
+        font-size: 3vw;
+        width: 90vw;
+    }
+    .table-r{
+        font-size: 3vw;
+    }
+    .t-1, .t-2, .t-3, .t-4, .t-5{
+        font-size: 3vw;
+        width: 5vw;
+    }
+    .table-c{
+        width: 5vw;
+        font-size: 3vw;
     }
 
     .bottom-line{
         display: none;
     }
 
-    .table-c{
-        font-size: 10px;
-    }
     .first-1, .second-1, .third-1, .fourth-1, .fifth-1, .t-1{
         margin-left: 20px;
+        width: 1vw;
     }
 
     .first-2, .second-2, .third-2, .fourth-2, .fifth-2, .t-2{
         margin-left: 40px;
+        width: 3vw;
     
     }
 
     .first-3, .second-3, .third-3, .fourth-3, .fifth-3, .t-3{
         margin-left: 70px;
-    }
-
-    .t-1, .t-2, .t-3, .t-4, .t-5{
-        font-size: 10px;
-    }
-    
-    .title-a{
-        font-size: 15px;
+        width: 3vw;
     }
 
     .back{
@@ -227,6 +230,7 @@ margin-top:45px;
 
     .table-c{
         height: 70vh;
+        width: 10vw;
     }
 
     .footer-a{

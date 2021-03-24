@@ -10,7 +10,6 @@ import rect from '../images/rect.png';
 function Assesment() {
     return (
         <div>
-         <Sidebar/>   
         <div className="top-line"></div>
         <div className="head">
             <span className="back">
