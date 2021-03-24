@@ -6,7 +6,7 @@ import './Results.css';
 
 function Results2() {
     return (
-        <div>
+        <div className="r-screen">
             <div className="header">
             <img src={Logo} alt="MindX Logo"/>
         </div>
