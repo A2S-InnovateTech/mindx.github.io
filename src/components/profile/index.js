@@ -1,15 +1,19 @@
-import React from 'react';
-import './Dashboard.css';
+import React, {useState} from 'react';
+import './profile.css';
 import {Link} from "react-router-dom";
 
-const profile = () =>  {
+const Profile = () =>  {
 
-    //const [value, setValue] = React.useState('female');
-
- /*const handleChange = (event) => {
-    setValue();
-  };*/
-
+    const [disabled, setDisabled] = useState(false);
+    const [disableds, setDisableds] = useState(false);
+     const  editp = () => {
+        setDisabled(true);
+        alert(' edit clicked');
+     }
+     const  edits = () => {
+        setDisabled(true);
+        alert(' edit clicked');
+     }
 
     return (
         <div className="Dashboard">
@@ -23,24 +27,24 @@ const profile = () =>  {
                     <div className="personal">Personal Information</div>
                     </div>
                     <span><label className="personal__title">Personal Information</label>
-                    <button className="savebutton">save</button>
-                    <button className="editbutton">Edit</button>
+                    <button className="savebutton" onClick={() => { alert('clicked') }}>save</button>
+                    <button className="editbutton" onClick={() => editp()}>Edit </button>
                     
                     </span>
                     <span className="form-div">
                     <label className="label">Student Name</label>
-                    <label className="form-11-s" type="text" ></label>
+                    <input className="form-11-s" type="text" disabled={disabled}></input>
                     </span>
                     <span className="form-div">
                     <label className="label" >Home Address </label>
-                    <label className="form-22-s" type="text" ></label>
+                    <input className="form-22-s" type="text" disabled={disabled} ></input>
                     </span>
                     
                     <span className="form-div">
                     <label className="label"> Mobile&nbsp;No. </label>
-                    <label className="form-3-s" type="text" ></label>
+                    <input className="form-3-s" type="text" disabled={disabled} ></input>
                     <label> Email </label>
-                    <label className="form-4-s" type="text" ></label>
+                    <input className="form-4-s" type="text" disabled={disabled}></input>
                     </span>
                     
              </div>
@@ -52,23 +56,23 @@ const profile = () =>  {
                     </div>
                     <span><label className="personal__title">School Information</label>
                     <button className="savebutton">save</button>
-                    <button className="editbutton">Edit</button>
+                    <button className="editbutton" onClick={edits}>Edit</button>
                     
                     </span>
                     <span className="form-div">
                     <label className="label">School Name</label>
-                    <input className="form-11-s" type="text" outline="none"  disabled="true"></input>
+                    <input className="form-11-s" type="text" outline="none"  disabled={disableds} ></input>
                     </span>
                     <span className="form-div">
                     <label className="label" >School Address </label>
-                    <label className="form-222-s" type="text" ></label>
+                    <input className="form-222-s" type="text" outline="none"  disabled={disableds} ></input>
                     </span>
                     
                     <span className="form-div">
                     <label className="label"> Mobile&nbsp;No. </label>
-                    <label className="form-3-s" type="text" ></label>
+                    <input className="form-3-s" type="text" disabled={disableds} ></input>
                     <label> Email </label>
-                    <label className="form-4-s" type="text" ></label>
+                    <input className="form-4-s" type="text" disabled={disableds} ></input>
                     </span>
                     
              </div>
@@ -84,4 +88,4 @@ const profile = () =>  {
     )
 }
 
-export default profile
+export default Profile
