@@ -10,7 +10,7 @@ import {
 //Page imports below
 import Homepage from './components/Homepage';
 import StudentPanel from './components/StudentPanel/StudentPanel';
-
+import Test from './components/TestScreen/Test';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
         <Switch>
           <Route path="/" exact><Homepage /></Route>
           <Route path="/s" exact component={StudentPanel} ></Route>
+          <Route path="/test" exact component={Test} ></Route>
         </Switch>
         
       </Router>  
