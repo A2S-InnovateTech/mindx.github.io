@@ -4,6 +4,8 @@
     margin: 0;
 }
 
+
+
 .result{
     align-items: center;
 }
@@ -170,4 +172,6 @@ left: 530px;
         position: absolute;
         bottom: 0;
     }
+
+    
 }

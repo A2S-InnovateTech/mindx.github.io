@@ -17,6 +17,8 @@ import Dashboard from './components/Dashboard';
 import MobileHeader from './components/MobileHeader';
 import Results from './components/Results';
 import Results2 from './components/Results2';
+import Assignment from './components/Assignment';
+import Assesment from './components/Assesment';
 
 import Report from './components/Report';
 import Test from './components/Test';
@@ -39,9 +41,21 @@ function App() {
       <div className="App">
           <Switch>  
             <div className="Content">
+              <Route path="/assignment" exact>
+                <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Assignment/>
+              </Route>
+              <Route path="/assesment" exact>
+                <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Assesment/>
+              </Route>
               <Route path="/s" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/><StudentPanel /></Route>
+                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <StudentPanel />
+              </Route>
               <Route path="/dashboard" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
