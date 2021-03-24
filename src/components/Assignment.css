@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&display=swap');
+
+.top-line{
+    background: #10222E;
+    position: absolute;
+    top: 0;
+    height: 10px;
+    width: 80vw;
+}
+
+.assignment{
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-line{
+    background: #10222E;
+    position: absolute;
+    bottom: 0;
+    height: 10px;
+    width: 80vw;
+}
+
+.back{
+width: 46px;
+height: 46px;
+background: #10222E;
+border-radius: 4px;
+align-items: center;
+}
+
+.back-icon{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.head{
+    display: flex;
+    margin-top: 33px;
+    margin-left: 20px;
+}
+
+.title-a{
+font-family: Fredoka One;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 48px;
+text-align: center;
+color: #10222E;
+margin-left: 20px;
+}
+
+.line{
+width: 519px;
+height: 4px;
+background: #10222E;
+border-radius: 10px;
+margin-top: 24px;
+margin-left: 20px;
+}
+
+.table-t{
+width: 924px;
+height: 46px;
+background: #10222E;
+border-radius: 5px 5px 0px 0px;
+margin-left: 20px;
+margin-top: 20px;
+display: flex;
+
+}
+
+.t-1, .t-2, .t-3, .t-4, .t-5{
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+text-align: center;
+color: #FFF5D1;
+margin-top: 10px;
+}
+
+.t-2{
+    margin-left: 50px;
+}
+
+.t-3{
+    margin-left: 170px;
+}
+
+.t-1{
+    margin-left:30px;
+}
+
+.t-4, .t-5{
+    margin-left: 50px;
+}
+
+.table-r{
+    display: flex;
+}
+
+.table-c{
+width: 910px;
+height: 421px;
+background: #EBE7DA;
+border-radius: 5px;
+margin-left: 20px;
+display: flex;
+flex-direction: column;
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+text-align: center;
+}
+
+.first, .second, .third, .fourth, .fifth{
+    display: flex;
+    margin-top: 30px;
+}
+
+.table-line{
+width: 14px;
+height: 360px;
+background: #10222E;
+margin-top: 5px;
+}
+
+
+
+.first-1, .second-1, .third-1, .fourth-1, .fifth-1{
+    margin-left: 40px;
+}
+
+.first-2, .second-2, .third-2, .fourth-2, .fifth-2{
+    margin-left: 70px;
+
+}
+
+.first-3, .second-3, .third-3, .fourth-3, .fifth-3{
+    margin-left: 140px;
+}
+
+.first-4, .second-4, .third-4, .fourth-4, .fifth-4{
+    margin-left: 34px;
+}
+
+.first-5, .second-5, .third-5, .fourth-5, .fifth-5{
+    margin-left: 40px;
+}
+
+.first-6, .second-6, .third-6, .fourth-6, .fifth-6{
+    margin-left: 82px;
+}
+
+.second-6{
+    margin-left: 99px;
+}
+
+.first-6{
+    margin-left: 87px;
+}
+
+.footer-a{
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 21px;
+text-align: center;
+margin-top:45px;
+}
+
+@media only screen and (max-width: 768px){
+    .table-t{
+        width: 700px;
+        
+    }
+
+    .bottom-line{
+        display: none;
+    }
+
+    .table-c{
+        font-size: 10px;
+    }
+    .first-1, .second-1, .third-1, .fourth-1, .fifth-1, .t-1{
+        margin-left: 20px;
+    }
+
+    .first-2, .second-2, .third-2, .fourth-2, .fifth-2, .t-2{
+        margin-left: 40px;
+    
+    }
+
+    .first-3, .second-3, .third-3, .fourth-3, .fifth-3, .t-3{
+        margin-left: 70px;
+    }
+
+    .t-1, .t-2, .t-3, .t-4, .t-5{
+        font-size: 10px;
+    }
+    
+    .title-a{
+        font-size: 15px;
+    }
+
+    .back{
+        height: 30px;
+        width: 30px;
+        margin-top: 10px;
+    }
+
+    .back-icon{
+        height: 15px;
+        width: 15px;
+        margin-top: 5px;
+    }
+
+    .table-c{
+        height: 70vh;
+    }
+
+    .footer-a{
+        display: none;
+    }
+
+    .table-line{
+        display: none;
+    }
+    
+}

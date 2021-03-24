@@ -17,6 +17,8 @@ import Dashboard from './components/Dashboard';
 import MobileHeader from './components/MobileHeader';
 import Results from './components/Results';
 import Results2 from './components/Results2';
+import Assignment from './components/Assignment';
+import Assesment from './components/Assesment';
 
 
 function App() {
@@ -44,6 +46,12 @@ function App() {
           </Route>
           <Route path="/results2" exact>
             <Results2/>
+          </Route>
+          <Route path="/assignment" exact>
+            <Assignment/>
+          </Route>
+          <Route path="/assesment" exact>
+            <Assesment/>
           </Route>
           </div>
           </Switch>
