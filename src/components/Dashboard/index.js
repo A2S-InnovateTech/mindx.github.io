@@ -20,7 +20,7 @@ function Dashboard() {
                 <div className="Dashboard__button">My Assignments</div>
                 <div className="Dashboard__button">My Videos</div>
                 <div className="Dashboard__button">My Notes</div>
-                <div className="Dashboard__button">My Report</div>
+                <Link to="/report" style={{textDecoration:"none", color:"white"}}><div className="Dashboard__button">My Report</div></Link>
             </div>
 
             <div className="Dashboard__button_row">
