@@ -36,7 +36,7 @@
     font-family: 'Roboto';
     font-weight: 500;
     font-size: clamp(16px, 2vw,22px);
-    width: 35vw;
+    width: 40vw;
     max-width: 240px;
     height: 60px;
     display: flex;
@@ -49,7 +49,7 @@
 .Dashboard__subject{
     background-color: #FFF5D1;
     max-width: 152px;
-    width: 25vw;
+    width: 40vw;
     height: 180px;
     display: flex;
     align-items: center;
@@ -95,7 +95,7 @@ tr + tr > th { border-top: 1px solid indigo; }
 .table{
     width: 40vw;
     background-color: #EBE7DA;
-    font-size: clamp(14px, 1.1vw, 30px);
+    font-size: clamp(10px, 1.1vw, 30px);
 }
 
 th{

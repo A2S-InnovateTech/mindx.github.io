@@ -34,7 +34,7 @@ function Sidebar({showSidebar, setShowSidebar}) {
             <p className="Sidebar__class">Class 12th A</p>
 
             <div className="Sidebar__buttons">
-                <div className="Sidebar__button active">Dashboard</div>
+                <Link to="/dashboard" style={{textDecoration:"none", color:"white"}}><div className="Sidebar__button active">Dashboard</div></Link>
                 <div className="Sidebar__button">Timetable</div>
                 <div className="Sidebar__button">Tests</div>
                 <div className="Sidebar__button">Attendance</div>

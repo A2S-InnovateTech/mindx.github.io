@@ -18,6 +18,7 @@ import MobileHeader from './components/MobileHeader';
 import Results from './components/Results';
 import Results2 from './components/Results2';
 
+import Report from './components/Report';
 
 function App() {
   var [showSidebar, setShowSidebar] = useState(true);
@@ -41,11 +42,15 @@ function App() {
                 <Dashboard />
               </Route>
               <Route path="/results" exact>
-            <Results/>
-          </Route>
-          <Route path="/results2" exact>
-            <Results2/>
-          </Route>
+                <Results/>
+              </Route>
+              <Route path="/results2" exact>
+                <Results2/>
+              </Route>
+              <Route path="/report" exact>
+                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Report />
+              </Route>
           </div>
         </Switch>
       </div>
