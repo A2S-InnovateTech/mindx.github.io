@@ -14,6 +14,7 @@ import SignUp from './components/Signup';
 import StudentPanel from './components/StudentPanel/StudentPanel';
 import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
+import Profile from './components/profile1';
 import MobileHeader from './components/MobileHeader';
 import Results from './components/Results';
 import Results2 from './components/Results2';
@@ -39,6 +40,10 @@ function App() {
               <Route path="/dashboard" exact>
                 <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Dashboard />
+              </Route>
+              <Route path="/profile" exact>
+                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Profile />
               </Route>
               <Route path="/results" exact>
             <Results/>
