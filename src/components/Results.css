@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+}
+
+
+
+.result{
+    align-items: center;
+}
+
+
+.header{
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #10222E;
+width: 100vw;
+margin-top: 0;
+margin-left: -256px;
+}
+
+.info{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: center;
+    width: 780px;
+    height: 30px;
+    margin-top: 32px;
+}
+
+.check-icon{
+    margin-left: 318px;
+    margin-top: 65px;
+}
+
+.answers{
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 47px;
+text-align: center;
+width: 716px;
+height: 30px;
+margin-top: 25px;
+}
+
+.btns{
+    display: flex;
+    margin-top: 60px;
+    
+}
+
+.btn-1, .btn-3{
+width: 250px;
+height: 50px;
+background: #10222E;
+border: 4px solid #10222E;
+box-sizing: border-box;
+border-radius: 10px;
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 26px;
+text-align: center;
+color: #FFF5D1;
+}
+
+.btn-2{
+width: 250px;
+height: 50px;
+background: #FFF5D1;
+border: 4px solid #10222E;
+box-sizing: border-box;
+border-radius: 10px;
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 26px;
+text-align: center;
+color: #10222E;
+}
+
+.btn-1{margin-right: 10px;}
+.btn-2{margin-right: 10px;}
+
+.baseline{
+    background-color: #10222E;
+    height: 10px;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+    position:absolute;
+    bottom:0;
+}
+
+.footer-r{
+width: 304px;
+height: 11px;
+position: absolute;
+bottom: 25px;
+left: 530px;
+}
+
+.footer-r-m{
+    display: none;
+}
+
+.baseline-m{
+    display: none;
+}
+
+.btn-1:hover, .btn-2:hover, .btn-3:hover{
+    opacity: 0.6;
+}
+
+@media only screen and (max-width: 768px){
+    .header{
+        display: none;
+    }
+
+    .info{
+        font-size: 20px;
+        width: 468px;
+        margin-left: -45px;
+    }
+
+    .check-icon{
+        height: 100px;
+        width: 100px;
+        margin-left: 150px;
+        margin-top: 95px;
+    }
+
+    .answers{
+        font-size: 20px;
+        width: 468px;
+        margin-left: -40px;
+        margin-top: 45px;
+    }
+
+    .btn-1, .btn-2, .btn-3{
+        width: 100px;
+        height: 30px;
+        font-size: 10px;
+        line-height: 0;
+    }
+
+    .btns{
+        margin-left: 30px;
+    }
+
+    .footer-r{
+        display: none;
+    }
+
+    .footer-r-m{
+        position: absolute;
+        left: 0;
+    }
+
+    .baseline-m{
+        background-color: #10222E;
+        height: 10px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    
+}

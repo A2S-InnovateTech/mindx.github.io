@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+.Dashboard__heading_row{
+    display: flex;
+    flex-direction: row;
+    margin: 30px 20px 20px 40px;
+    align-items: center;
+    width: 70vw;
+}
+
+.Dashboard__title{
+    font-family: 'Fredoka One';
+    font-size: 40px;
+    color: #10222E;
+}
+
+.Dashboard__line{
+    background-color: #10222E;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    margin-left: 40px;
+}
+
+.Dashboard__button_row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Dashboard__button{
+    background-color: #10222E;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: clamp(16px, 2vw,22px);
+    width: 40vw;
+    max-width: 240px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.Dashboard__subject{
+    background-color: #FFF5D1;
+    max-width: 152px;
+    width: 40vw;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 4px solid #10222E;
+    border-radius: 10px;
+    margin-right: 20px;
+    font-size: 1vw;
+}
+
+.Dashboard__subject_img{
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+}
+
+.Dashboard__subject_name{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 24px;
+}
+
+table { border-collapse: collapse; }
+
+td + td,
+th + th { border-left: 1px solid black; }
+tr + tr { border-top: 1px solid black; }
+
+td,
+th { padding: 10px; }
+
+tr + tr > td,
+tr + tr > th { border-top: 1px solid indigo; }
+
+.Dashboard__table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 20px 50px 10px 50px; */
+}
+
+.table{
+    width: 40vw;
+    background-color: #EBE7DA;
+    font-size: clamp(10px, 1.1vw, 30px);
+}
+
+th{
+    width: 1vw;
+    max-width: 150px;
+    text-align: center;
+}
+
+td{
+    text-align: center;
+}
