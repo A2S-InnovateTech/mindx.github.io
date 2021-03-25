@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 
 //Page imports below
+
 import Homepage from './components/Homepage';
 import Login from './components/Login';
 import SignUp from './components/Signup';
@@ -15,6 +16,7 @@ import StudentPanel from './components/StudentPanel/StudentPanel';
 import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
 import Profile from './components/profile/Index';
+import Mobile from './components/profile/mobile';
 import MobileHeader from './components/MobileHeader';
 import Results from './components/Results';
 import Results2 from './components/Results2';
@@ -44,6 +46,10 @@ function App() {
               <Route path="/profile" exact>
                 <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Profile />
+              </Route>
+              <Route path="/mobile" exact>
+              <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Mobile/>
               </Route>
               <Route path="/results" exact>
             <Results/>
