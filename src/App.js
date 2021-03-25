@@ -12,6 +12,7 @@ import Homepage from './components/Homepage';
 import Login from './components/Login';
 import SignUp from './components/Signup';
 import StudentPanel from './components/StudentPanel/StudentPanel';
+
 import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
 import MobileHeader from './components/MobileHeader';
@@ -26,6 +27,7 @@ import Test from './components/Test';
 function App() {
   var [showSidebar, setShowSidebar] = useState(true);
   return (
+
     <Router basename={process.env.PUBLIC_URL}>
     <div className="OuterApp">
       <Route path="/test" exact>
