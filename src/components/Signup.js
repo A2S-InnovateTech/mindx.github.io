@@ -1,11 +1,14 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useState } from 'react'
 import './Signup.css';
 import logo from '../images/logo.png';
 import app from '../firebase';
 import { withRouter } from "react-router";
 import {Link} from "react-router-dom";
+import firebase from 'firebase';
 
 function Signup({history}) {
+        const [fullname, setFullName] = useState("");
+        const [mobile, setMobile] = useState("");
 
        const handleSignUp = useCallback(async event => {
            event.preventDefault();
@@ -13,8 +16,12 @@ function Signup({history}) {
            try {
                await app
                .auth()
-               .createUserWithEmailAndPassword(email.value, password.value);
-               history.push("/");
+               .createUserWithEmailAndPassword(email.value, password.value)
+               .then((authUser) => {
+                    return authUser.user.updateProfile({ displayName:fullname });
+                })
+                .catch(e => console.log(e));
+               history.push("/")
            } catch (error) {
                alert(error);
            }
@@ -54,12 +61,12 @@ function Signup({history}) {
                 <form onSubmit={handleSignUp}>
                 <div className="forms-s">
                     
-                    <input className="form-1-s" type="text" placeholder="  Full Name" required></input>
+                    <input name="fullname" className="form-1-s" type="text" placeholder="  Full Name" value={fullname} onChange={(e)=>{setFullName(e.target.value)}} required></input>
                     <label>
                     <input name="email" className="form-2-s" type="email" placeholder="  Email Id" required></input>
                     </label>
                     <span className="form-div">
-                    <input className="form-3-s" type="text" placeholder="  Mobile No." required></input>
+                    <input className="form-3-s" type="text" placeholder="  Mobile No." value={mobile} onChange={(e)=>{setMobile(e.target.value)}} required></input>
                     <input className="form-4-s" type="text" placeholder="  Class" required></input>
                     </span>
                     <input className="form-5-s" type="text" placeholder="  School Name" required></input>

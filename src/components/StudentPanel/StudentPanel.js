@@ -5,12 +5,13 @@ import {Link} from "react-router-dom";
 
 import { Row, Col } from 'react-bootstrap';
 
-function StudentPanel() {
+function StudentPanel({props}) {
+  console.log(props);
     return (
        <div className="container">
            
-         <section className="header">
-           <Row>
+         <section className="header" style={{backgroundColor: "white"}}>
+           <Row style={{width:"60vw", marginTop:"50px"}} className="hideOnMobile">
              <Col lg={1} md={1} sm={2} xs={2}>
                <div className="arrow">
                   <Link to="/dashboard"><img src={require('../../assets/images/arrow.png').default}  alt="arrow"/></Link>
@@ -26,17 +27,19 @@ function StudentPanel() {
         </section>
 
          <section className="dropdown">
-            <select className="browser-default" defaultValue="Physics">
-                <option value="Physics">Physics</option>
-                <option value="one">Option one</option>
-                <option value="two">Option two</option>
-                <option value="three">Option three</option>
+            <select className="browser-default">
+                <option value="Maths" selected={props?.subject==="Maths"}>Maths</option>
+                <option value="Physics" selected={props?.subject==="Physics"}>Physics</option>
+                <option value="Chemistry" selected={props?.subject==="Chemistry"}>Chemistry</option>
+                <option value="three" selected={props?.subject==="Computer"}>Computer</option>
+                <option value="three" selected={props?.subject==="English"}>English</option>
+                <option value="three" selected={props?.subject==="Literature"}>Literature</option>
            </select>
          </section>
 
          <section>
-           <h3>Subject : Physics</h3>
-           <Row>
+           <h3>Subject : {props?.subject}</h3>
+           <Row >
                <Col lg={3} md={4} sm={6} xs={12}>
                 <div className="comp">
                   <div className="image">

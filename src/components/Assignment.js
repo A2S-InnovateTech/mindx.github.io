@@ -2,6 +2,7 @@ import React from 'react'
 import Sidebar from './Sidebar/index'
 import './Assignment.css'
 import Back from '../images/back-icon.png';
+import {Link} from 'react-router-dom';
 
 
 function Assignment() {
@@ -11,7 +12,7 @@ function Assignment() {
             <div className="bottom-line"></div>
             <div className="head">
             <span className="back">
-            <img className="back-icon" src={Back}></img>
+            <Link to="/dashboard" style={{textDecoration:"none", color:"white"}}><img className="back-icon" src={Back}></img></Link>
             </span>
             <span className="title-a">My Assignments</span>
             <span className="line"></span>   
@@ -25,48 +26,105 @@ function Assignment() {
             </span>
             <div className="table-r">
             <span className="table-c">
-               <table>
+               <table className="autoSerial">
+                <tbody>
                    <tr class="noBorder">
-                       <td>1</td>
+                       <td className="serial"></td>
                        <td>English Assignment</td>
                        <td>11/03/21</td>
                        <td>15/03/21</td>
                        <td>Not Done</td>
-                       <td>View</td>
+                       <Link 
+                        to={{
+                            pathname:"/assesment",
+                            state: { subject: 'English' }
+                        }} 
+                        style={{textDecoration:"none", color:"black"}}
+                       >
+                        <td>View</td>
+                       </Link>
                    </tr>
                    <tr class="noBorder">
-                       <td>2</td>
+                       <td className="serial"></td>
                        <td>Physics Assignment</td>
                        <td>11/03/21</td>
                        <td>15/03/21</td>
                        <td>Graded</td>
-                       <td>View</td>
+                       <Link 
+                        to={{
+                            pathname:"/assesment",
+                            state: { subject: 'Physics' }
+                        }} 
+                        style={{textDecoration:"none", color:"black"}}
+                       >    
+                        <td>View</td>
+                       </Link>
                    </tr>
                    <tr class="noBorder">
-                       <td>3</td>
+                       <td className="serial"></td>
                        <td>English Assignment</td>
                        <td>11/03/21</td>
                        <td>15/03/21</td>
-                       <td>Ungraded</td>
-                       <td>View</td>
+                       <td>Not Done</td>
+                       <Link 
+                        to={{
+                            pathname:"/assesment",
+                            state: { subject: 'English' }
+                        }} 
+                        style={{textDecoration:"none", color:"black"}}
+                       >
+                        <td>View</td>
+                       </Link>
                    </tr>
                    <tr class="noBorder">
-                       <td>4</td>
+                       <td className="serial"></td>
                        <td>Physics Assignment</td>
                        <td>11/03/21</td>
                        <td>15/03/21</td>
                        <td>Graded</td>
-                       <td>View</td>
+                       <Link 
+                        to={{
+                            pathname:"/assesment",
+                            state: { subject: 'Physics' }
+                        }} 
+                        style={{textDecoration:"none", color:"black"}}
+                       >    
+                        <td>View</td>
+                       </Link>
                    </tr>
                    <tr class="noBorder">
-                       <td>5</td>
+                       <td className="serial"></td>
                        <td>English Assignment</td>
                        <td>11/03/21</td>
                        <td>15/03/21</td>
-                       <td>Ungraded</td>
-                       <td>View</td>
+                       <td>Not Done</td>
+                       <Link 
+                        to={{
+                            pathname:"/assesment",
+                            state: { subject: 'English' }
+                        }} 
+                        style={{textDecoration:"none", color:"black"}}
+                       >
+                        <td>View</td>
+                       </Link>
                    </tr>
-                   
+                   <tr class="noBorder">
+                       <td className="serial"></td>
+                       <td>Physics Assignment</td>
+                       <td>11/03/21</td>
+                       <td>15/03/21</td>
+                       <td>Graded</td>
+                       <Link 
+                        to={{
+                            pathname:"/assesment",
+                            state: { subject: 'Physics' }
+                        }} 
+                        style={{textDecoration:"none", color:"black"}}
+                       >    
+                        <td>View</td>
+                       </Link>
+                   </tr>
+                   </tbody>
                </table>
             </span>
             <span className="table-line"></span>

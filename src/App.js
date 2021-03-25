@@ -1,10 +1,12 @@
 import './App.css';
-import React, {useState} from "react";
+import React, {useState, useContext, useEffect} from "react";
 import {
   HashRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  Redirect,
+  useHistory
 } from "react-router-dom";
 
 //Page imports below
@@ -23,9 +25,32 @@ import Assesment from './components/Assesment';
 
 import Report from './components/Report';
 import Test from './components/Test';
+import firebase from 'firebase';
 
 function App() {
   var [showSidebar, setShowSidebar] = useState(true);
+  const [user, setUser] = useState(null);
+  const [tookAssessment, setTookAssessment] = useState(false);
+  let history = useHistory();
+
+  useEffect(() => {
+    const unsubscribe = firebase.auth().onAuthStateChanged((authUser) => {
+      if (authUser) {
+        //user logged in
+        console.log(authUser);
+        setUser(authUser);
+      } else {
+        //user logged out
+        setUser(null);
+      }
+    });
+
+    return () => {
+      //perform cleanup
+      unsubscribe();
+    };
+  }, [user]);
+
   return (
 
     <Router basename={process.env.PUBLIC_URL}>
@@ -39,28 +64,57 @@ function App() {
       <Route path="/signup" exact>
         <SignUp/>
       </Route>
-      <Route path="/" exact><Login /></Route>
+      <Route path="/" exact>
+        {user?<Redirect to="/dashboard" />:<Login/>}
+      </Route>
+
+      <Route 
+        path="/logout" 
+        render={ ()=>{
+          firebase.auth().signOut().then(function() {
+            firebase.auth().onAuthStateChanged((authUser) => {
+            if (authUser) {
+              //user logged in
+              console.log(authUser);
+              setUser(authUser);
+            } else {
+              //user logged out
+              setUser(null);
+            }});
+            history?.push('/');
+          })
+        }} 
+        exact
+      />
+
       <div className="App">
           <Switch>  
             <div className="Content">
               <Route path="/assignment" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
                 <Assignment/>
               </Route>
-              <Route path="/assesment" exact>
-                <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <Assesment/>
+              <Route path="/assesment" render={(routeProps) => 
+                <>
+                  <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                  <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
+                  <Assesment props={routeProps.location.state}/>
+                </>  
+                } exact>
               </Route>
-              <Route path="/s" exact>
-                <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <StudentPanel />
+              <Route path="/s" render={(routeProps) => 
+                <>
+                  <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
+                <StudentPanel props={routeProps.location.state}/>
+                </>  
+                } exact>
+                
               </Route>
               <Route path="/dashboard" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
                 <Dashboard />
               </Route>
               <Route path="/results" exact>
@@ -73,7 +127,7 @@ function App() {
               </Route>
               <Route path="/report" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
                 <Report />
               </Route>
           </div>

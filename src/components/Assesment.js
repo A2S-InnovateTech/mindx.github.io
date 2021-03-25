@@ -6,21 +6,23 @@ import  Cross from "../images/cross.png"
 import file from "../images/file.png";
 import upload from '../images/upload.png'
 import rect from '../images/rect.png';
+import {Link, withRouter} from 'react-router-dom';
 
-function Assesment() {
+function Assesment(props) {
+    console.log(props);
     return (
         <div>
         <div className="top-line"></div>
         <div className="head">
             <span className="back">
-            <img className="back-icon" src={Back}></img>
+            <Link to="/assignment"><img className="back-icon" src={Back}></img></Link>
             </span>
             <span className="title-a">My Assignments</span>
             <span className="line"></span>   
             </div>
             <span className="table-t">
                 <span className="s-no-1">1</span>
-                <span className="ass-1">English Assignment</span>
+                <span className="ass-1">{props?.props?.subject+" Assignment"||'English Assignment'}</span>
                 <span className="dt"> Due Date: 15/03/2021</span>
                 <img className="x" src={Cross}></img>
             </span>
