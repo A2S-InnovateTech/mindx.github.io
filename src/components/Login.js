@@ -26,18 +26,26 @@ function Login({ history }) {
     } 
 
     const updateUserDetails = (user) => {
-        app.firestore().collection("users").doc(user.uid).set({
-            assessmentTaken: false,
-            class: null,
-            phoneNumber: null,
-            relation: null,
-            relativeNumber: null,
-            school: null,
-            userType: "student",
-            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-        })
-        .then(()=>history.push('/'))
-        .catch(e=>console.log("Error in updating details: ", e))
+        app.firestore().collection("users").doc(user.uid).get()
+            .then(snapshot=>{
+              if(!snapshot.exists){
+                  app.firestore().collection("users").doc(user.uid).set({
+                    assessmentTaken: false,
+                    class: null,
+                    phoneNumber: null,
+                    relation: null,
+                    relativeNumber: null,
+                    school: null,
+                    userType: "student",
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                })
+                .then(()=>history.push('/'))
+                .catch(e=>console.log("Error in updating details: ", e))
+                }
+                else{
+                    console.log("Old User");
+                }
+            })
     }
 
     const handleLogin = useCallback(async event => {
