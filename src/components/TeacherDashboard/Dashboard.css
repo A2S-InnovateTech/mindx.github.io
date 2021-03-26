@@ -1,0 +1,128 @@
+h3 {
+  font-family: Fredoka One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  width: fit-content;
+  line-height: 48px;
+  color: #10222E;
+}
+
+.hrline {
+  border-bottom: 2px solid #10222E;
+  height: 0;
+  margin-top: 25px;
+}
+
+button {
+  /* width: 128px; */
+  width: 100%;
+  height: 46px;
+  border: 3px solid #10222E;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+
+  color: #FFF5D1;
+  background-color: #10222E;
+
+  margin-bottom: 5px;
+}
+
+.one {
+  margin-top: 50px;
+}
+
+.two {
+   margin-top: 50px;
+}
+
+.mySubject {
+  /* height: 150px; */
+  margin-top: 50px;
+  background: #EBE7DA;
+  border-radius: 10px;
+}
+
+
+.physics {
+  background: #FFF5D1;
+  border: 4px solid #10222E;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 175px;
+  height: 200px;
+  text-align: center;
+  margin-top: -25px;
+  margin-bottom: -25px;
+}
+
+.physics img {
+  width: 60px;
+  height: 60px;
+  margin-top: 28px;  
+}
+
+.physics p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #10222E;
+  margin-top: 28px; 
+}
+
+.physics .horizon {
+  width: 130px;
+  height: 12px;
+  background: #10222E;
+  opacity: 0.75;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.mySubject button {
+  margin-top: 45px;
+}
+
+.three {
+  margin: 50px auto;
+}
+
+.testsHistory {
+  background: #EBE7DA;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+
+.testsHistory th, td {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #10222E;
+  border-right: 1px solid #000000;
+}
+
+.testsHistory th{
+  border-bottom: 1px solid #000000 !important;
+}
+
+.testsHistory .btns {
+  text-align: center;
+}
+
+.testsHistory .btns button{
+  margin: 10px;
+}
+

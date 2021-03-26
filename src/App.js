@@ -11,6 +11,7 @@ import {
 import Homepage from './components/Homepage';
 import StudentPanel from './components/StudentPanel/StudentPanel';
 import Test from './components/TestScreen/Test';
+import Dashboard from './components/TeacherDashboard/Dashboard';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" exact><Homepage /></Route>
           <Route path="/s" exact component={StudentPanel} ></Route>
           <Route path="/test" exact component={Test} ></Route>
+          <Route path="/dashboard" exact component={Dashboard} ></Route>
         </Switch>
         
       </Router>  
