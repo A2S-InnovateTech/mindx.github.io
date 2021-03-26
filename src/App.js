@@ -18,6 +18,7 @@ import Dashboard from './components/Dashboard';
 import Profile from './components/profile/Index';
 import Mobile from './components/profile/mobile';
 import Popup from './components/popup/';
+import  Teacherpopup from './components/teacher/popup/index';
 import MobileHeader from './components/MobileHeader';
 import Results from './components/Results';
 import Results2 from './components/Results2';
@@ -55,6 +56,10 @@ function App() {
               <Route path="/popup" exact>
              
                 <Popup/>
+              </Route>
+              <Route path="/tpopup" exact>
+             
+                <Teacherpopup/>
               </Route>
               <Route path="/results" exact>
             <Results/>
