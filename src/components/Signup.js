@@ -9,24 +9,47 @@ import firebase from 'firebase';
 function Signup({history}) {
         const [fullname, setFullName] = useState("");
         const [mobile, setMobile] = useState("");
+        const [email, setEmail] = useState("");
+        const [Class, setClass] = useState("");
+        const [school, setSchool] = useState("");
+        const [password, setPassword] = useState("");
+        const [relation, setRelation] = useState("");
+        const [relationNo, setRelationNo] = useState("");
 
-       const handleSignUp = useCallback(async event => {
-           event.preventDefault();
-           const { email, password } = event.target.elements;
+       const handleSignUp = (e) => {
+           e.preventDefault();
            try {
-               await app
+                app
                .auth()
-               .createUserWithEmailAndPassword(email.value, password.value)
+               .createUserWithEmailAndPassword(email, password)
                .then((authUser) => {
-                    return authUser.user.updateProfile({ displayName:fullname });
+                    console.log(authUser.user.updateProfile({ displayName:fullname })
+                    .then(()=>{
+                        // history.push("/")
+                        updateUserDetails(authUser.user)
+                    })
+                    .catch(e=>{console.log("Error:",e);}));
                 })
                 .catch(e => console.log(e));
-               history.push("/")
            } catch (error) {
                alert(error);
-           }
-           
-   },[history]);
+           }       
+        };
+
+        const updateUserDetails = (user) => {
+            app.firestore().collection("users").doc(user.uid).set({
+                assessmentTaken: false,
+                class: Class,
+                phoneNumber: mobile,
+                relation,
+                relativeNumber: relationNo,
+                school,
+                userType: "student",
+                timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            })
+            .then(()=>history.push('/'))
+            .catch(e=>console.log("Error in updating details: ", e))
+        }
 
 
     return (
@@ -58,29 +81,29 @@ function Signup({history}) {
             </div>
                 <div className="right-p-s">
                 <span className="title-s">SIGNUP</span>
-                <form onSubmit={handleSignUp}>
+                <form>
                 <div className="forms-s">
                     
                     <input name="fullname" className="form-1-s" type="text" placeholder="  Full Name" value={fullname} onChange={(e)=>{setFullName(e.target.value)}} required></input>
                     <label>
-                    <input name="email" className="form-2-s" type="email" placeholder="  Email Id" required></input>
+                    <input name="email" className="form-2-s" type="email" placeholder="  Email Id" value={email} onChange={(e)=>{setEmail(e.target.value)}} required></input>
                     </label>
                     <span className="form-div">
                     <input className="form-3-s" type="text" placeholder="  Mobile No." value={mobile} onChange={(e)=>{setMobile(e.target.value)}} required></input>
-                    <input className="form-4-s" type="text" placeholder="  Class" required></input>
+                    <input className="form-4-s" type="text" placeholder="  Class" value={Class} onChange={(e)=>{setClass(e.target.value)}} required></input>
                     </span>
-                    <input className="form-5-s" type="text" placeholder="  School Name" required></input>
+                    <input className="form-5-s" type="text" placeholder="  School Name" value={school} onChange={(e)=>{setSchool(e.target.value)}} required></input>
                     <label>
-                    <input name="password" className="form-6-s" type="password" placeholder="  Password" required></input>
+                    <input name="password" className="form-6-s" type="password" placeholder="  Password" value={password} onChange={(e)=>{setPassword(e.target.value)}} required></input>
                     </label>
                     <span className="form-div">
-                    <input className="form-7-s" type="text" placeholder="  Relation" required></input>
-                    <input className="form-8-s" type="text" placeholder="  Mobile No." required></input>
+                    <input className="form-7-s" type="text" placeholder="  Relation" value={relation} onChange={(e)=>{setRelation(e.target.value)}} required></input>
+                    <input className="form-8-s" type="text" placeholder="  Mobile No." value={relationNo} onChange={(e)=>{setRelationNo(e.target.value)}} required></input>
                     </span>
                     
                 </div>
 
-                <button type="submit" className="final-btn-s">SignUp</button>
+                <button onClick={(e)=>handleSignUp(e)}className="final-btn-s">SignUp</button>
                 </form>
                <Link to="/login"><span className="footer-s">Already have an account? Login Now</span></Link>
 

@@ -1,11 +1,12 @@
 import './StudentPanel.css';
-import React from 'react';
+import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from "react-router-dom";
 
 import { Row, Col } from 'react-bootstrap';
 
 function StudentPanel({props}) {
+  const [selectedSubject, setSelectedSubject] = useState(props?.subject || "Physics");
   console.log(props);
     return (
        <div className="container">
@@ -38,7 +39,7 @@ function StudentPanel({props}) {
          </section>
 
          <section>
-           <h3>Subject : {props?.subject}</h3>
+           <h3>Subject : {selectedSubject}</h3>
            <Row >
                <Col lg={3} md={4} sm={6} xs={12}>
                 <div className="comp">

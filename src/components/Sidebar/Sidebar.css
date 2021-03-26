@@ -30,6 +30,8 @@
 .Sidebar__profile_pic{
     margin-top: 20px;
     width: 9vw;
+    height: 9vw;
+    object-fit: cover;
     max-width: 186px;
     border-radius: 50%;
 }
@@ -86,4 +88,17 @@
     .Sidebar{
         display: none;
     }
+}
+
+.Sidebar__edit{
+    cursor: pointer;
+    object-fit: contain;
+    align-self: flex-end;
+}
+
+.Sidebar__filepicker{
+}
+
+.file-trigger{
+    cursor: pointer;
 }

@@ -15,31 +15,30 @@ function Login({ history }) {
     const handleGoogleLogin = () => {
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth()
-  .signInWithPopup(provider)
-  .then((result) => {
-    /** @type {firebase.auth.OAuthCredential} */
-    var credential = result.credential;
-
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    var token = credential.accessToken;
-    // The signed-in user info.
-    var user = result.user;
-    // ...
-    console.log(user);
-    history.push("/dashboard");
-  }).catch((error) => {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // The email of the user's account used.
-    var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
-    var credential = error.credential;
-    // ...
-    console.log(error);
-  });
-
+            .signInWithPopup(provider)
+            .then((result) => {
+                var user = result.user;
+                console.log(user);
+                updateUserDetails(user);
+            }).catch((error) => {
+                console.log(error);
+            });
     } 
+
+    const updateUserDetails = (user) => {
+        app.firestore().collection("users").doc(user.uid).set({
+            assessmentTaken: false,
+            class: null,
+            phoneNumber: null,
+            relation: null,
+            relativeNumber: null,
+            school: null,
+            userType: "student",
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        })
+        .then(()=>history.push('/'))
+        .catch(e=>console.log("Error in updating details: ", e))
+    }
 
     const handleLogin = useCallback(async event => {
         event.preventDefault();

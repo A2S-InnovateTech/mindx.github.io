@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './Dashboard.css';
 import Maths from './function.png';
 import Physics from './physics.png';
@@ -7,8 +7,9 @@ import Computer from './computer.png';
 import English from './english.png';
 import Literature from './literature.png';
 import {Link} from "react-router-dom";
+import app from '../../firebase';
 
-function Dashboard() {
+function Dashboard({user, userDetails, setUserDetails}) {
     return (
         <div className="Dashboard">
             <div className="Dashboard__heading_row">

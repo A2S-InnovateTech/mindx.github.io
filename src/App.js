@@ -1,7 +1,7 @@
 import './App.css';
 import React, {useState, useContext, useEffect} from "react";
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route,
   Link,
@@ -26,12 +26,31 @@ import Assesment from './components/Assesment';
 import Report from './components/Report';
 import Test from './components/Test';
 import firebase from 'firebase';
+import app from './firebase';
 
 function App() {
+  const [userDetails, setUserDetails] = useState([]);
   var [showSidebar, setShowSidebar] = useState(true);
   const [user, setUser] = useState(null);
   const [tookAssessment, setTookAssessment] = useState(false);
   let history = useHistory();
+
+  const fetchUserDetails = () => {
+      app.firestore().collection("users")
+      .doc(user.uid)
+      .get()
+      .then((snapshot) => {
+        setUserDetails(snapshot.data());
+        console.log("Details", userDetails);
+      })
+      .catch(e=>console.log(e));
+  }
+
+  useEffect(() => {
+      if(user){
+          fetchUserDetails();
+      }
+  }, [user])
 
   useEffect(() => {
     const unsubscribe = firebase.auth().onAuthStateChanged((authUser) => {
@@ -53,7 +72,7 @@ function App() {
 
   return (
 
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
     <div className="OuterApp">
       <Route path="/test" exact>
         <Test />
@@ -92,13 +111,13 @@ function App() {
             <div className="Content">
               <Route path="/assignment" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
+                <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
                 <Assignment/>
               </Route>
               <Route path="/assesment" render={(routeProps) => 
                 <>
                   <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                  <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
+                  <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
                   <Assesment props={routeProps.location.state}/>
                 </>  
                 } exact>
@@ -106,7 +125,7 @@ function App() {
               <Route path="/s" render={(routeProps) => 
                 <>
                   <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
+                <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
                 <StudentPanel props={routeProps.location.state}/>
                 </>  
                 } exact>
@@ -114,8 +133,8 @@ function App() {
               </Route>
               <Route path="/dashboard" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
-                <Dashboard />
+                <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
+                <Dashboard user={user} userDetails={userDetails} setUserDetails={setUserDetails}/>
               </Route>
               <Route path="/results" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
@@ -127,7 +146,7 @@ function App() {
               </Route>
               <Route path="/report" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
+                <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
                 <Report />
               </Route>
           </div>
