@@ -1,5 +1,6 @@
 import './Test.css';
-import React from 'react'
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Row, Col } from 'react-bootstrap';
 
@@ -42,7 +43,7 @@ function Test() {
                
             </section>
             <section>
-              <div className="header">
+              <div className="test_header">
                 <div className="quesnum">Question No : 1 of 15 </div>
                 <div className="time">Time Left : 09 m 37 s</div>
               </div>

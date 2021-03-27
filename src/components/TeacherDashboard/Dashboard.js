@@ -1,5 +1,7 @@
 import './Dashboard.css';
-import React from 'react'
+import React from 'react';
+import {Link} from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Row, Col, Table } from 'react-bootstrap';
 
@@ -13,8 +15,11 @@ function Dashboard() {
               </Row>
               <div>
                 <Row>
+                  {/* <Link to="/assignment" style={{textDecoration:"none", color:"white"}}><div className="Dashboard__button">My Assignments</div></Link> */}
                   <Col lg={3} md={6} sm={12}>
-                    <button>My Classes</button>
+                    <Link to="/my_classes">
+                      <button>My Classes</button>
+                    </Link>
                   </Col>
                   <Col lg={3} md={6} sm={12}>
                     <button>Time Table</button>
@@ -43,10 +48,14 @@ function Dashboard() {
                     </div>
                   </Col>
                   <Col lg={3} md={6} sm={12}>
-                    <button>Test</button>
+                    <Link to="/test" >
+                     <button>Test</button>
+                    </Link> 
                   </Col>
                   <Col lg={3} md={6} sm={12}>
-                    <button>Assignment</button>
+                    <Link>
+                      <button to="/assignment">Assignment</button>
+                    </Link>
                   </Col>
                   <Col lg={3} md={6} sm={12}>
                     <button>Notes</button>
