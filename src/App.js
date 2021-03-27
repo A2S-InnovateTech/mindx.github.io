@@ -15,7 +15,7 @@ import Homepage from './components/Homepage';
 import Login from './components/Login';
 import SignUp from './components/Signup';
 import StudentPanel from './components/StudentPanel/StudentPanel';
-
+import TeacherDashboard from './components/TeacherDashboard/Dashboard';
 import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
 
@@ -140,6 +140,12 @@ function App() {
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
                 <Dashboard user={user} userDetails={userDetails} setUserDetails={setUserDetails}/>
+              </Route>
+            
+            <Route path="/teacher/dashboard" exact>
+                <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
+                <TeacherDashboard user={user} userDetails={userDetails} setUserDetails={setUserDetails}/>
               </Route>
               
               <Route path="/profile" exact>
