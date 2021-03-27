@@ -17,10 +17,17 @@
 
 .forminput{
     margin-left: 10px;
+   
 
 }
 .personalback{
     background-color: #10222E; 
+}
+.buttonrow{
+    margin-bottom: 10px;
+}
+.form{
+    margin-top: 10px;
 }
 
 .personal{
@@ -30,6 +37,7 @@
     font-weight: 500;
     font-size: clamp(16px, 2vw,22px); 
     margin-left: 20px; 
+    margin-bottom: 10px;
 }
 .editbutton{
     height: 40px;
@@ -59,4 +67,12 @@
 }
 .gape{
     height: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .formback{
+    height: 399px;
+        
+    }
+
 }

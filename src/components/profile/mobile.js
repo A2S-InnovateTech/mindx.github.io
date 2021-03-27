@@ -40,28 +40,46 @@ const Mobile = () => {
               <div className="personalback">
                     <div className="personal">Personal Information</div>
                     </div>
-                    <span><label className="personal__title">Personal Information</label>
+                    <span className="buttonrow">
+                        <label className="personal__title">Personal Information</label>
                     <Button className="savebutton" onClick={() => { alert('clicked') }} >save</Button>
                     <Button className="editbutton"  onClick={() => editp()}>Edit </Button>
                     
                     </span>
         <div>
         <Form className="form">
-            <Form.Group controlId="formGroupEmail">
+            <Form.Group >
+                <Form.Row>
+                    <Col  xs={3} md={2}>
                     <Form.Label className="formlabel">Student Name</Form.Label>
-                    <Form.Control className="forminput" type="text" placeholder="Student Name" disabled={disabled} />
+                    </Col>
+                    <Col   xs={15} md={10}>
+                    <Form.Control  className="forminput" type="text" placeholder="Student Name" disabled={disabled} />
+                    </Col>
+                </Form.Row>
             </Form.Group>
-            <Form.Group controlId="formGroupPassword">
-                <Form.Label className="formlabel">Home Address</Form.Label>
-                <Form.Control className="forminput" type="text" placeholder="Home Address"  disabled={disabled}/>
+            <Form.Group >
+                <Form.Row>
+                    <Col  xs={3} md={2}>
+                    <Form.Label className="formlabel">Home Address</Form.Label>
+                    </Col>
+                    <Col   xs={15} md={10}>
+                    <Form.Control className="forminput" type="text" placeholder="Home Address"  disabled={disabled}/>
+                    </Col>
+                </Form.Row>
             </Form.Group>
+           
             <Form.Row>
-                <Col>
+                <Col  xs={3} md={2}>
                 <Form.Label className="formlabel">Mobile Number</Form.Label>
+                </Col>
+                <Col  xs={5} md={3}>
                 <Form.Control className="forminput" placeholder="Mobile Number" type="text" disabled={disabled} />
                 </Col>
-                <Col>
+                <Col  xs={3} md={2}>
                 <Form.Label className="formlabel">Email</Form.Label>
+                </Col>
+                <Col  xs={7} md={5}> 
                 <Form.Control  className="forminput"placeholder="Email" type="email" disabled={disabled}  onChange={(event) => setPemail(event.target.value)}/>
                 </Col>
             </Form.Row>
@@ -80,25 +98,43 @@ const Mobile = () => {
                     </span>
         <div>
         <Form className="form">
-            <Form.Group controlId="formGroupEmail">
+            <Form.Group >
+                <Form.Row>
+                    <Col  xs={3} md={2}>
                     <Form.Label className="formlabel">School Name</Form.Label>
+                    </Col>
+                    <Col   xs={15} md={10}>
                     <Form.Control className="forminput" type="text" placeholder="Student Name" disabled={disableds} />
+                    </Col>
+                </Form.Row>
             </Form.Group>
-            <Form.Group controlId="formGroupPassword">
-                <Form.Label className="formlabel">School Address</Form.Label>
-                <Form.Control className="forminput" type="text" placeholder="Home Address"  disabled={disableds}/>
+            <Form.Group >
+                <Form.Row>
+                    <Col  xs={3} md={2}>
+                    <Form.Label className="formlabel">School Address</Form.Label>
+                    </Col>
+                    <Col   xs={12} md={8}>
+                    <Form.Control className="forminput" type="text" placeholder="School Address"  disabled={disableds}/>
+                    </Col>
+                    <Col  xs={3} md={2}></Col>
+                </Form.Row>
             </Form.Group>
+           
             <Form.Row>
-                <Col>
+                <Col  xs={3} md={2}>
                 <Form.Label className="formlabel">Mobile Number</Form.Label>
+                </Col>
+                <Col  xs={5} md={3}>
                 <Form.Control className="forminput" placeholder="Mobile Number" type="text" disabled={disableds} />
                 </Col>
-                <Col>
+                <Col  xs={3} md={2}>
                 <Form.Label className="formlabel">Email</Form.Label>
+                </Col>
+                <Col  xs={7} md={5}> 
                 <Form.Control  className="forminput"placeholder="Email" type="email" disabled={disableds} />
                 </Col>
             </Form.Row>
-        </Form>
+        </Form>       
         </div>
         </div>
 

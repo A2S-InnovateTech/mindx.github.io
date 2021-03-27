@@ -15,7 +15,7 @@ import SignUp from './components/Signup';
 import StudentPanel from './components/StudentPanel/StudentPanel';
 import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
-import Profile from './components/profile/Index';
+
 import Mobile from './components/profile/mobile';
 import Popup from './components/popup/';
 import  Teacherpopup from './components/teacher/popup/index';
@@ -45,11 +45,8 @@ function App() {
                 <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Dashboard />
               </Route>
+              
               <Route path="/profile" exact>
-                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <Profile />
-              </Route>
-              <Route path="/mobile" exact>
               <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Mobile/>
               </Route>
