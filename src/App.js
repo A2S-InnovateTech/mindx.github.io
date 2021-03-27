@@ -27,6 +27,7 @@ import Results from './components/Results';
 import Results2 from './components/Results2';
 import Assignment from './components/Assignment';
 import Assesment from './components/Assesment';
+import Performance from './components/Performance';
 
 import Report from './components/Report';
 import Test from './components/Test';
@@ -172,6 +173,11 @@ function App() {
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
                 <Report />
+              </Route>
+              <Route path="/performance" exact>
+                <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Performance/>
               </Route>
           </div>
         </Switch>
