@@ -15,7 +15,7 @@ const Grid =(props) => {
        dialogClassName="tpop" 
        aria-labelledby="contained-modal-title-vcenter">
         <Modal.Header closeButton className="tpopb">
-          <Modal.Title id="contained-modal-title-vcenter">
+          <Modal.Title className="modal-title">
           Create Assignment
           </Modal.Title>
         </Modal.Header>
@@ -37,7 +37,7 @@ const Grid =(props) => {
             </Row>
             <Row>
               <Col xs={12} md={8}>
-                g
+                
               </Col>
               <Col xs={6} md={4}>
               
@@ -55,6 +55,9 @@ const Grid =(props) => {
               <div  className="rec">
               <div className="box"><div className="calendar"></div></div>
               <p className="boxtext">Due Date</p>
+              <div className="margincal">
+              <div className="smallcalendar"></div>
+              </div>
               </div>
               </Col>
             </Row>

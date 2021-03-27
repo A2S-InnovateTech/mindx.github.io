@@ -1,12 +1,36 @@
 .tpop{
     background: #FFF5D1;
     border-radius: 20px;
+   
+    left: 2vw;
+}
+.modal-title{
+
+    width: 429px;
+height: 26px;
+
+margin-left: 200px;
+
+    font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 42px;
+display: flex;
+align-items: center;
+text-align: center;
+
+/* 1 */
+
+color: #10222E;
 }
 .tpopb{
     background: #FFF5D1;
+    border: 1px solid #FFF5D1;
 }
 .rec{
-
+   margin-left: 10px;
+   margin-top: 30px;
     width: 233px;
 height: 100px;
     display: flex;
@@ -28,6 +52,8 @@ height: 90px;
 background: #10222E;
 }
 .boxtext{
+    margin-top: 10px;
+
     font-family: Roboto;
 font-style: normal;
 font-weight: 500;
@@ -41,26 +67,42 @@ justify-content: center;
 color: #10222E;
 }
 .dog{
-    left: 29px;
-    top: 29px;
+    margin-top: 14px;
+    margin-left: 10px;
     width: 42px;
 height: 42px;
 background: url("./dog.png");
+
 }
 .presentation{
+    margin-top: 20px;
+    margin-left: 20px;
     width: 42px;
     height: 42px;
     background: url("./presentation.png");
-
+   
 }
 .calendar{
-    left: 29px;
+    margin-top: 20px;
+    margin-left: 20px;
     width: 42px;
     height: 42px;
     background: url("./calendar.png");
-
+    
+}
+.smallcalendar{
+    width: 24px;
+height: 24px;
+background: url("./calendar.png");
+}
+.margincal{
+    margin-top: 10px;
+    margin-left: 10px ;
+    margin-right: 10px;
 }
 .upload{
+    margin-top: 15px;
+    margin-left: 15px;
     width: 42px;
     height: 42px;
     background: url("./upload.png");
@@ -72,10 +114,10 @@ height: 24px;
     background: url("./Poly.png");
 }
 .creatbox{
-   
+  
 width: 217px;
 height: 58px;
-
+margin-right: 300px;
 
 /* 1 */
 
@@ -88,7 +130,8 @@ border-radius: 10px;
    
 width: 153px;
 height: 32px;
-
+margin-top: 10px;
+margin-left: 20px;
 
 font-family: Roboto;
 font-style: normal;
@@ -102,4 +145,37 @@ text-align: center;
 /* 1 */
 
 color: #10222E;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .modal-title{
+        width: 429px;
+        height: 26px;
+        margin-left: 100px;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 26px;
+    }
+    .creatbox{
+  
+        width: 217px;
+        height: 58px;
+        margin-right: 100px;
+        }
+
+        .rec{
+            margin-left: 10px;
+             width: 200px;
+             margin-top: 20px;
+         height: 100px;
+             display: flex;
+             flex-direction: row;
+             border: 5px solid #10222E;
+             
+             border-radius: 10px;
+            
+             
+         }
+    
 }
