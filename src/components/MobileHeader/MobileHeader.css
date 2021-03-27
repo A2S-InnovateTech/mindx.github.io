@@ -1,0 +1,32 @@
+
+.MobileHeader{
+    display: none;
+    display: flex;
+    height: 0px;
+}
+
+.MobileHeader__logo{
+    margin-right: auto;
+    display: none;
+}
+
+@media only screen and (max-width: 850px) {
+    .MobileHeader{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #10222E;
+        width: 100vw;
+        height: 60px;
+    }
+
+    .MobileHeader__logo{
+        display: block;
+    }
+  }
+
+  .MobileHeader__Menu{
+      margin-right: auto;
+      margin-left: 20px;
+  }
+

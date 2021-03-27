@@ -94,3 +94,8 @@ h3{
 }
 
 
+@media only screen and (max-width: 850px){
+  .hideOnMobile{
+    display: none !important;
+  }
+} 
