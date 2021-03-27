@@ -88,6 +88,15 @@
     margin-bottom: 10px;
 }
 
+.Test__option:hover{
+    cursor: pointer;
+    background-color: #10222E;
+}
+
+.Test__option:hover .Test__option_text{
+    color: #fff;
+}
+
 .Test__option_letter{
     width: 40px;
     height: 40px;
@@ -135,6 +144,12 @@
     font-family: 'Roboto';
     font-weight: 700;
     margin-right: 20px;
+}
+
+.Test__light_button:hover{
+    cursor: pointer;
+    background-color: #10222E;
+    color: white;
 }
 
 .dark_button{
