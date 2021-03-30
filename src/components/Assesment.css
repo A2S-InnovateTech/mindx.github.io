@@ -231,4 +231,10 @@ line-height: 23px;
         margin-left: 220px;
         height: 50px;
     }
+
+    .t-1, .t-2, .t-3, .t-4, .t-5{
+        font-size: 3vw;
+        width: 5vw;
+        height: 2vh;
+    }
 }

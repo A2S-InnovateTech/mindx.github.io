@@ -157,7 +157,7 @@ tr.noBorder td {
 @media only screen and (max-width: 768px){
     .table-t{
         font-size: 3vw;
-        width: 90vw;
+        width: 200px
     }
     .table-r{
         font-size: 3vw;
@@ -167,7 +167,7 @@ tr.noBorder td {
         width: 5vw;
     }
     .table-c{
-        width: 5vw;
+        width: 10vw;
         font-size: 3vw;
     }
 
@@ -220,14 +220,20 @@ tr.noBorder td {
     table{
         /* background-color: #EBE7DA; */
         margin-left: 10px;
+        
+
+    }
+
+    .t-2{
+        margin-left: 20px;
     }
     
     .t-3{
-        margin-left: 90px;      
+        margin-left: 20px;      
     }
 
     .t-4{
-        margin-left: 60px;
+        margin-left: 20px;
     }
 
     .t-5{
@@ -239,6 +245,6 @@ tr.noBorder td {
     }
 
     .table-t{
-        width: 452px;
+        width: 352px;
     }
 }

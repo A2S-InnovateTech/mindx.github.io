@@ -23,6 +23,7 @@ import Performance from './components/Performance';
 
 import Report from './components/Report';
 import Test from './components/Test';
+import AssignmentsT from './AssignmentsT';
 
 function App() {
   var [showSidebar, setShowSidebar] = useState(true);
@@ -79,6 +80,11 @@ function App() {
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Performance/>
+              </Route>
+              <Route path="/assignments-teacher" exact>
+                <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <AssignmentsT/>
               </Route>
           </div>
         </Switch>
