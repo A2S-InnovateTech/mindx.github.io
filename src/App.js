@@ -33,6 +33,7 @@ import Report from './components/Report';
 import Test from './components/Test';
 import firebase from 'firebase';
 import app from './firebase';
+import TeacherSignup from './components/TeacherSignup';
 
 function App() {
   const [userDetails, setUserDetails] = useState([]);
@@ -89,6 +90,9 @@ function App() {
       <Route path="/signup" exact>
         <SignUp/>
       </Route>
+      <Route path="/teacher/signup" exact>
+        <TeacherSignup/>
+      </Route>
       <Route path="/" exact>
         {user?<Redirect to="/dashboard" />:<Login/>}
       </Route>
@@ -138,9 +142,13 @@ function App() {
                 
               </Route>
               <Route path="/dashboard" exact>
-                <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
-                <Dashboard user={user} userDetails={userDetails} setUserDetails={setUserDetails}/>
+                {userDetails && userDetails?.userType=="teacher"?<Redirect to="/teacher/dashboard" />:
+                  <>
+                    <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                    <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
+                    <Dashboard user={user} userDetails={userDetails} setUserDetails={setUserDetails}/>
+                  </>
+                }
               </Route>
             
             <Route path="/teacher/dashboard" exact>

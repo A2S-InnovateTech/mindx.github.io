@@ -1,0 +1,247 @@
+.navbar-s{
+    display: flex;
+    justify-content: space-between;
+}
+
+.options-s{
+    display: flex;
+    margin-top: 35px;
+    height: 26px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFF5D1;
+    margin-left: 173px;
+}
+
+.option-1-s{
+    margin-right: 28px;
+    width: 71px;
+    height: 26px;
+}
+
+.option-2-s{
+    margin-right: 28px;
+    width: 118px;
+    height: 26px;
+}
+
+.option-3-s{
+    width: 118px;
+    height: 26px;
+}
+
+.total-p-s{
+    display: flex;
+    margin-left: 10vw;
+}
+
+
+.login-btn-s{
+    width: 172px;
+    height: 54px;
+    background: #FFF5D1;
+    border-radius: 10px; 
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+    color: #10222E;
+    margin-right: 14px;
+    margin-top: 19px;
+    margin-left: 20px;
+    outline: none;
+    
+    
+}
+
+
+.signup-btn-s{
+width: 172px;
+height: 54px;
+background: #10222E;
+border: 4px solid #FFF5D1;
+box-sizing: border-box;
+border-radius: 10px;
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 28px;
+text-align: center;
+color: #FFF5D1;
+margin-top: 19px;
+margin-right: 62px;
+outline: none;
+
+}
+
+
+.title-s{
+margin-top: 62px;
+font-family: Fredoka One;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 48px;
+text-align: center;
+color: #FFF5D1;
+margin-left: 335px;
+}
+
+.forms-s{
+    display: flex;
+    flex-direction: column;
+    margin-top: 27px;
+    margin-left: 335px;
+    margin-bottom: 20px;
+    margin-top: 26px;
+    
+}
+
+.form-1-s, .form-2-s, .form-5-s, .form-6-s{
+    width: 548px;
+    height: 40px;
+    background: #EBE7DA;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.form-div{
+    display: flex;
+
+}
+
+.form-3-s, .form-4-s, .form-7-s, .form-8-s{
+width: 265px;
+height: 40px;
+background: #EBE7DA;
+border-radius: 10px;
+margin-bottom: 8px;
+}
+
+.form-3-s, .form-7-s{
+margin-right: 10px;
+}
+
+.picture-s{
+    width: 309px;
+    height: 407.64px;
+    border-radius: 28px;
+    margin-top: 70px;
+    margin-left: 60px;
+}
+
+.final-btn-s{
+    background: #10222E;
+    width: 548px;
+    height: 48px;
+    border: 4px solid #FFF5D1;
+box-sizing: border-box;
+border-radius: 10px;
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 33px;
+text-align: center;
+color: #FFF5D1;
+margin-left: 335px;
+margin-bottom: 30px;
+outline: none;
+}
+
+.footer-s{
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 23px;
+text-align: center;
+color: #FFF5D1;
+margin-left: 485px;
+margin-top: 20px;
+opacity: 0.6;
+}
+
+.right-p-s{
+    margin-top: 30px;
+}
+
+.blank-s{
+background: #EBE7DA;
+border-radius: 28px;
+width: 307px;
+height: 401.37px;
+z-index: 0;
+margin-top: -450px;
+margin-left: 30px ;
+}
+
+
+
+.buttons-s{
+display: flex;
+}
+
+.login-btn-s:hover{
+    opacity: 0.6;
+}
+
+.signup-btn-s:hover{
+    opacity: 0.6;
+}
+
+.final-btn-s:hover{
+    opacity: 0.6;
+}
+
+@media only screen and (max-width: 768px){
+    .picture-s{
+        display: none;
+    }
+
+    .buttons-s{
+        display: none;
+        }
+
+    .blank-s{
+        display: none;
+    }
+    
+    .logo-s{
+        display: none;
+    }
+
+    .options-s{
+        margin-left: 10px;
+    }
+
+    .right-p-s{
+        margin-left: -350px;
+    }
+
+    .form-1-s, .form-2-s, .form-5-s, .form-6-s, .form-6-s{
+        width: 80%;
+    }
+
+    .form-3-s, .form-4-s, .form-7-s,.form-8-s{
+        width: 40%;
+    }
+    
+    .final-btn-s{
+        width: max-content;
+        margin-top: -20px;
+    }
+
+    .footer-s{
+        margin-left: 370px;
+    }
+
+    
+}
