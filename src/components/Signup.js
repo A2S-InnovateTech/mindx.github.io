@@ -105,7 +105,8 @@ function Signup({history}) {
 
                 <button onClick={(e)=>handleSignUp(e)}className="final-btn-s">SignUp</button>
                 </form>
-               <Link to="/login"><span className="footer-s">Already have an account? Login Now</span></Link>
+               <Link to="/login"><span className="footer-s">Already have an account?</span></Link>
+                <Link to="/teacher/signup"><span className="footer-s">Are you a teacher? Sign Up here</span></Link>
 
                 </div>
                 </div>
