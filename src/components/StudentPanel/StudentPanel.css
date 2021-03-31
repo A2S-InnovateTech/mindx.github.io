@@ -1,8 +1,8 @@
-.header {
+.header_stPanel {
   margin: 20px auto;
 }
 
-.header .arrow {
+.header_stPanel .arrow {
   height: 46px;
   width: 46px;
   background-color: #10222E;
@@ -10,13 +10,13 @@
   text-align: center;
 }
 
-.header a img {
+.header_stPanel a img {
   height: 26px;
   width: 26px;
   margin-top: 10px;
 }
 
-.header p {
+.header_stPanel p {
   font-family: Fredoka One;
   font-style: Regular;
   font-size: 30px;
@@ -25,19 +25,19 @@
   color: #10222E;
 }
 
-.header .horizon {
+.header_stPanel .horizon {
   border-bottom: 2px solid #10222E;
   height: 0;
   margin-top: 24px;
 }
 
-.dropdown {
-  width: 100%;
+.subjects_dropdown {
+  width: 90%;
   margin-bottom: 30px;
 }
 
 .subjects_dropdown select {
-  width: 100%;
+  width: 90%;
   border: 2px solid #10222E;
   box-sizing: border-box;
   border-radius: 4px;

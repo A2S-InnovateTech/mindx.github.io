@@ -11,7 +11,7 @@ function StudentPanel({props}) {
     return (
        <div className="container">
            
-         <section className="header" style={{backgroundColor: "white"}}>
+         <section className="header_stPanel" style={{backgroundColor: "white"}}>
            <Row style={{width:"60vw", marginTop:"50px"}} className="hideOnMobile">
              <Col lg={1} md={1} sm={2} xs={2}>
                <div className="arrow">
@@ -27,7 +27,7 @@ function StudentPanel({props}) {
            </Row>
         </section>
 
-         <section className="dropdown">
+         <section className="subjects_dropdown">
             <select className="browser-default">
                 <option value="Maths" selected={props?.subject==="Maths"}>Maths</option>
                 <option value="Physics" selected={props?.subject==="Physics"}>Physics</option>
