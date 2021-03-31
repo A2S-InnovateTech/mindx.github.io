@@ -9,8 +9,8 @@ import app from '../../firebase';
 import { useHistory } from "react-router-dom";
 
 
-function Test() {
-    const [testNumber, setTestNumber] = useState(1);
+function Test({props}) {
+    const [testNumber, setTestNumber] = useState(props.testNo);
     const [questionNumber, setQuestionNumber] = useState(1);
     const [questions, setQuestions] = useState([]);
     const [score, setScore] = useState(0);
@@ -52,7 +52,10 @@ function Test() {
     }
 
     const onSubmit = () =>{
-        history.push("/results");
+        if(testNumber == 1)
+            history.push("/results", {marks: score});
+        else 
+            history.push("/results2", {marks: score});
     }
 
     return (

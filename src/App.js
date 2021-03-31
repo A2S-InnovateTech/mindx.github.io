@@ -81,8 +81,9 @@ function App() {
 
     <Router>
     <div className="OuterApp">
-      <Route path="/test" exact>
-        <Test />
+      <Route path="/test" render={(routeProps) => 
+          <Test props={routeProps.location.state}/>
+        } exact>
       </Route>
       <Route path="/login" exact>
         <Login/>
@@ -142,7 +143,7 @@ function App() {
                 
               </Route>
               <Route path="/dashboard" exact>
-                {userDetails && userDetails?.userType=="teacher"?<Redirect to="/teacher/dashboard" />:
+                {userDetails && userDetails &&userDetails?.userType=="teacher"?<Redirect to="/teacher/dashboard" />:
                   <>
                     <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                     <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
@@ -169,13 +170,19 @@ function App() {
              
                 <Teacherpopup/>
               </Route>
-              <Route path="/results" exact>
-                <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <Results/>
+              <Route path="/results" render={(routeProps) => 
+                <>
+                  <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                  <Results props={routeProps.location.state}/>
+                </>  
+                } exact>
               </Route>
-              <Route path="/results2" exact>
-                <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <Results2/>
+              <Route path="/results2" render={(routeProps) => 
+                <>
+                  <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                  <Results2 props={routeProps.location.state}/>
+                </>  
+                } exact>
               </Route>
               <Route path="/report" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
