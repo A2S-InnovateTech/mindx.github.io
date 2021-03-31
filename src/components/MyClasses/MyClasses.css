@@ -1,0 +1,173 @@
+.header {
+  margin: 20px auto;
+}
+
+.header .arrow {
+  height: 46px;
+  width: 46px;
+  background-color: #10222E;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.header a img {
+  height: 26px;
+  width: 26px;
+  margin-top: 10px;
+}
+
+.header p {
+  font-family: Fredoka One;
+  font-style: Regular;
+  font-size: 30px;
+  /* font-size: 3vw; */
+  line-height: 48px;
+  color: #10222E;
+}
+
+.header .horizon {
+  border-bottom: 2px solid #10222E;
+  height: 0;
+  margin-top: 24px;
+}
+
+.classes_dropdown .btns{
+  display: flex;
+  width: 95%;
+  height: 52px;
+  background-color: #10222E;
+}
+
+.classes_dropdown button div {
+    width: 20%;
+    text-align: left;
+    height: 100%;
+    padding-top: 10px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFF5D1;
+
+}
+
+.classes_dropdown #dropdown-split-basic{
+   width: 5%;
+   text-align: center;
+   height: 52px;
+   background-color: #10222E;
+   border: none!important;
+}
+
+
+.classes_dropdown #dropdown-split-basic img{
+  width: 100%;
+  height: 100%;
+}
+
+.classes_dropdown .table {
+  background: #EBE7DA;
+  padding-bottom: 10px;
+}
+
+.classes_dropdown .table th {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  border-right: none!important;
+  background: #313131;
+}
+
+.classes_dropdown .table td {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #10222E;
+  border-right: none!important;
+}
+
+.classes_dropdown .table td button{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #10222E;
+  border: none!important;
+  background-color: transparent;
+}
+
+.classes_dropdown .table .footer{
+  margin: auto 10px;
+}
+
+.classes_dropdown .table .footer button{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #10222E;
+  border: 3px solid #10222E;
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  padding-top: 5px;
+  height: 36px;
+}
+
+.classes_dropdown .table .footer button img {
+  margin-right: 10px;
+}
+
+.classes_dropdown .table .footer .right_btns {
+  float: right;
+  margin-top: -36px;
+}
+
+.classes_dropdown .table .footer .right_btns button{
+  float: right;
+}
+
+@media screen and (max-width: 800px) {
+  .classes_dropdown button div {
+    width: 50%;
+  }
+
+  .classes_dropdown .table .footer{
+    text-align: center;
+  }
+
+  .classes_dropdown .table .footer button{
+    margin: auto;
+  }
+
+  .classes_dropdown .table .footer .right_btns {
+    margin: auto;
+    float: right;
+    width: 100%;
+    padding-left: 20%;
+  }
+
+  .classes_dropdown .table .footer .right_btns button{
+    float: left;
+    margin: 10px;
+  }
+
+}
+
+
+
+

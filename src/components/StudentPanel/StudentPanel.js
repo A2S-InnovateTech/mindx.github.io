@@ -32,9 +32,9 @@ function StudentPanel({props}) {
                 <option value="Maths" selected={props?.subject==="Maths"}>Maths</option>
                 <option value="Physics" selected={props?.subject==="Physics"}>Physics</option>
                 <option value="Chemistry" selected={props?.subject==="Chemistry"}>Chemistry</option>
-                <option value="three" selected={props?.subject==="Computer"}>Computer</option>
-                <option value="three" selected={props?.subject==="English"}>English</option>
-                <option value="three" selected={props?.subject==="Literature"}>Literature</option>
+                <option value="Computer" selected={props?.subject==="Computer"}>Computer</option>
+                <option value="English" selected={props?.subject==="English"}>English</option>
+                <option value="Literature" selected={props?.subject==="Literature"}>Literature</option>
            </select>
          </section>
 

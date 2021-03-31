@@ -34,6 +34,8 @@ import Test from './components/Test';
 import firebase from 'firebase';
 import app from './firebase';
 import TeacherSignup from './components/TeacherSignup';
+// import Test from './components/TestScreen/Test';
+import MyClasses from './components/MyClasses/MyClasses';
 
 function App() {
   const [userDetails, setUserDetails] = useState([]);
@@ -142,6 +144,8 @@ function App() {
                 } exact>
                 
               </Route>
+              
+              <Route path="/myclasses" exact component={MyClasses} ></Route>
               <Route path="/dashboard" exact>
                 {userDetails && userDetails &&userDetails?.userType=="teacher"?<Redirect to="/teacher/dashboard" />:
                   <>
