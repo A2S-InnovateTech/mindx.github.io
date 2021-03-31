@@ -12,6 +12,7 @@ import Homepage from './components/Homepage';
 import StudentPanel from './components/StudentPanel/StudentPanel';
 import Test from './components/TestScreen/Test';
 import Dashboard from './components/TeacherDashboard/Dashboard';
+import MyClasses from './components/MyClasses/MyClasses';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/s" exact component={StudentPanel} ></Route>
           <Route path="/test" exact component={Test} ></Route>
           <Route path="/dashboard" exact component={Dashboard} ></Route>
+          <Route path="/myclasses" exact component={MyClasses} ></Route>
         </Switch>
         
       </Router>  

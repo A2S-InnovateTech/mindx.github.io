@@ -24,7 +24,7 @@ function StudentPanel() {
            </Row>
         </section>
 
-         <section className="dropdown">
+         <section className="subjects_dropdown">
             <select className="browser-default" defaultValue="Physics">
                 <option value="Physics">Physics</option>
                 <option value="one">Option one</option>
