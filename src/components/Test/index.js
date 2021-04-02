@@ -32,8 +32,6 @@ function Test({props, user, fetchUserDetails}) {
         else{
             console.log("wrong");
         }
-        if(questionNumber<=questions.length)
-        setQuestionNumber(questionNumber+1);
     }
 
     const getQuestions = () => {
