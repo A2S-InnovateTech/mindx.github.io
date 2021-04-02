@@ -8,8 +8,17 @@ import English from './english.png';
 import Literature from './literature.png';
 import {Link} from "react-router-dom";
 import app from '../../firebase';
+import Modal from 'react-modal';
+import Popup from '../popup';
 
 function Dashboard({user, userDetails, setUserDetails}) {
+    const [modalIsOpen,setIsOpen] = React.useState(false);
+    useEffect(() => {
+        console.log(userDetails.assessmentTaken);
+        if(userDetails.assessmentTaken===false){
+            setIsOpen(true);
+        }
+    }, [userDetails.assessmentTaken]);
     return (
         <div className="Dashboard">
             <div className="Dashboard__heading_row">
@@ -169,6 +178,13 @@ function Dashboard({user, userDetails, setUserDetails}) {
                     </tr>
                 </table>
             </div>
+                    <Modal
+                    isOpen={modalIsOpen}
+                    onRequestClose={()=>setIsOpen(false)}
+                    contentLabel="Example Modal"
+                    >
+                        <Popup setIsOpen={setIsOpen}/>
+                    </Modal>
         </div>
     )
 }

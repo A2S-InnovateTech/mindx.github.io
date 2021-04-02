@@ -9,7 +9,7 @@ import app from '../../firebase';
 import { useHistory } from "react-router-dom";
 
 
-function Test({props}) {
+function Test({props, user, fetchUserDetails}) {
     const [testNumber, setTestNumber] = useState(props.testNo);
     const [questionNumber, setQuestionNumber] = useState(1);
     const [questions, setQuestions] = useState([]);
@@ -52,10 +52,19 @@ function Test({props}) {
     }
 
     const onSubmit = () =>{
-        if(testNumber == 1)
+        if(testNumber == 1){
+            app.firestore().collection("users").doc(user?.uid).update("test1", score)
+            .then(()=>{fetchUserDetails();})
+            .catch(e=>console.log("Error in updating test 1 details: ", e))
             history.push("/results", {marks: score});
+        }
         else 
+        {
+            app.firestore().collection("users").doc(user?.uid).update("test2", score, "assessmentTaken", true)
+            .then(()=>{fetchUserDetails();})
+            .catch(e=>console.log("Error in updating test 2 details: ", e))
             history.push("/results2", {marks: score});
+        }
     }
 
     return (

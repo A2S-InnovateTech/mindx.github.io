@@ -8,6 +8,8 @@ import {
   Redirect,
   useHistory
 } from "react-router-dom";
+import Loader from "react-loader-spinner";
+
 
 //Page imports below
 
@@ -41,19 +43,24 @@ function App() {
   const [user, setUser] = useState(null);
   const [tookAssessment, setTookAssessment] = useState(false);
   let history = useHistory();
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchUserDetails = () => {
+    console.log("fetching...");
       app.firestore().collection("users")
       .doc(user.uid)
       .get()
       .then((snapshot) => {
         setUserDetails(snapshot.data());
         console.log("Details", userDetails);
+        setIsLoading(false);
+        console.log(isLoading);
       })
       .catch(e=>console.log(e));
   }
 
   useEffect(() => {
+    setIsLoading(true);
       if(user){
           fetchUserDetails();
       }
@@ -142,13 +149,27 @@ function App() {
                 } exact>
                 
               </Route>
-              <Route path="/dashboard" exact>
-                {userDetails && userDetails &&userDetails?.userType=="teacher"?<Redirect to="/teacher/dashboard" />:
+              <Route path="/dashboard" exact>{
+                isLoading?(
+                  <div className="LoadingScreen">
+                    <div className="LoadingText">Loading</div>
+                    <Loader
+                      type="TailSpin"
+                      color="#00BFFF"
+                      height={100}
+                      width={100}
+                      timeout={3000} //3 secs
+                    />
+                  </div>
+                )
+                  :userDetails.userType=="teacher"?<Redirect to="/teacher/dashboard" />:
                   <>
                     <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                     <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
                     <Dashboard user={user} userDetails={userDetails} setUserDetails={setUserDetails}/>
                   </>
+              }
+                {
                 }
               </Route>
             

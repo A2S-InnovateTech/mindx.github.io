@@ -54,6 +54,7 @@ function Sidebar({showSidebar, setShowSidebar, user, setUser, userDetails, fetch
                 });
                 setProgress(0);
                 setImage(null);
+                history.go(0);
         });
     };
 

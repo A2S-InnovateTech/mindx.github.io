@@ -16,3 +16,16 @@
         margin-left: 0px;
     }
   }
+
+.LoadingScreen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.LoadingText{
+    margin-bottom: 100px;
+}

@@ -41,7 +41,7 @@ function TeacherSignup({history}) {
                 userType: "teacher",
                 timestamp: firebase.firestore.FieldValue.serverTimestamp(),
             })
-            .then(()=>history.push('/'))
+            .then(()=>history.push('/teacher/dashboard'))
             .catch(e=>console.log("Error in updating details: ", e))
         }
 
