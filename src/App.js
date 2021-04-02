@@ -36,6 +36,8 @@ import Test from './components/Test';
 import firebase from 'firebase';
 import app from './firebase';
 import TeacherSignup from './components/TeacherSignup';
+// import Test from './components/TestScreen/Test';
+import MyClasses from './components/MyClasses/MyClasses';
 
 function App() {
   const [userDetails, setUserDetails] = useState([]);
