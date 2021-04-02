@@ -82,7 +82,7 @@ function App() {
     <Router>
     <div className="OuterApp">
       <Route path="/test" render={(routeProps) => 
-          <Test props={routeProps.location.state}/>
+          <Test props={routeProps.location.state} user={user} fetchUserDetails={fetchUserDetails}/>
         } exact>
       </Route>
       <Route path="/login" exact>
