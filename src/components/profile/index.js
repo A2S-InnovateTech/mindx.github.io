@@ -38,6 +38,7 @@ const Profile = () => {
     return(
         <div>
                 <div className="Dashboard__heading_row">
+                   <div className="arrowbox"> <div className="arrow"> </div></div>
                     <div className="Dashboard__title">My&nbsp;Profile</div>
                     <div className="Dashboard__line" />
                 </div>

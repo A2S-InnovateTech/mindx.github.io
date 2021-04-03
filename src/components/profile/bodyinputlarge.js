@@ -45,10 +45,10 @@ const Bodybutton = (props) => {
                 <Form.Label className="personal__title">{props.buttontitle}</Form.Label>
             </Col>
             <Col  xs={4} md={2} sm={2}>
-                <Button className="savebutton" onClick={props.savebutton} >save</Button>
+                <Button className="editbutton" onClick={props.editbutton} >Edit</Button>
             </Col>
             <Col  xs={4} md={1} sm={2}>
-                <Button className="editbutton"  onClick={props.editbutton}>Edit </Button>
+                <Button className="savebutton"  onClick={props.savebutton}>Save</Button>
             </Col>
         </Form.Row>
     );
