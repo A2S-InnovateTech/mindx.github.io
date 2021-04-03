@@ -14,6 +14,7 @@ function Test({props, user, fetchUserDetails}) {
     const [questionNumber, setQuestionNumber] = useState(1);
     const [questions, setQuestions] = useState([]);
     const [score, setScore] = useState(0);
+    const [answeredQuestions, setAnsweredQuestions] = useState([]);
     const history = useHistory();
 
     useEffect(() => {
@@ -25,6 +26,11 @@ function Test({props, user, fetchUserDetails}) {
     }, [questions])
 
     const optionSelected = (option) =>{
+        if(answeredQuestions[questionNumber]!==undefined && questions[questionNumber-1]?.correct == answeredQuestions[questionNumber]){
+            console.log("Last answer was correct");
+            setScore(score-1);
+        }
+        answeredQuestions[questionNumber]=option; 
         if(questions[questionNumber-1]?.correct == option){
             console.log("correct");
             setScore(score+1);
@@ -32,8 +38,6 @@ function Test({props, user, fetchUserDetails}) {
         else{
             console.log("wrong");
         }
-        if(questionNumber<=questions.length)
-        setQuestionNumber(questionNumber+1);
     }
 
     const getQuestions = () => {
@@ -86,21 +90,16 @@ function Test({props, user, fetchUserDetails}) {
                 <div className="Test__title">Test {testNumber}</div>
 
                 <div className="Test__questions_row">
-                    <div className="Test__question_number">1</div>
-                    <div className="Test__question_number">2</div>
-                    <div className="Test__question_number">3</div>
-                    <div className="Test__question_number">4</div>
-                    <div className="Test__question_number">5</div>
-                    <div className="Test__question_number">6</div>
-                    <div className="Test__question_number">7</div>
-                    <div className="Test__question_number">8</div>
-                    <div className="Test__question_number">9</div>
-                    <div className="Test__question_number">10</div>
-                    <div className="Test__question_number">11</div>
-                    <div className="Test__question_number">12</div>
-                    <div className="Test__question_number">13</div>
-                    <div className="Test__question_number">14</div>
-                    <div className="Test__question_number">15</div>
+                    {
+                        questions.map((item, i) => {
+                            if(i==questionNumber-1){
+                                return <div className="Test__question_number activeQuestion" key={i}>{i+1}</div>
+                            }
+                            else{
+                                return <div className="Test__question_number" key={i} onClick={()=>setQuestionNumber(i+1)}>{i+1}</div>
+                            }
+                        })
+                    }
                 </div>
 
                 <div className="Test__question_time_row">
@@ -117,25 +116,58 @@ function Test({props, user, fetchUserDetails}) {
                 <div className="Test__question_text">Q{questionNumber}. {questions[questionNumber-1]?.question} </div>
 
                 <div className="Test__options_grid">
-                    <div className="Test__option" onClick = {()=>optionSelected('a')}>
-                        <div className="Test__option_letter">A</div>
-                        <div className="Test__option_text">{questions[questionNumber-1]?.a}</div>
-                    </div>
-                    <div className="Test__option" onClick = {()=>optionSelected('b')}>
-                        <div className="Test__option_letter">B</div>
-                        <div className="Test__option_text">{questions[questionNumber-1]?.b}</div>
-                    </div>
+                    {answeredQuestions[questionNumber] === 'a'? (
+                        <div className="Test__option selectedOption" onClick = {()=>optionSelected('a')}>
+                            <div className="Test__option_letter">A</div>
+                            <div className="Test__option_text whiteText">{questions[questionNumber-1]?.a}</div>
+                        </div>
+                    )
+                    : (
+                        <div className="Test__option" onClick = {()=>optionSelected('a')}>
+                            <div className="Test__option_letter">A</div>
+                            <div className="Test__option_text">{questions[questionNumber-1]?.a}</div>
+                        </div>
+                    )}
+                    
+                    {answeredQuestions[questionNumber] === 'b'? (
+                        <div className="Test__option selectedOption" onClick = {()=>optionSelected('b')}>
+                            <div className="Test__option_letter">B</div>
+                            <div className="Test__option_text whiteText">{questions[questionNumber-1]?.b}</div>
+                        </div>
+                    )
+                    : (
+                        <div className="Test__option" onClick = {()=>optionSelected('b')}>
+                            <div className="Test__option_letter">B</div>
+                            <div className="Test__option_text">{questions[questionNumber-1]?.b}</div>
+                        </div>
+                    )}
                 </div>
                 
                 <div className="Test__options_grid">
-                    <div className="Test__option" onClick = {()=>optionSelected('c')}>
-                        <div className="Test__option_letter">C</div>
-                        <div className="Test__option_text">{questions[questionNumber-1]?.c}</div>
-                    </div>
-                    <div className="Test__option" onClick = {()=>optionSelected('d')}>
-                        <div className="Test__option_letter">D</div>
-                        <div className="Test__option_text">{questions[questionNumber-1]?.d}</div>
-                    </div>
+                    {answeredQuestions[questionNumber] === 'c'? (
+                        <div className="Test__option selectedOption" onClick = {()=>optionSelected('c')}>
+                            <div className="Test__option_letter">C</div>
+                            <div className="Test__option_text whiteText">{questions[questionNumber-1]?.c}</div>
+                        </div>
+                    )
+                    : (
+                        <div className="Test__option" onClick = {()=>optionSelected('c')}>
+                            <div className="Test__option_letter">C</div>
+                            <div className="Test__option_text">{questions[questionNumber-1]?.c}</div>
+                        </div>
+                    )}
+                    {answeredQuestions[questionNumber] === 'd'? (
+                        <div className="Test__option selectedOption" onClick = {()=>optionSelected('d')}>
+                            <div className="Test__option_letter">D</div>
+                            <div className="Test__option_text whiteText">{questions[questionNumber-1]?.d}</div>
+                        </div>
+                    )
+                    : (
+                        <div className="Test__option" onClick = {()=>optionSelected('d')}>
+                            <div className="Test__option_letter">D</div>
+                            <div className="Test__option_text">{questions[questionNumber-1]?.d}</div>
+                        </div>
+                    )}
                 </div>
 
                 <div className="Test__button_row">

@@ -19,6 +19,19 @@ function Dashboard({user, userDetails, setUserDetails}) {
             setIsOpen(true);
         }
     }, [userDetails.assessmentTaken]);
+
+    function toDateTime(secs) {
+        var t = new Date(1970, 0, 1); // Epoch
+        t.setSeconds(secs);
+        var dd = String(t.getDate()).padStart(2, '0');
+        var mm = String(t.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = t.getFullYear();
+
+        var date = dd + '/' + mm + '/' + yyyy;
+
+        return date;
+    }
+
     return (
         <div className="Dashboard">
             <div className="Dashboard__heading_row">
@@ -144,22 +157,26 @@ function Dashboard({user, userDetails, setUserDetails}) {
                         <th>Marks Obtained</th>
                         <th>Action</th>
                     </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Physics</td>
-                        <td>15/01/2021</td>
-                        <td>1 hrs</td>
-                        <td>38/50</td>
-                        <td>View</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Physics</td>
-                        <td>15/01/2021</td>
-                        <td>1 hrs</td>
-                        <td>38/50</td>
-                        <td>View</td>
-                    </tr>
+                    {userDetails.test1!==null&&(
+                        <tr>
+                            <td>1</td>
+                            <td>Assessment&nbsp;1</td>
+                            <td>{toDateTime(userDetails.timestamp.seconds)}</td>
+                            <td>10 mins</td>
+                            <td>{userDetails.test1}/15</td>
+                            <td>View</td>
+                        </tr>
+                    )}
+                    {userDetails.test1!==null&&(
+                        <tr>
+                            <td>2</td>
+                            <td>Assessment&nbsp;2</td>
+                            <td>{toDateTime(userDetails.timestamp.seconds)}</td>
+                            <td>10 mins</td>
+                            <td>{userDetails.test2}/15</td>
+                            <td>View</td>
+                        </tr>
+                    )}
                     <tr>
                         <td>1</td>
                         <td>Physics</td>

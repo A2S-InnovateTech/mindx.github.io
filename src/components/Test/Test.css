@@ -47,6 +47,10 @@
     border-radius: 4px;
 }
 
+.Test__question_number:hover{
+    cursor: pointer;
+}
+
 .Test__question_time_row{
     margin-top: 40px;
     display: flex;
@@ -189,4 +193,18 @@
     .Test__footer_text{
         display: none;
     }
+}
+
+.activeQuestion{
+    background-color: #10222E;
+    color: white;
+}
+
+.selectedOption{
+    background-color: #10222E;
+    color: white;
+}
+
+.whiteText{
+    color: white;
 }
