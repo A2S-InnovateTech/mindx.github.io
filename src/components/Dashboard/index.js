@@ -40,17 +40,7 @@ function Dashboard({user, userDetails, setUserDetails}) {
             </div>
 
             <div className="Dashboard__button_row">
-                <Link to="/assignment" style={{textDecoration:"none", color:"white"}}><div className="Dashboard__button">My Assignments</div></Link>
-                <div className="Dashboard__button">My Videos</div>
-                <div className="Dashboard__button">My Notes</div>
                 <Link to="/report" style={{textDecoration:"none", color:"white"}}><div className="Dashboard__button">My Report</div></Link>
-            </div>
-
-            <div className="Dashboard__button_row">
-                <Link to="/test" to={{
-                            pathname:"/test",
-                            state: { testNo: 1 }
-                        }} style={{textDecoration:"none", color:"white"}}><div className="Dashboard__button">Take Assessment</div></Link>
                 <div className="Dashboard__button">Time Table</div>
                 <div className="Dashboard__button">My Notices</div>
                 <div className="Dashboard__button">My Profile</div>
