@@ -172,7 +172,7 @@ function App() {
                     />
                   </div>
                 )
-                  :userDetails?.userType=="teacher"?<Redirect to="/teacher/dashboard" />:
+                  :userDetails.userType=="teacher"?<Redirect to="/teacher/dashboard" />:
                   <>
                     <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                     <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
