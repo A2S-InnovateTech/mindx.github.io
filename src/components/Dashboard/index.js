@@ -14,11 +14,11 @@ import Popup from '../popup';
 function Dashboard({user, userDetails, setUserDetails}) {
     const [modalIsOpen,setIsOpen] = React.useState(false);
     useEffect(() => {
-        console.log(userDetails.assessmentTaken);
-        if(userDetails.assessmentTaken===false){
+        console.log(userDetails?.assessmentTaken);
+        if(userDetails?.assessmentTaken===false){
             setIsOpen(true);
         }
-    }, [userDetails.assessmentTaken]);
+    }, [userDetails?.assessmentTaken]);
 
     function toDateTime(secs) {
         var t = new Date(1970, 0, 1); // Epoch
@@ -147,23 +147,23 @@ function Dashboard({user, userDetails, setUserDetails}) {
                         <th>Marks Obtained</th>
                         <th>Action</th>
                     </tr>
-                    {userDetails.test1!==null&&(
+                    {userDetails?.test1!==null&&(
                         <tr>
                             <td>1</td>
                             <td>Assessment&nbsp;1</td>
-                            <td>{toDateTime(userDetails.timestamp.seconds)}</td>
+                            <td>{toDateTime(userDetails?.timestamp.seconds)}</td>
                             <td>10 mins</td>
-                            <td>{userDetails.test1}/15</td>
+                            <td>{userDetails?.test1}/15</td>
                             <td>View</td>
                         </tr>
                     )}
-                    {userDetails.test1!==null&&(
+                    {userDetails?.test1!==null&&(
                         <tr>
                             <td>2</td>
                             <td>Assessment&nbsp;2</td>
-                            <td>{toDateTime(userDetails.timestamp.seconds)}</td>
+                            <td>{toDateTime(userDetails?.timestamp.seconds)}</td>
                             <td>10 mins</td>
-                            <td>{userDetails.test2}/15</td>
+                            <td>{userDetails?.test2}/15</td>
                             <td>View</td>
                         </tr>
                     )}

@@ -38,6 +38,7 @@ import app from './firebase';
 import TeacherSignup from './components/TeacherSignup';
 // import Test from './components/TestScreen/Test';
 import MyClasses from './components/MyClasses/MyClasses';
+import GoogleSignUpDetails from "./components/GoogleSignUpDetails";
 
 function App() {
   const [userDetails, setUserDetails] = useState([]);
@@ -55,11 +56,15 @@ function App() {
       .then((snapshot) => {
         setUserDetails(snapshot.data());
         console.log("Details", userDetails);
-        setIsLoading(false);
         console.log(isLoading);
       })
       .catch(e=>console.log(e));
   }
+
+  useEffect(() => {
+    if(userDetails!==[])
+      setIsLoading(false);
+  }, [userDetails])
 
   useEffect(() => {
     setIsLoading(true);
@@ -95,7 +100,7 @@ function App() {
         } exact>
       </Route>
       <Route path="/login" exact>
-        <Login/>
+        <Login setUser={setUser}/>
       </Route>
       <Route path="/signup" exact>
         <SignUp/>
@@ -104,7 +109,10 @@ function App() {
         <TeacherSignup/>
       </Route>
       <Route path="/" exact>
-        {user?<Redirect to="/dashboard" />:<Login/>}
+        {user?<Redirect to="/dashboard" />:<Login setUser={setUser}/>}
+      </Route>
+      <Route path="/signup-details" exact>
+        <GoogleSignUpDetails user={user} history={history}/>
       </Route>
 
       <Route 
@@ -164,7 +172,7 @@ function App() {
                     />
                   </div>
                 )
-                  :userDetails.userType=="teacher"?<Redirect to="/teacher/dashboard" />:
+                  :userDetails?.userType=="teacher"?<Redirect to="/teacher/dashboard" />:
                   <>
                     <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                     <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
@@ -179,6 +187,12 @@ function App() {
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
                 <TeacherDashboard user={user} userDetails={userDetails} setUserDetails={setUserDetails}/>
+              </Route>
+
+            <Route path="/teacher/classes" exact>
+                <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
+                <MyClasses user={user} userDetails={userDetails} setUserDetails={setUserDetails}/>
               </Route>
               
               <Route path="/profile" exact>
