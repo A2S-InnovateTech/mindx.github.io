@@ -1,0 +1,193 @@
+
+.pop{
+    
+    width: 1120px;
+    background-color:  #FFF5D1;
+}
+
+.popback{
+    background-color:  #FFF5D1;
+    border: 0px solid  #FFF5D1;
+}
+.popback-f{
+    background-color:  #FFF5D1;
+    border: 0px solid  #FFF5D1;
+    align-items: center;
+    justify-content: center;  
+}
+.title{
+    
+    left: 622px; 
+font-family: Fredoka One;
+font-style: normal;
+font-weight: bold;
+font-size: 44px;
+line-height: 53px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #10222E;
+}
+
+.p1{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+line-height: 45px;
+display: flex;
+align-items: center;
+text-align: center;
+justify-content: center;
+
+/* 1 */
+
+color: #10222E;
+}
+
+
+.buttonone{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+height: 100px;
+left: 319px;
+background: #10222E;
+border-radius: 10px;
+}
+.iconone{
+    width: 34px;
+height: 34px;
+margin-left: 15px;
+margin-right: -30px;
+
+background: url(play.png);
+}
+.icontwo{
+    width: 34px;
+height: 34px;
+left: 358px;
+top: 698px;
+margin-left: 15px;
+margin-right: -30px;
+background: url(test.png);
+}
+.buttontwo{
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;   
+width: 300px;
+height: 100px;
+left: 761px;
+
+
+/* 3 */
+
+background: #FFF5D1;
+/* 1 */
+
+border: 6px solid #10222E;
+box-sizing: border-box;
+border-radius: 10px;
+}
+.button-onetext{
+   
+    width: 247px;
+    height: 76px;
+    left: 404px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: 10px;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    /* 3 */
+    
+    color: #FFF5D1;
+    
+}
+
+
+.button-twotext{
+   
+width: 247px;
+height: 76px;
+left: 81px;
+font-size: 30px;
+margin-top: 10px;
+justify-content: center;
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+line-height: 45px;
+display: flex;
+align-items: center;
+text-align: center;
+
+/* 1 */
+
+color: #10222E;
+}
+
+@media only screen and (max-width: 1000px) {
+    .pop{
+        width: 800px;
+    }
+    .title{
+        font-size: 30px;
+line-height: 35px;
+    }
+    .p1{  
+    font-size: 22px;
+    line-height: 25px;
+    }
+    .buttonone{
+    width: 280px;
+    height: 70px;
+    left: 319px;
+    border-radius: 9px;
+    }
+    .buttontwo{
+        margin-left: 0px;
+        width: 280px;
+        height: 70px;
+        left: 319px;
+        border-radius: 9px;
+        }
+        .button-onetext{
+   
+            width: 230px;
+            height: 76px;
+            left: 404px;
+            font-size: 30px;
+            line-height: 45px;
+        }
+        .button-twotext{
+   
+            width: 230px;
+            height: 76px;
+            left: 404px;
+            font-size: 30px;
+            line-height: 45px;
+        }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .pop{
+        width: 400px;
+    }
+    .title{
+        font-size: 30px;
+line-height: 35px;
+    }
+    
+  }

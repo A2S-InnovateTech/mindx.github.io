@@ -47,6 +47,10 @@
     border-radius: 4px;
 }
 
+.Test__question_number:hover{
+    cursor: pointer;
+}
+
 .Test__question_time_row{
     margin-top: 40px;
     display: flex;
@@ -86,6 +90,15 @@
     padding: 5px 0px 5px 10px;
     border-radius: 4px;
     margin-bottom: 10px;
+}
+
+.Test__option:hover{
+    cursor: pointer;
+    background-color: #10222E;
+}
+
+.Test__option:hover .Test__option_text{
+    color: #fff;
 }
 
 .Test__option_letter{
@@ -137,6 +150,12 @@
     margin-right: 20px;
 }
 
+.Test__light_button:hover{
+    cursor: pointer;
+    background-color: #10222E;
+    color: white;
+}
+
 .dark_button{
     background-color: #10222E;
     width: 100px;
@@ -174,4 +193,18 @@
     .Test__footer_text{
         display: none;
     }
+}
+
+.activeQuestion{
+    background-color: #10222E;
+    color: white;
+}
+
+.selectedOption{
+    background-color: #10222E;
+    color: white;
+}
+
+.whiteText{
+    color: white;
 }

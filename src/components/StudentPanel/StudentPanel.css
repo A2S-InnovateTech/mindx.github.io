@@ -1,42 +1,9 @@
-.header {
-  margin: 20px auto;
-}
-
-.header .arrow {
-  height: 46px;
-  width: 46px;
-  background-color: #10222E;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.header a img {
-  height: 26px;
-  width: 26px;
-  margin-top: 10px;
-}
-
-.header p {
-  font-family: Fredoka One;
-  font-style: Regular;
-  font-size: 30px;
-  /* font-size: 3vw; */
-  line-height: 48px;
-  color: #10222E;
-}
-
-.header .horizon {
-  border-bottom: 2px solid #10222E;
-  height: 0;
-  margin-top: 24px;
-}
-
-.dropdown {
+.subjects_dropdown {
   width: 100%;
   margin-bottom: 30px;
 }
 
-.dropdown select {
+.subjects_dropdown select {
   width: 100%;
   border: 2px solid #10222E;
   box-sizing: border-box;
@@ -94,3 +61,8 @@ h3{
 }
 
 
+@media only screen and (max-width: 850px){
+  .hideOnMobile{
+    display: none !important;
+  }
+} 
