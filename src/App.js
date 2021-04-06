@@ -235,6 +235,7 @@ function App() {
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <AssignmentsT/>
+              </Route>
               <Route path="/myclasses" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
