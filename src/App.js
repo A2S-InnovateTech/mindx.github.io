@@ -154,7 +154,7 @@ function App() {
                 <>
                   <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
-                <StudentPanel props={routeProps.location.state}/>
+                <StudentPanel props={routeProps.location.state} userDetails={userDetails}/>
                 </>  
                 } exact>
                 

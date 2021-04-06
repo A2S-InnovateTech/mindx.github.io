@@ -10,9 +10,11 @@ import {Link} from "react-router-dom";
 import app from '../../firebase';
 import Modal from 'react-modal';
 import Popup from '../popup';
+import classSubject from '../../subjects';
 
 function Dashboard({user, userDetails, setUserDetails}) {
     const [modalIsOpen,setIsOpen] = React.useState(false);
+    var studentclass = userDetails.class.split(" ")[0];
     useEffect(() => {
         console.log(userDetails?.assessmentTaken);
         if(userDetails?.assessmentTaken===false){
@@ -52,84 +54,21 @@ function Dashboard({user, userDetails, setUserDetails}) {
             </div>
 
             <div className="Dashboard__button_row">
-                <Link 
-                    to={{
-                        pathname:"/s",
-                        state: { subject: 'Maths' }
-                    }} 
-                    style={{textDecoration:"none", color:"black"}}
-                >    
-                <div className="Dashboard__subject">
-                    <img src={Maths} alt="Maths" className="Dashboard__subject_img"/>
-                    <div className="Dashboard__subject_name">Maths</div>
-                    <div className="Dashboard__subject_line" />
-                </div>
-                </Link>
-                <Link 
-                    to={{
-                        pathname:"/s",
-                        state: { subject: 'Physics' }
-                    }} 
-                    style={{textDecoration:"none", color:"black"}}
-                >
-                <div className="Dashboard__subject">
-                    <img src={Physics} alt="Physics" className="Dashboard__subject_img"/>
-                    <div className="Dashboard__subject_name">Physics</div>
-                    <div className="Dashboard__subject_line" />
-                </div>
-                </Link>
-                <Link 
-                    to={{
-                        pathname:"/s",
-                        state: { subject: 'Chemistry' }
-                    }} 
-                    style={{textDecoration:"none", color:"black"}}
-                >
-                <div className="Dashboard__subject">
-                    <img src={Chemistry} alt="Chemistry" className="Dashboard__subject_img"/>
-                    <div className="Dashboard__subject_name">Chemistry</div>
-                    <div className="Dashboard__subject_line" />
-                </div>
-                </Link>
-                <Link 
-                    to={{
-                        pathname:"/s",
-                        state: { subject: 'Computer' }
-                    }} 
-                    style={{textDecoration:"none", color:"black"}}
-                >
-                <div className="Dashboard__subject">
-                    <img src={Computer} alt="Computer" className="Dashboard__subject_img"/>
-                    <div className="Dashboard__subject_name">Computer</div>
-                    <div className="Dashboard__subject_line" />
-                </div>
-                </Link>
-                <Link 
-                    to={{
-                        pathname:"/s",
-                        state: { subject: 'English' }
-                    }} 
-                    style={{textDecoration:"none", color:"black"}}
-                >
-                <div className="Dashboard__subject">
-                    <img src={English} alt="English" className="Dashboard__subject_img"/>
-                    <div className="Dashboard__subject_name">English</div>
-                    <div className="Dashboard__subject_line" />
-                </div>
-                </Link>
-                <Link 
-                    to={{
-                        pathname:"/s",
-                        state: { subject: 'Literature' }
-                    }} 
-                    style={{textDecoration:"none", color:"black"}}
-                >
-                <div className="Dashboard__subject">
-                    <img src={Literature} alt="Literature" className="Dashboard__subject_img"/>
-                    <div className="Dashboard__subject_name">Literature</div>
-                    <div className="Dashboard__subject_line" />
-                </div>
-                </Link>
+                {classSubject[studentclass].map((item, i)=>(
+                    <Link 
+                        to={{
+                            pathname:"/s",
+                            state: { subject: item }
+                        }} 
+                        style={{textDecoration:"none", color:"black"}}
+                    >
+                    <div className="Dashboard__subject">
+                        <img src={Maths} alt={item} className="Dashboard__subject_img"/>
+                        <div className="Dashboard__subject_name">{item}</div>
+                        <div className="Dashboard__subject_line" />
+                    </div>
+                    </Link>
+                ))}
             </div>
             
             <div className="Dashboard__heading_row">
