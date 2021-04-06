@@ -36,9 +36,9 @@ import Test from './components/Test';
 import firebase from 'firebase';
 import app from './firebase';
 import TeacherSignup from './components/TeacherSignup';
-// import Test from './components/TestScreen/Test';
 import MyClasses from './components/MyClasses/MyClasses';
 import GoogleSignUpDetails from "./components/GoogleSignUpDetails";
+import AssignmentsT from './AssignmentsT';
 
 function App() {
   const [userDetails, setUserDetails] = useState([]);
@@ -231,6 +231,10 @@ function App() {
                 <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
                 <Performance/>
               </Route>
+              <Route path="/assignments-teacher" exact>
+                <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <AssignmentsT/>
               <Route path="/myclasses" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
