@@ -20,8 +20,7 @@ import StudentPanel from './components/StudentPanel/StudentPanel';
 import TeacherDashboard from './components/TeacherDashboard/Dashboard';
 import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
-
-import Mobile from './components/profile/mobile';
+import Profile from './components/profile/index';
 import Popup from './components/popup/';
 import  Teacherpopup from './components/teacher/popup/index';
 import MobileHeader from './components/MobileHeader';
@@ -195,9 +194,10 @@ function App() {
                 <MyClasses user={user} userDetails={userDetails} setUserDetails={setUserDetails}/>
               </Route>
               
+              
               <Route path="/profile" exact>
               <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <Mobile/>
+                <Profile/>
               </Route>
               <Route path="/popup" exact>
              

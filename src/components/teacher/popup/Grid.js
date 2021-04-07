@@ -2,11 +2,6 @@ import React, {useState}  from 'react';
 import {  Button, Modal, Row, Col, Container} from 'react-bootstrap';
 import './tpop.css';
 
-import Dog from './dog.png'
-import Calendar from './calendar.png';
-import Presentation from './presentation.png';
-import Upload from './upload.png';
-
 const Grid =(props) => {
     return (
       <Modal 
