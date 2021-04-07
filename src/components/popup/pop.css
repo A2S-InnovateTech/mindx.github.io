@@ -33,11 +33,12 @@ color: #10222E;
     font-family: Roboto;
 font-style: normal;
 font-weight: normal;
-font-size: 30px;
+font-size: 25px;
 line-height: 45px;
 display: flex;
 align-items: center;
 text-align: center;
+justify-content: center;
 
 /* 1 */
 
@@ -59,8 +60,8 @@ border-radius: 10px;
 .iconone{
     width: 34px;
 height: 34px;
-left: 358px;
-top: 698px;
+margin-left: 15px;
+margin-right: -30px;
 
 background: url(play.png);
 }
@@ -69,7 +70,8 @@ background: url(play.png);
 height: 34px;
 left: 358px;
 top: 698px;
-
+margin-left: 15px;
+margin-right: -30px;
 background: url(test.png);
 }
 .buttontwo{
@@ -97,17 +99,17 @@ border-radius: 10px;
     width: 247px;
     height: 76px;
     left: 404px;
-   
-    
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 38px;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: 10px;
     line-height: 45px;
     display: flex;
     align-items: center;
     text-align: center;
-    
+    justify-content: center;
     /* 3 */
     
     color: #FFF5D1;
@@ -120,12 +122,12 @@ border-radius: 10px;
 width: 247px;
 height: 76px;
 left: 81px;
-
-
+font-size: 30px;
+margin-top: 10px;
+justify-content: center;
 font-family: Roboto;
 font-style: normal;
 font-weight: 500;
-font-size: 38px;
 line-height: 45px;
 display: flex;
 align-items: center;
