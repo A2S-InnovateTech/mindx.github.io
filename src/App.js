@@ -196,8 +196,8 @@ function App() {
               
               
               <Route path="/profile" exact>
-              <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <Profile/>
+                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} userDetails={userDetails}/>
+                <Profile user={user} userDetails={userDetails}/>
               </Route>
               <Route path="/popup" exact>
              

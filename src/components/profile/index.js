@@ -1,39 +1,70 @@
-import React, {useState}  from 'react';
+import React, {useState, useEffect}  from 'react';
 import Body from './body';
 import './profile.css';
-const Profile = () => {
+import firebase from 'firebase';
+import app from '../../firebase';
+import {useHistory} from 'react-router-dom';
 
+const Profile = ({userDetails, user}) => {
+   console.log(userDetails);
     const [disabled, setDisabled] = useState(true);
     const [disableds, setDisableds] = useState(true);
-    const [pname, setPname] = useState("Shivam Varshney");
-    const [paddress, setPaddress] = useState("14/110, Moti Mill Compound");
+    const [pname, setPname] = useState(user?.displayName);
+    const [paddress, setPaddress] = useState("");
     const [pemail, setPemail] = useState("shivamvarshney30@gmail.com ");
     const [pnumber, setPnumber] = useState("+91 7983872298");
     const [sname, setSname] = useState("D.S.B.M. Sr. Sec. School");
     const [saddress, setSaddress] = useState("Parao Dubey, Aligarh");
     const [semail, setSemail] = useState("dsbmabc30@gmail.com");
     const [snumber, setSnumber] = useState("+91 123456789");
+
+    let history = useHistory();
+
      const  editp = () => {
         setDisabled(false);
      }
      const savep = () => {
-        alert(  pname);
-        alert(  paddress  );
-        alert(  pemail );
-        alert(  pnumber);
+        updateUserDetails();
         setDisabled(true);
      }
      const saves = () => {
-        alert(  sname);
-        alert(  saddress  );
-        alert(  semail );
-        alert(  snumber);
+        updateUserDetails();
         setDisableds(true);
      }
      const  edits = () => {
         setDisableds(false);
         
      }
+   useEffect(() => {
+      setPname(user?.displayName);
+      setPemail(user?.email);
+   }, [user])
+
+   useEffect(() => {
+      setPaddress(userDetails.address);
+      setPnumber(userDetails.phoneNumber);
+      setSname(userDetails.school);
+      setSaddress(userDetails.schoolAddress);
+      setSnumber(userDetails.schoolNumber);
+      setSemail(userDetails.schoolEmail);
+   }, [userDetails])
+
+   const updateUserDetails = () => {
+      app.firestore().collection("users").doc(user?.uid).set(
+         {
+            address: paddress?paddress:null, 
+            phoneNumber: pnumber?pnumber:null, 
+            school: sname?sname:null, 
+            schoolAddress: saddress?saddress:null, 
+            schoolNumber: snumber?snumber:null, 
+            schoolEmail: semail?semail:null
+         },
+         {
+            merge: true
+         })
+        .then(()=>history.go(0))
+        .catch(e=>console.log("Error in updating details: ", e))
+   }
 
     return(
         <div>

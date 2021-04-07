@@ -14,7 +14,6 @@ import classSubject from '../../subjects';
 
 function Dashboard({user, userDetails, setUserDetails}) {
     const [modalIsOpen,setIsOpen] = React.useState(false);
-    var studentclass = userDetails.class.split(" ")[0];
     useEffect(() => {
         console.log(userDetails?.assessmentTaken);
         if(userDetails?.assessmentTaken===false){
@@ -45,7 +44,7 @@ function Dashboard({user, userDetails, setUserDetails}) {
                 <Link to="/report" style={{textDecoration:"none", color:"white"}}><div className="Dashboard__button">My Report</div></Link>
                 <div className="Dashboard__button">Time Table</div>
                 <div className="Dashboard__button">My Notices</div>
-                <div className="Dashboard__button">My Profile</div>
+                <Link to="/profile" style={{textDecoration:"none", color:"white"}}><div className="Dashboard__button">My Profile</div></Link>
             </div>
             
             <div className="Dashboard__heading_row">
@@ -54,13 +53,14 @@ function Dashboard({user, userDetails, setUserDetails}) {
             </div>
 
             <div className="Dashboard__button_row">
-                {classSubject[studentclass].map((item, i)=>(
+                {classSubject[userDetails.class.split(" ")[0]]?.map((item, i)=>(
                     <Link 
                         to={{
                             pathname:"/s",
                             state: { subject: item }
                         }} 
                         style={{textDecoration:"none", color:"black"}}
+                        key={i}
                     >
                     <div className="Dashboard__subject">
                         <img src={Maths} alt={item} className="Dashboard__subject_img"/>
