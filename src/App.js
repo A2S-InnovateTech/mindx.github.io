@@ -60,9 +60,25 @@ function App() {
       .catch(e=>console.log(e));
   }
 
+  const getSchoolName = (id) =>{
+    app.firestore().collection("schools").doc(id)
+    .get()
+    .then((doc) => {
+        if(doc.exists)  {
+          setUserDetails(oldUserDetails=>{
+            let oldObj = Object.assign({}, oldUserDetails);
+            oldObj.school = doc.data().name;
+            return oldObj;
+          })
+        }
+    })
+    .catch(e=>console.log(e));
+  }
+
   useEffect(() => {
-    if(userDetails!==[])
+    if(userDetails!==[] && userDetails!==undefined)
       setIsLoading(false);
+    getSchoolName(userDetails.school);
   }, [userDetails])
 
   useEffect(() => {

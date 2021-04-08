@@ -102,7 +102,7 @@ margin-left: 335px;
 
 }
 
-.form-1-s, .form-2-s, .form-5-s, .form-6-s{
+.form-1-s, .form-2-s, .form-5-s, .form-6-s, .select-search__input{
     width: 548px;
     height: 40px;
     background: #EBE7DA;
@@ -246,4 +246,22 @@ display: flex;
     }
 
     
+}
+
+.notInList{
+    color: white;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.select-search__option{
+    border-radius: 5px;
+    padding: 2px 10px 2px 10px;
+    width: 30vw;
+    min-width: 350px;
+}
+
+.select-search__input{
+    min-width: 460px;
+    width: 35.5vw;
 }

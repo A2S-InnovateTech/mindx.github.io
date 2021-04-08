@@ -29,12 +29,16 @@ function Sidebar({showSidebar, setShowSidebar, user, setUser, userDetails, fetch
         }
     }, [image])
 
-    const updateSchool = (e) =>{
-        e.preventDefault();
-        app.firestore().collection("users").doc(user?.uid).update("school", school)
-            .then(()=>{setSchoolEdit(false); fetchUserDetails();})
-            .catch(e=>console.log("Error in updating details: ", e))
-    }
+    // const updateSchool = (e) =>{
+    //     e.preventDefault();
+    //     app.firestore().collection("users").doc(user?.uid).get()
+    //         .then((doc)=>{
+    //             app.firestore().collection("schools").doc(doc.data().school).update(
+
+    //             )
+    //         })
+    //         .catch(e=>console.log("Error in updating details: ", e))
+    // }
     const updateClass = (e) =>{
         e.preventDefault();
         app.firestore().collection("users").doc(user.uid).update("class", Class)
@@ -77,7 +81,8 @@ function Sidebar({showSidebar, setShowSidebar, user, setUser, userDetails, fetch
                 </>
             }
             <p className="Sidebar__name">{user?.displayName || "Student"}</p>
-            <p className="Sidebar__school">School: {schoolEdit? <><input type="text" value={school} onChange={(e)=>setSchool(e.target.value)}/> <button onClick={(e)=>updateSchool(e)}>Set</button> </>: <>{userDetails?.school||"Not Set"} <img src={EditIcon} alt="Edit" className="Sidebar__edit" onClick={()=>setSchoolEdit(true)}/></>}</p>
+            {/* <p className="Sidebar__school">School: {schoolEdit? <><input type="text" value={school} onChange={(e)=>setSchool(e.target.value)}/> <button onClick={(e)=>updateSchool(e)}>Set</button> </>: <>{userDetails?.school||"Not Set"} <img src={EditIcon} alt="Edit" className="Sidebar__edit" onClick={()=>setSchoolEdit(true)}/></>}</p> */}
+            <p className="Sidebar__school">School: {userDetails?.school||"Not Set"}</p>            
             <p className="Sidebar__class">Class:  {classEdit? <><input type="text" value={Class} onChange={(e)=>setClass(e.target.value)}/> <button onClick={(e)=>updateClass(e)}>Set</button> </>: <>{userDetails?.class||"Not Set"} <img src={EditIcon} alt="Edit" className="Sidebar__edit" onClick={()=>setClassEdit(true)}/></>}</p>
             <p className="Sidebar__class clickable" onClick={
                 (e)=>{
@@ -112,7 +117,7 @@ function Sidebar({showSidebar, setShowSidebar, user, setUser, userDetails, fetch
                 </>
             }
             <p className="Sidebar__name">{user?.displayName || "Student"}</p>
-            <p className="Sidebar__school">School: {schoolEdit? <><input type="text" value={school} onChange={(e)=>setSchool(e.target.value)}/> <button onClick={(e)=>updateSchool(e)}>Set</button> </>: <>{userDetails?.school||"Not Set"} <img src={EditIcon} alt="Edit" className="Sidebar__edit" onClick={()=>setSchoolEdit(true)}/></>}</p>
+            <p className="Sidebar__school">School: {userDetails?.school||"Not Set"}</p>
             <p className="Sidebar__class">Class:  {classEdit? <><input type="text" value={Class} onChange={(e)=>setClass(e.target.value)}/> <button onClick={(e)=>updateClass(e)}>Set</button> </>: <>{userDetails?.class||"Not Set"} <img src={EditIcon} alt="Edit" className="Sidebar__edit" onClick={()=>setClassEdit(true)}/></>}</p>
             <p className="Sidebar__class clickable" onClick={
                 (e)=>{
