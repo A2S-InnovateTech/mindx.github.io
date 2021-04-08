@@ -38,6 +38,7 @@ import app from './firebase';
 import TeacherSignup from './components/TeacherSignup';
 // import Test from './components/TestScreen/Test';
 import MyClasses from './components/MyClasses/MyClasses';
+import Feedback from './components/Feedback';
 
 function App() {
   const [userDetails, setUserDetails] = useState([]);
@@ -90,10 +91,10 @@ function App() {
 
     <Router>
     <div className="OuterApp">
-      {/* <Route path="/test" render={(routeProps) => 
+       <Route path="/test" render={(routeProps) => 
           <Test props={routeProps.location.state} user={user} fetchUserDetails={fetchUserDetails}/>
         } exact>
-      </Route> */}
+      </Route> 
       <Route path="/login" exact>
         <Login/>
       </Route>
@@ -103,9 +104,9 @@ function App() {
       <Route path="/teacher/signup" exact>
         <TeacherSignup/>
       </Route>
-      {/* <Route path="/" exact>
+       <Route path="/" exact>
         {user?<Redirect to="/dashboard" />:<Login/>}
-      </Route> */}
+      </Route> 
 
       <Route 
         path="/logout" 
@@ -151,7 +152,7 @@ function App() {
                 } exact>
                 
               </Route>
-              {/* <Route path="/dashboard" exact>{
+               <Route path="/dashboard" exact>{
                 isLoading?(
                   <div className="LoadingScreen">
                     <div className="LoadingText">Loading</div>
@@ -173,7 +174,7 @@ function App() {
               }
                 {
                 }
-              </Route> */}
+              </Route> 
             
             <Route path="/teacher/dashboard" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>

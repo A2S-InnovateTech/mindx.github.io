@@ -1,0 +1,85 @@
+.popup-feedback{
+position: absolute;
+width: 920px;
+height: 380.86px;
+left: 280px;
+top: 231.55px;
+background: #FFF5D1;
+border-radius: 15px;
+z-index: 1;
+}
+
+.popup-title{
+font-family: Fredoka One;
+font-style: normal;
+font-weight: normal;
+font-size: 44px;
+line-height: 53px;
+display: flex;
+align-items: center;
+text-align: center;
+margin-left: 280px;
+
+}
+
+.question{
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 28px;
+line-height: 45px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #10222E;
+margin-left: 250px;
+margin-top: 20px;
+}
+
+.stars{
+    display: flex;
+    font-size: 50px;
+    margin-left: 220px;
+    margin-top: 20px;
+}
+
+.rate{
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 33px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #10222E;
+font-size: 18px;
+}
+
+.rate-1{
+    margin-left: 200px;
+}
+
+.rate-2{
+    margin-left: 170px;
+}
+
+.rate-3{
+    margin-left: 120px;
+}
+
+.feedback-btn{
+width: 175px;
+height: 56px;
+background: #FFF5D1;
+border: 6px solid #10222E;
+box-sizing: border-box;
+border-radius: 10px;
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 23px;
+line-height: 45px;
+margin-left: 350px;
+margin-top: 40px;
+}
