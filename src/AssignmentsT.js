@@ -2,15 +2,18 @@ import React from 'react';
 import Back from './images/back-icon.png';
 import "./AssignmentT.css"
 import plus from "./images/plus-icon.png";
+import {Link} from 'react-router-dom';
 
 function AssignmentsT() {
     return (
         <div>
              <div className="top-line"></div>
              <div className="head">
-            <span className="back">
-            <img className="back-icon" src={Back}></img>
-            </span>
+                <span className="back">
+                    <Link to="/teacher/dashboard" style={{textDecoration: "none"}}>
+                        <img className="back-icon" src={Back}></img>
+                    </Link>                
+                </span>
             <span className="title-a">My Assignments</span>
             <span className="line"></span>   
             </div>

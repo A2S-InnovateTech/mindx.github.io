@@ -17,7 +17,7 @@ function Dashboard() {
                 <Row>
                   {/* <Link to="/assignment" style={{textDecoration:"none", color:"white"}}><div className="Dashboard__button">My Assignments</div></Link> */}
                   <Col lg={3} md={6} sm={12}>
-                    <Link to="/my_classes">
+                    <Link to="/teacher/classes">
                       <button>My Classes</button>
                     </Link>
                   </Col>
@@ -53,8 +53,8 @@ function Dashboard() {
                     </Link> 
                   </Col>
                   <Col lg={3} md={6} sm={12}>
-                    <Link>
-                      <button to="/assignment">Assignment</button>
+                    <Link to="/teacher/assignments">
+                      <button>Assignment</button>
                     </Link>
                   </Col>
                   <Col lg={3} md={6} sm={12}>

@@ -7,6 +7,7 @@ import Statistics from '../../assets/images/statistics 1.png';
 import XLS from '../../assets/images/xls-file 1.png';
 import PDF from '../../assets/images/pdf-file 1.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Back from '../../images/back-icon.png';
 
 import { Row, Col, ButtonGroup, Button, Table } from 'react-bootstrap';
 import Dropdown from 'react-bootstrap/Dropdown'
@@ -21,9 +22,11 @@ function MyClasses() {
         <div className="container">
          
          <div className="Dashboard__heading_row">
-            <div className="arrow">
-              <Link to="/dashboard"><img src={require('../../assets/images/arrow.png').default}  alt="arrow" width="40px"/></Link>
-            </div>
+            <span className="back">
+                    <Link to="/teacher/dashboard" style={{textDecoration: "none"}}>
+                        <img className="back-icon" src={Back}></img>
+                    </Link>                
+                </span>
             <div className="Dashboard__title">My&nbsp;Classes</div>
             <div className="Dashboard__line" />
           </div>
