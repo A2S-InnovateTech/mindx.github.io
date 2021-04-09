@@ -1,5 +1,5 @@
 import React, {useState}  from 'react';
-import {  Button, Form, Col } from 'react-bootstrap';
+import { Container, Button, Form, Col } from 'react-bootstrap';
 
 import './notice.css';
 
@@ -8,19 +8,22 @@ const Noticerow = (props) => {
     
 
     return(
-        <div className="notice_rec">
+        <div className="notice_rec" >
+            <Container fluid>
             <Form.Row >
-                <Col  xs={6} md={8} sm={4} >
+                <Col  xs={9} md={8} sm={6} >
                     <Form.Label ><p className="notice_text">{props.title}</p></Form.Label>
                 </Col>
-                <Col  xs={6} md={3} sm={4}>
+                <Col  xs={5} md={3} sm={5}>
                     <Form.Label><p className="notice_text">{props.time}</p></Form.Label>
                 </Col>
                 
-                <Col  xs={6} md={1} sm={4}>
+                <Col  xs={4} md={1} sm={1}>
                     <div className="notice_icon_box"><div className="notice_icon"></div></div>
                 </Col>
             </Form.Row>
+            </Container>
+            
             
         </div>
     );
