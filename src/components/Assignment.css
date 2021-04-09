@@ -75,7 +75,7 @@ display: flex;
 
 }
 
-.t-1, .t-2, .t-3, .t-4, .t-5{
+.t-1_Assignment, .t-5_Assignment, .t-2_Assignment, .t-3, .t-4, .t-5_Assignment,.t-6{
 font-family: Roboto;
 font-style: normal;
 font-weight: 500;
@@ -83,10 +83,11 @@ font-size: 18px;
 line-height: 21px;
 text-align: center;
 color: #FFF5D1;
+width: 10vw;
 margin-top: 10px;
 }
 
-.t-2{
+.t-2_Assignment{
     margin-left: 70px;
 }
 
@@ -94,11 +95,11 @@ margin-top: 10px;
     margin-left: 130px;
 }
 
-.t-1{
+.t-1_Assignment{
     margin-left:20px;
 }
 
-.t-4, .t-5{
+.t-4, .t-5_Assignment{
     margin-left: 90px;
 }
 
@@ -120,6 +121,7 @@ font-weight: 500;
 font-size: 18px;
 line-height: 21px;
 text-align: center;
+overflow-y: scroll;
 }
 
 .first, .second, .third, .fourth, .fifth{
@@ -157,14 +159,9 @@ tr.noBorder td {
 @media only screen and (max-width: 768px){
     .table-t{
         font-size: 3vw;
-        width: 200px
     }
     .table-r{
         font-size: 3vw;
-    }
-    .t-1, .t-2, .t-3, .t-4, .t-5{
-        font-size: 3vw;
-        width: 5vw;
     }
     .table-c{
         width: 10vw;
@@ -175,20 +172,26 @@ tr.noBorder td {
         display: none;
     }
 
-    .first-1, .second-1, .third-1, .fourth-1, .fifth-1, .t-1{
+    .first-1 .second-1, .third-1, .fourth-1, .fifth-1, .t-1_Assignment{
         margin-left: 20px;
         width: 1vw;
     }
 
-    .first-2, .second-2, .third-2, .fourth-2, .fifth-2, .t-2{
+    .first-2, .second-2, .third-2, .fourth-2, .fifth-2, .t-2_Assignment{
         margin-left: 40px;
         width: 3vw;
     
     }
 
-    .first-3, .second-3, .third-3, .fourth-3, .fifth-3, .t-3{
-        margin-left: 70px;
-        width: 3vw;
+    .t-3, .t-4{
+        display: none;
+    }
+
+    .t-5_Assignment{
+        margin-left: 100px;
+    }
+    .t-6{
+        margin-left: 40px;
     }
 
     .back{
@@ -220,31 +223,9 @@ tr.noBorder td {
     table{
         /* background-color: #EBE7DA; */
         margin-left: 10px;
-        
-
-    }
-
-    .t-2{
-        margin-left: 20px;
     }
     
-    .t-3{
-        margin-left: 20px;      
-    }
 
-    .t-4{
-        margin-left: 20px;
-    }
-
-    .t-5{
-        margin-left: 60px;
-    }
-
-    
-
-    .table-t{
-        width: 352px;
-    }
 }
 tr:first-child
 {

@@ -212,6 +212,7 @@ function App() {
               
               
               <Route path="/profile" exact>
+                <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} userDetails={userDetails}/>
                 <Profile user={user} userDetails={userDetails}/>
               </Route>

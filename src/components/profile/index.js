@@ -3,7 +3,8 @@ import Body from './body';
 import './profile.css';
 import firebase from 'firebase';
 import app from '../../firebase';
-import {useHistory} from 'react-router-dom';
+import {useHistory, Link} from 'react-router-dom';
+import Back from './arrow.png';
 
 const Profile = ({userDetails, user}) => {
    console.log(userDetails);
@@ -69,7 +70,11 @@ const Profile = ({userDetails, user}) => {
     return(
         <div>
                 <div className="Dashboard__heading_row">
-                   <div className="arrowbox"> <div className="arrow"> </div></div>
+                  <Link to="/dashboard">
+                     <div className="arrow">
+                        <img src={Back}  alt="arrow" width="40px"/>
+                     </div>
+                     </Link>
                     <div className="Dashboard__title">My&nbsp;Profile</div>
                     <div className="Dashboard__line" />
                 </div>
