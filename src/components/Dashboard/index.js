@@ -81,8 +81,8 @@ function Dashboard({user, userDetails, setUserDetails}) {
                     <tr>
                         <th>S.No.</th>
                         <th>Student</th>
-                        <th>Date</th>
-                        <th>Duration</th>
+                        <th className="hide_on_mobile">Date</th>
+                        <th className="hide_on_mobile">Duration</th>
                         <th>Marks Obtained</th>
                         <th>Action</th>
                     </tr>
@@ -90,8 +90,8 @@ function Dashboard({user, userDetails, setUserDetails}) {
                         <tr>
                             <td>1</td>
                             <td>Assessment&nbsp;1</td>
-                            <td>{toDateTime(userDetails?.timestamp.seconds)}</td>
-                            <td>10 mins</td>
+                            <td className="hide_on_mobile">{toDateTime(userDetails?.timestamp.seconds)}</td>
+                            <td className="hide_on_mobile">10 mins</td>
                             <td>{userDetails?.test1}/15</td>
                             <td>View</td>
                         </tr>
@@ -100,8 +100,8 @@ function Dashboard({user, userDetails, setUserDetails}) {
                         <tr>
                             <td>2</td>
                             <td>Assessment&nbsp;2</td>
-                            <td>{toDateTime(userDetails?.timestamp.seconds)}</td>
-                            <td>10 mins</td>
+                            <td className="hide_on_mobile">{toDateTime(userDetails?.timestamp.seconds)}</td>
+                            <td className="hide_on_mobile">10 mins</td>
                             <td>{userDetails?.test2}/15</td>
                             <td>View</td>
                         </tr>
@@ -109,16 +109,16 @@ function Dashboard({user, userDetails, setUserDetails}) {
                     <tr>
                         <td>1</td>
                         <td>Physics</td>
-                        <td>15/01/2021</td>
-                        <td>1 hrs</td>
+                        <td className="hide_on_mobile">15/01/2021</td>
+                        <td className="hide_on_mobile">1 hrs</td>
                         <td>38/50</td>
                         <td>View</td>
                     </tr>
                     <tr>
                         <td>1</td>
                         <td>Physics</td>
-                        <td>15/01/2021</td>
-                        <td>1 hrs</td>
+                        <td className="hide_on_mobile">15/01/2021</td>
+                        <td className="hide_on_mobile">1 hrs</td>
                         <td>38/50</td>
                         <td>View</td>
                     </tr>
