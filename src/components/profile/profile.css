@@ -6,6 +6,9 @@
     align-items: center;
     width: 70vw;
 }
+.pad{
+    padding-right: 0px;
+}
 .arrowbox{
     margin-right: 30px;
     width: 46px;
@@ -36,9 +39,10 @@ background: url("./arrow.png");
     margin-left: 40px;
 }
 .form-body{
-    background:  #EBE7DA;
+    background-color:  #EBE7DA;
     height: 440px;
-    margin-left: 30px;  
+    margin-left: 30px; 
+    margin-right: 0px; 
 }
 .personalback{
     background-color: #10222E; 
@@ -49,7 +53,7 @@ background: url("./arrow.png");
     font-family: 'Roboto';
     font-weight: 500;
     font-size: clamp(16px, 2vw,22px); 
-    margin-left: 20px; 
+    margin-left: 10px; 
     margin-bottom: 10px;
 }
 .editbutton{
