@@ -1,9 +1,11 @@
 import React from 'react'
 import '../components/Feedback.css'
+import Close from "../images/close-icon.png";
 
 function Feedback() {
     return (
         <div className="popup-feedback">
+            <img src={Close} className="close-feedback"></img>
             <div className="popup-title">
                 User Feedback!!
             </div>

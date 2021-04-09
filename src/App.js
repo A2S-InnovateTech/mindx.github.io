@@ -218,6 +218,11 @@ function App() {
                 <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
                 <Performance/>
               </Route>
+              <Route path="/feed" exact>
+                <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
+                <Feedback/>                 {/*for testing the popup*/}
+              </Route>
           </div>
         </Switch>
       </div>

@@ -19,6 +19,7 @@ display: flex;
 align-items: center;
 text-align: center;
 margin-left: 280px;
+margin-top: 15px;
 
 }
 
@@ -82,4 +83,10 @@ font-size: 23px;
 line-height: 45px;
 margin-left: 350px;
 margin-top: 40px;
+}
+
+.close-feedback{
+    float: right;
+    margin-right: 15px;
+    margin-top: 10px;
 }
