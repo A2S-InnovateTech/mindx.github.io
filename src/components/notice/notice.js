@@ -10,12 +10,12 @@ const Noticerow = (props) => {
     return(
         <div className="notice_rec" >
             <Container fluid>
-            <Form.Row >
-                <Col  xs={9} md={8} sm={6} >
+            <Form.Row className="notice_row">
+                <Col  xs={4} md={8} sm={6} >
                     <Form.Label ><p className="notice_text">{props.title}</p></Form.Label>
                 </Col>
-                <Col  xs={5} md={3} sm={5}>
-                    <Form.Label><p className="notice_text">{props.time}</p></Form.Label>
+                <Col  xs={4} md={3} sm={5}>
+                    <Form.Label><p className="notice_texttime">{props.time}</p></Form.Label>
                 </Col>
                 
                 <Col  xs={4} md={1} sm={1}>

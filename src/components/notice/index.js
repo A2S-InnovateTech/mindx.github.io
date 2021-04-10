@@ -24,13 +24,15 @@ class Notice extends Component {
         return (
             <div>
     
-            <div className="Dashboard__heading_row">
+            <div className="notice__heading_row">
                    <div className="arrowbox"> <div className="arrow"> </div></div>
                     <div className="Dashboard__title">Notices</div>
-                    <div className="Dashboard__line" />
+                    <div className="notice__line" />
             </div>
 
-           {this.state.persons.map((item) => {
+          
+
+                {this.state.persons.map((item) => {
                 return <Noticerow title={item.title} time={item.time}/>
                 
                 })}
