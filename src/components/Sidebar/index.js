@@ -8,7 +8,7 @@ import firebase from 'firebase';
 import app from '../../firebase';
 import EditIcon from './edit.png';
 
-function Sidebar({showSidebar, setShowSidebar, user, setUser, userDetails, fetchUserDetails}) {
+function Sidebar({showSidebar, setShowSidebar, user, setUser, userDetails, fetchUserDetails, setOpenFeedback}) {
     let history = useHistory();
     const [schoolEdit, setSchoolEdit] = useState(false);
     const [classEdit, setClassEdit] = useState(false);
@@ -102,7 +102,7 @@ function Sidebar({showSidebar, setShowSidebar, user, setUser, userDetails, fetch
                 <Link to="/test" style={{textDecoration:"none", color:"white"}}><div className="Sidebar__button">Tests</div></Link>
                 <div className="Sidebar__button">Attendance</div>
                 <div className="Sidebar__button">Help</div>
-                <div className="Sidebar__button">Feedback</div>
+                <div className="Sidebar__button" onClick={()=>setOpenFeedback(true)} style={{cursor: "pointer"}}>Feedback</div>
                 <div className="Sidebar__button">Settings</div>
             </div>
         </div>
@@ -137,7 +137,7 @@ function Sidebar({showSidebar, setShowSidebar, user, setUser, userDetails, fetch
                 <Link to="/test" style={{textDecoration:"none", color:"white"}}><div className="Sidebar__button">Tests</div></Link>
                 <div className="Sidebar__button">Attendance</div>
                 <div className="Sidebar__button">Help</div>
-                <div className="Sidebar__button">Feedback</div>
+                <div className="Sidebar__button" onClick={()=>setOpenFeedback(true)}>Feedback</div>
                 <div className="Sidebar__button">Settings</div>
             </div>
 

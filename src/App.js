@@ -48,6 +48,7 @@ function App() {
   const [tookAssessment, setTookAssessment] = useState(false);
   let history = useHistory();
   const [isLoading, setIsLoading] = useState(true);
+  const [openFeedback,setOpenFeedback] = useState(false);
 
   const fetchUserDetails = () => {
     console.log("fetching...");
@@ -192,18 +193,16 @@ function App() {
                   :userDetails.userType=="teacher"?<Redirect to="/teacher/dashboard" />:
                   <>
                     <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                    <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
-                    <Dashboard user={user} userDetails={userDetails} setUserDetails={setUserDetails}/>
+                    <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser} setOpenFeedback={setOpenFeedback}/>
+                    <Dashboard user={user} userDetails={userDetails} setUserDetails={setUserDetails} openFeedback={openFeedback} setOpenFeedback={setOpenFeedback}/>
                   </>
               }
-                {
-                }
               </Route>
             
             <Route path="/teacher/dashboard" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
-                <TeacherDashboard user={user} userDetails={userDetails} setUserDetails={setUserDetails}/>
+                <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser} setOpenFeedback={setOpenFeedback}/>
+                <TeacherDashboard user={user} userDetails={userDetails} setUserDetails={setUserDetails} openFeedback={openFeedback}/>
               </Route>
 
             <Route path="/teacher/classes" exact>

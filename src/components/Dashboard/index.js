@@ -11,8 +11,9 @@ import app from '../../firebase';
 import Modal from 'react-modal';
 import Popup from '../popup';
 import classSubject from '../../subjects';
+import Feedback from '../Feedback';
 
-function Dashboard({user, userDetails, setUserDetails}) {
+function Dashboard({user, userDetails, setUserDetails, openFeedback, setOpenFeedback}) {
     const [modalIsOpen,setIsOpen] = React.useState(false);
     useEffect(() => {
         console.log(userDetails?.assessmentTaken);
@@ -131,6 +132,7 @@ function Dashboard({user, userDetails, setUserDetails}) {
                     >
                         <Popup setIsOpen={setIsOpen}/>
                     </Modal>
+                {openFeedback&&<Feedback setOpenFeedback={setOpenFeedback}/>}
         </div>
     )
 }
