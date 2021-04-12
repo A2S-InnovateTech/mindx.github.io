@@ -1,10 +1,11 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useState, useEffect } from 'react'
 import './Signup.css';
 import logo from '../images/logo.png';
 import app from '../firebase';
 import { withRouter } from "react-router";
 import {Link} from "react-router-dom";
 import firebase from 'firebase';
+import SelectSearch from 'react-select-search';
 
 function Signup({history}) {
         const [fullname, setFullName] = useState("");
@@ -15,6 +16,12 @@ function Signup({history}) {
         const [password, setPassword] = useState("");
         const [relation, setRelation] = useState("");
         const [relationNo, setRelationNo] = useState("");
+        const [schoolNames, setSchoolNames] = useState([]);
+        const [addSchoolManual, setAddSchoolManual] = useState(false);
+
+        useEffect(() => {
+            console.log(school);
+        }, [school])
 
        const handleSignUp = (e) => {
            e.preventDefault();
@@ -36,19 +43,62 @@ function Signup({history}) {
            }       
         };
 
-        const updateUserDetails = (user) => {
-            app.firestore().collection("users").doc(user.uid).set({
-                assessmentTaken: false,
-                class: Class,
-                phoneNumber: mobile,
-                relation,
-                relativeNumber: relationNo,
-                school,
-                userType: "student",
-                timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        const getSchoolDetails = () => {
+            app.firestore().collection("schools")
+            .get()
+            .then((snapshot) => {
+                snapshot.docs.map(
+                    doc => {
+                        var city = doc.data().city?", "+doc.data().city:"";
+                        var finalSchoolName = doc.data().name + city;
+                        var schoolObject = {name: finalSchoolName, value: doc.id};
+                        setSchoolNames(oldSchoolNames => [...oldSchoolNames, schoolObject]);
+                    }
+                )
             })
-            .then(()=>history.push('/'))
-            .catch(e=>console.log("Error in updating details: ", e))
+            .catch(e=>console.log(e));
+        }
+
+        useEffect(() => {
+            getSchoolDetails();
+        }, [])
+
+        const updateUserDetails = (user) => {
+
+            if(addSchoolManual){
+                app.firestore().collection("schools").add({
+                    name: school
+                })
+                .then((docRef)=>{
+                    app.firestore().collection("users").doc(user.uid).set({
+                        assessmentTaken: false,
+                        class: Class,
+                        phoneNumber: mobile,
+                        relation,
+                        relativeNumber: relationNo,
+                        school: docRef.id,
+                        userType: "student",
+                        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                    })
+                    .then(()=>history.push('/'))
+                    .catch(e=>console.log("Error in updating details: ", e))
+                })
+                .catch(e=>console.log("Error in updating school details: ", e))
+            }
+            else{
+                app.firestore().collection("users").doc(user.uid).set({
+                    assessmentTaken: false,
+                    class: Class,
+                    phoneNumber: mobile,
+                    relation,
+                    relativeNumber: relationNo,
+                    school,
+                    userType: "student",
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                })
+                .then(()=>history.push('/'))
+                .catch(e=>console.log("Error in updating details: ", e))
+            }
         }
 
 
@@ -92,7 +142,13 @@ function Signup({history}) {
                     <input className="form-3-s" type="text" placeholder="  Mobile No." value={mobile} onChange={(e)=>{setMobile(e.target.value)}} required></input>
                     <input className="form-4-s" type="text" placeholder="  Class" value={Class} onChange={(e)=>{setClass(e.target.value)}} required></input>
                     </span>
-                    <input className="form-5-s" type="text" placeholder="  School Name" value={school} onChange={(e)=>{setSchool(e.target.value)}} required></input>
+                    <form autocomplete="off">
+                    {addSchoolManual
+                        ? <input className="form-5-s" type="text" placeholder="  Enter School Name Manually" value={school} onChange={(e)=>{setSchool(e.target.value)}} required></input> 
+                        : <SelectSearch options={schoolNames} value="sv" closeOnSelect={false} name="SchoolName" placeholder="  Select School Name" search autoComplete="on" onChange={(e)=>{setSchool(e)}}/>
+                    }
+                    {!addSchoolManual && <div className="notInList" onClick={()=>setAddSchoolManual(true)}>School not in list?</div>}
+                    </form>
                     <label>
                     <input name="password" className="form-6-s" type="password" placeholder="  Password" value={password} onChange={(e)=>{setPassword(e.target.value)}} required></input>
                     </label>

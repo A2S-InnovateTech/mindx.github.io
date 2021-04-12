@@ -1,0 +1,276 @@
+.Dashboard__heading_row{
+    display: flex;
+    flex-direction: row;
+    margin: 30px 20px 20px 40px;
+    margin-left: 30px;
+    align-items: center;
+    width: 70vw;
+}
+.pad{
+    padding-right: 0px;
+}
+.arrowbox{
+    margin-right: 30px;
+    width: 46px;
+height: 46px;
+    background-color: #10222E;
+}
+.arrow{
+    margin: 10px;
+}
+.gap{
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.Dashboard__title{
+    font-family: 'Fredoka One';
+    font-size: 40px;
+    color: #10222E;
+}
+
+.Dashboard__line{
+    background-color: #10222E;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    margin-left: 40px;
+}
+.form-body{
+    background-color:  #EBE7DA;
+    height: 440px;
+    margin-left: 30px; 
+    margin-right: 0px; 
+}
+.personalback{
+    background-color: #10222E; 
+}
+.personal{
+   
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: clamp(16px, 2vw,22px); 
+    margin-left: 10px; 
+    margin-bottom: 10px;
+}
+.editbutton{
+    height: 40px;
+    float: right;
+    background-color: #10222E;
+    border: 2px solid #10222E;
+    color: white;
+    margin: 10px 10px 10px 10px;
+}
+.editbuttonrec{
+    margin-left: 10px;
+}
+.savebutton{
+    height: 40px;
+    float: right;
+    background-color: #EBE7DA;
+
+    border: 2px solid #10222E;
+    color: white;
+    color: black;
+    margin: 10px 10px 10px 10px;
+    
+}
+.personal__title{
+    font-family: 'Fredoka One';
+    font-size: 20px;
+    color: #10222E;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.forminput{
+    margin-left: 10px;
+}
+.forminput-email{
+    margin-left: 10px;
+}
+.formlabel{
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 17px;
+    margin-left: 10px;
+}
+.formlabel-email{
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 17px;
+}
+
+@media only screen and (min-width: 1000px) {
+    
+    .form-body{
+        height: 280px;  
+    }
+    .forminput{
+        max-width: 800px;
+    }
+    .forminput-email{
+       max-width: 378px;
+    }
+    .forminput-mobile{
+        max-width: 800px;
+     }
+    .formlabel-email{
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 17px;
+        margin-left: 80px;
+    }
+   
+
+}
+@media only screen and ( min-width: 300px ) and (max-width: 370px) {
+    .editbutton{
+        margin: 3px 3px 3px 3px;
+        border: 2px solid #10222E;
+    }
+    
+    .savebutton{
+        margin: 3px 3px 3px 3px;
+        border: 2px solid #10222E;
+        
+    }
+    .form-body{
+        height: 400px;
+        margin-right: 10px;  
+    }
+    .forminput{
+        min-width: 275px;
+        max-width: 350px;
+    }
+    .forminput-email{
+        margin-top: 10px;
+        min-width: 165px;
+       max-width: 350pxpx;
+       margin-left: 0px;
+    }
+    .forminput-mobile{
+        min-width: 165px;
+        max-width: 350px;
+     }
+     .formlabel-email{
+        margin-top: 10px;
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 17px;
+        margin-left: 10px;
+    }
+    .personal__title{
+        font-size: 17px;
+        margin-left: 5px;
+    }
+
+}
+@media only screen and ( min-width: 576px ) and (max-width: 670px) {
+    
+    .Dashboard__title{
+      font-size: 35px;
+    }
+    .Dashboard__line{
+        margin-left: 20px;
+    }
+    .form-body{
+        height: 270px;
+        margin-right: 10px;  
+    }
+    .forminput{
+        min-width: 350px;
+        max-width: 500px;
+    }
+    .forminput-email{
+        margin-top: 10px;
+        min-width: 165px;
+       max-width: 350pxpx;
+       margin-left: 0px;
+    }
+    .forminput-mobile{
+        min-width: 165px;
+        max-width: 350px;
+        margin-left: 10px;
+     }
+   
+
+}
+@media only screen and ( min-width: 670px ) {
+    .form-body{
+        height: 270px;
+        margin-right: 10px;  
+    }
+    .formlabel-email{
+       margin-left: 40px;
+    }
+    .forminput-email{
+        
+        min-width: 165px;
+       max-width: 350px;
+       margin-left: 0px;
+    }
+}
+
+
+
+@media only screen and (min-width: 370px)  and (max-width: 476px){
+    
+    
+    .form-body{
+        height: 400px;
+        margin-right: 10px;  
+    }
+    .forminput{
+        min-width: 275px;
+        max-width: 350px;
+    }
+    .forminput-email{
+        margin-top: 10px;
+        min-width: 165px;
+       max-width: 350px;
+       margin-left: 0px;
+    }
+    .forminput-mobile{
+        min-width: 165px;
+        max-width: 350px;
+     }
+     .formlabel-email{
+        margin-top: 10px;
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 17px;
+        margin-left: 10px;
+    }
+   
+}
+@media only screen and (min-width: 476px)  and (max-width: 576px){
+    
+    
+    .form-body{
+        height: 400px;
+        margin-right: 10px;  
+    }
+    .forminput{
+        min-width: 275px;
+        max-width: 400px;
+    }
+    .forminput-email{
+        margin-top: 10px;
+        min-width: 165px;
+       max-width: 400px;
+       margin-left: 0px;
+    }
+    .forminput-mobile{
+        min-width: 165px;
+        max-width: 350px;
+     }
+     .formlabel-email{
+        margin-top: 10px;
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 17px;
+        margin-left: 10px;
+    }
+   
+}
