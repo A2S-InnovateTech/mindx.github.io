@@ -1,0 +1,33 @@
+.dark-bg{
+    background-color: #10222E;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.vert-center-align{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.GoogleSignUp{
+    background-color: #10222E;
+    height: 100vh;
+}
+
+.GoogleSignUp__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.h1__white{
+    color: white;
+    margin-bottom: 50px;
+}

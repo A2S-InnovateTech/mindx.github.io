@@ -10,14 +10,15 @@ import { Redirect, withRouter } from 'react-router';
 import firebase from 'firebase/app';
 import {Link} from "react-router-dom";
 
-function Login({ history }) {
-
+function Login({ history, setUser }) {
+    console.log(setUser);
     const handleGoogleLogin = () => {
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth()
             .signInWithPopup(provider)
             .then((result) => {
                 var user = result.user;
+                setUser(user);
                 console.log(user);
                 updateUserDetails(user);
             }).catch((error) => {
@@ -39,7 +40,7 @@ function Login({ history }) {
                     userType: "student",
                     timestamp: firebase.firestore.FieldValue.serverTimestamp(),
                 })
-                .then(()=>history.push('/'))
+                .then(()=>history.push("/signup-details"))
                 .catch(e=>console.log("Error in updating details: ", e))
                 }
                 else{
