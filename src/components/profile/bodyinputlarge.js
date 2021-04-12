@@ -6,10 +6,10 @@ const BodyinputLarge = (props) => {
     return(
         <Form.Group >
         <Form.Row>
-        <Col  xs={9} md={2} sm={3}>
+        <Col  xs={9} md={2} sm={3} >
         <Form.Label className="formlabel">{props.label}</Form.Label>
         </Col>
-        <Col   xs={9} md={10} sm={9}>
+        <Col   xs={9} md={10} sm={9}  >
         <Form.Control  className="forminput" type="text" placeholder={props.placeholder} disabled={props.disabled} onChange={(e) => props.set(e.target.value)} />
         </Col>
         </Form.Row>
@@ -41,7 +41,7 @@ const Bodyinputsmall = (props) => {
 const Bodybutton = (props) => {
     return(
         <Form.Row>
-            <Col  xs={10} md={9} sm={8}>
+            <Col  xs={10} md={9} sm={8} >
                 <Form.Label className="personal__title">{props.buttontitle}</Form.Label>
             </Col>
             <Col  xs={4} md={2} sm={2}>

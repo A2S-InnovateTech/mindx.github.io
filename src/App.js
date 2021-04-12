@@ -22,6 +22,7 @@ import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
 import Profile from './components/profile/index';
 import Popup from './components/popup/';
+import Notice from './components/notice/index';
 import  Teacherpopup from './components/teacher/popup/index';
 import MobileHeader from './components/MobileHeader';
 import Results from './components/Results';
@@ -215,6 +216,10 @@ function App() {
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} userDetails={userDetails}/>
                 <Profile user={user} userDetails={userDetails}/>
+              </Route>
+              <Route path="/notice" exact>
+              <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Notice/>
               </Route>
               <Route path="/popup" exact>
              

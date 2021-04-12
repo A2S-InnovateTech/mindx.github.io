@@ -79,8 +79,8 @@ const Profile = ({userDetails, user}) => {
                     <div className="Dashboard__line" />
                 </div>
                   <Body
-                  heading ="personal&nbsp;Information"
-                  buttontitle = "personal&nbsp;Information"
+                  heading ="Personal&nbsp;Information"
+                  buttontitle = "Personal&nbsp;Information"
                   labelone ="Student&nbsp;Name"
                   labeltwo = "Home&nbsp;Address"
                   editbutton = {disabled}
