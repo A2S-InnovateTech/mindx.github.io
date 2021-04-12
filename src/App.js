@@ -37,6 +37,7 @@ import firebase from 'firebase';
 import app from './firebase';
 import TeacherSignup from './components/TeacherSignup';
 import MyClasses from './components/MyClasses/MyClasses';
+import Feedback from './components/Feedback';
 import GoogleSignUpDetails from "./components/GoogleSignUpDetails";
 import AssignmentsT from './AssignmentsT';
 
