@@ -100,7 +100,7 @@ height: 26px;
     color: #FFF5D1 !important;
     margin-left: 85px;
     display: inline-block;
-    margin-top: 25px;
+    margin-top: 85px;
     
 }
 
@@ -193,7 +193,7 @@ height: 26px;
     margin-top: -370px;
     z-index: 2;
     position: relative;
-    margin-right: 30px;
+    margin-right: 180px;
 }
 
 .total-p{
@@ -211,10 +211,10 @@ height: 26px;
     height: 407.64px;
     border-radius: 28px;
     margin-top: 70px;
-    margin-left: 340px;
+    margin-left: 290px;
     z-index: 3;
     position: relative;
-    margin-right: 50px;
+    margin-right: 20px;
 }
 
 .social{
@@ -225,8 +225,8 @@ font-size: 19px;
 line-height: 28px;
 text-align: center;
 color: #EBE7DA;
-margin-top: 60px;
-margin-left: 86px;
+margin-top: 50px;
+margin-left: 85px;
 }
 
 .social-icons img{
@@ -235,7 +235,7 @@ height: 28px;
 }
 
 .social-icons{
-    margin-top: 26px;
+    margin-top: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
