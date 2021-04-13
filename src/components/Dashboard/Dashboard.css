@@ -3,6 +3,11 @@
 .Dashboard{
     height: 100%;
     min-height: 100vh;
+    overflow-y: scroll;
+}
+
+.Dashboard::-webkit-scrollbar {
+    display: none;
 }
 
 .Dashboard__heading_row{

@@ -65,20 +65,29 @@ function StudentPanel({props, userDetails}) {
                 </div>
               </Col>
               <Col lg={3} md={4} sm={6} xs={12}>
-                <div className="comp">
+                <Link to="/assignment"><div className="comp">
                   <div className="image">
                     <img src={require('../../assets/images/notes.png').default}  alt="assignments"/>
                   </div>
                   <p>Assignments</p>
                 </div>
+                </Link>
               </Col>
               <Col lg={3} md={4} sm={6} xs={12}>
-                <div className="comp">
-                  <div className="image">
-                    <img src={require('../../assets/images/practise.png').default}  alt="practise"/>
+                <Link 
+                  to={{
+                    pathname:"/practice-topic",
+                    state: { subject: selectedSubject }
+                  }} 
+                  style={{textDecoration:"none", color:"black"}}
+                >
+                  <div className="comp">
+                    <div className="image">
+                      <img src={require('../../assets/images/practise.png').default}  alt="practise"/>
+                    </div>
+                    <p>Practise Now</p>
                   </div>
-                  <p>Practise Now</p>
-                </div>
+                </Link>
               </Col>
            </Row>
           

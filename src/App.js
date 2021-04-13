@@ -40,6 +40,7 @@ import MyClasses from './components/MyClasses/MyClasses';
 import Feedback from './components/Feedback';
 import GoogleSignUpDetails from "./components/GoogleSignUpDetails";
 import AssignmentsT from './AssignmentsT';
+import PracticeTestTopic from './components/PracticeTestTopic';
 
 function App() {
   const [userDetails, setUserDetails] = useState([]);
@@ -81,7 +82,7 @@ function App() {
   useEffect(() => {
     if(userDetails!==[] && userDetails!==undefined)
       setIsLoading(false);
-    getSchoolName(userDetails.school);
+    getSchoolName(userDetails?.school);
   }, [userDetails])
 
   useEffect(() => {
@@ -177,6 +178,17 @@ function App() {
                 } exact>
                 
               </Route>
+
+              <Route path="/practice-topic" render={(routeProps) => 
+                <>
+                  <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                  <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
+                  <PracticeTestTopic props={routeProps.location.state} userDetails={userDetails}/>
+                </>  
+                } exact>
+                
+              </Route>
+
               <Route path="/dashboard" exact>{
                 isLoading?(
                   <div className="LoadingScreen">

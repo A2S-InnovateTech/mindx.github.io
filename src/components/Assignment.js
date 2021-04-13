@@ -2,17 +2,22 @@ import React from 'react'
 import Sidebar from './Sidebar/index'
 import './Assignment.css'
 import Back from '../images/back-icon.png';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 
 
 function Assignment() {
+    const history = useHistory();
+    const goBack = () => {
+        history.goBack()
+    }
+
     return (
         <div className="assignment">
             <div className="top-line"></div>
             <div className="bottom-line"></div>
             <div className="head">
             <span className="back">
-            <Link to="/dashboard" style={{textDecoration:"none", color:"white"}}><img className="back-icon" src={Back}></img></Link>
+            <a onClick={goBack} style={{textDecoration:"none", color:"white", cursor: "pointer"}}><img className="back-icon" src={Back}></img></a>
             </span>
             <span className="title-a">My Assignments</span>
             <span className="line"></span>   

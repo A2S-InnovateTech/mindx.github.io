@@ -43,8 +43,7 @@ function Dashboard({user, userDetails, setUserDetails, openFeedback, setOpenFeed
 
             <div className="Dashboard__button_row">
                 <Link to="/report" style={{textDecoration:"none", color:"white"}}><div className="Dashboard__button">My Report</div></Link>
-                <div className="Dashboard__button">Time Table</div>
-                <div className="Dashboard__button">My Notices</div>
+                <Link to="/notice" style={{textDecoration:"none", color:"white"}}><div className="Dashboard__button">My Notices</div></Link>
                 <Link to="/profile" style={{textDecoration:"none", color:"white"}}><div className="Dashboard__button">My Profile</div></Link>
             </div>
             
@@ -107,22 +106,6 @@ function Dashboard({user, userDetails, setUserDetails, openFeedback, setOpenFeed
                             <td>View</td>
                         </tr>
                     )}
-                    <tr>
-                        <td>1</td>
-                        <td>Physics</td>
-                        <td className="hide_on_mobile">15/01/2021</td>
-                        <td className="hide_on_mobile">1 hrs</td>
-                        <td>38/50</td>
-                        <td>View</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Physics</td>
-                        <td className="hide_on_mobile">15/01/2021</td>
-                        <td className="hide_on_mobile">1 hrs</td>
-                        <td>38/50</td>
-                        <td>View</td>
-                    </tr>
                 </table>
             </div>
                     <Modal

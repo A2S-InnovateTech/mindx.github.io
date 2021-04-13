@@ -87,7 +87,7 @@ function Test({props, user, fetchUserDetails}) {
                     <img src={Image2} alt="Img 2"/>
                 </div> */}
 
-                <div className="Test__title">Test {testNumber}</div>
+                <div className="Test__title">{props?.subject} {props?.practice &&"Practice"} Test</div>
 
                 <div className="Test__questions_row">
                     {
@@ -104,13 +104,13 @@ function Test({props, user, fetchUserDetails}) {
 
                 <div className="Test__question_time_row">
                     <div className="Test__subtitle">Question No : {questionNumber} of {questions?.length} </div>
-                    <div className="Test__subtitle">Time Left :&nbsp;
+                    {!props.practice && <div className="Test__subtitle">Time Left :&nbsp;
                         
                                 <React.Fragment>
                                     <Timer.Minutes /> m&nbsp;
                                     <Timer.Seconds /> s
                                 </React.Fragment>
-                    </div>
+                    </div>}
                 </div>
 
                 <div className="Test__question_text">Q{questionNumber}. {questions[questionNumber-1]?.question} </div>

@@ -5,9 +5,10 @@ import './notice.css';
 
 const Noticerow = (props) => {
 
-    
+    const [bodyOpen, setBodyOpen] = useState(false);
 
     return(
+        <>
         <div className="notice_rec" >
             <Container fluid>
             <Form.Row className="notice_row">
@@ -19,13 +20,14 @@ const Noticerow = (props) => {
                 </Col>
                 
                 <Col  xs={4} md={1} sm={1}>
-                    <div className="notice_icon_box"><div className="notice_icon"></div></div>
+                    <div className="notice_icon_box" onClick={()=>setBodyOpen(!bodyOpen)}><div className="notice_icon"></div></div>
                 </Col>
             </Form.Row>
+            
             </Container>
-            
-            
         </div>
+        {bodyOpen && <div className="Notice__body">{props.body}</div>}
+        </>
     );
 }
 

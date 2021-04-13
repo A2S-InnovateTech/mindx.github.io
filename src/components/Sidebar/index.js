@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import './Sidebar.css';
 import Logo from '../../logo.png';
-import ProfilePic from './profile_pic.png';
+import ProfilePic from './profile_pic.svg';
 import Close from './close.svg';
 import {Link, useHistory} from "react-router-dom";
 import firebase from 'firebase';
@@ -97,10 +97,8 @@ function Sidebar({showSidebar, setShowSidebar, user, setUser, userDetails, fetch
             }><b>Logout</b></p>
 
             <div className="Sidebar__buttons">
-                <Link to="/dashboard" style={{textDecoration:"none", color:"white"}}><div className="Sidebar__button active">Dashboard</div></Link>
-                <div className="Sidebar__button">Timetable</div>
+                <Link to="/dashboard" style={{textDecoration:"none", color:"white"}}><div className="Sidebar__button">Dashboard</div></Link>
                 <Link to="/test" style={{textDecoration:"none", color:"white"}}><div className="Sidebar__button">Tests</div></Link>
-                <div className="Sidebar__button">Attendance</div>
                 <div className="Sidebar__button">Help</div>
                 <div className="Sidebar__button" onClick={()=>setOpenFeedback(true)} style={{cursor: "pointer"}}>Feedback</div>
                 <div className="Sidebar__button">Settings</div>
