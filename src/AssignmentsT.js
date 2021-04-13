@@ -1,10 +1,56 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Back from './images/back-icon.png';
 import "./AssignmentT.css"
 import plus from "./images/plus-icon.png";
 import {Link} from 'react-router-dom';
 
+
+
+
 function AssignmentsT() {
+
+    const [disabled_one, setDisabled_one] = useState(false);
+    const [disabled_two, setDisabled_two] = useState(false);
+    const [disabled_three, setDisabled_three] = useState(false);
+    const [inputValue_one, setInputValue_one] = React.useState("");
+    const [inputValue_two, setInputValue_two] = React.useState("");
+    const [inputValue_three, setInputValue_three] = React.useState("");
+
+    const onChangeHandler_one = event => {
+        setInputValue_one(event.target.value);
+    };
+
+     const onChangeHandler_two = event => {
+        setInputValue_two(event.target.value);
+    };
+
+    const onChangeHandler_three = event => {
+       setInputValue_three(event.target.value);
+    };
+
+
+    const handleKeypress_one = e => {
+        var code = e.keyCode || e.which;
+        if(code === 13) {
+            setDisabled_one(true);
+        } 
+    };
+
+    const handleKeypress_two = e => {
+        var code = e.keyCode || e.which;
+        if(code === 13) {
+            setDisabled_two(true);
+        } 
+    };
+
+    const handleKeypress_three = e => {
+        var code = e.keyCode || e.which;
+        if(code === 13) {
+            setDisabled_three(true);
+        } 
+    };
+   
+  
     return (
         <div>
              <div className="top-line"></div>
@@ -28,6 +74,7 @@ function AssignmentsT() {
                        <td>Class</td>
                        <td>Submissions</td>
                        <td>Status</td>
+                       <td>Grade</td>
                    </tr>
 
                    <tr class="noBorder">
@@ -36,6 +83,14 @@ function AssignmentsT() {
                        <td>11th A</td>
                        <td>43/50</td>
                        <td>View</td>
+                       <td className="grade_input"><input
+                            type="text"
+                            name="name"
+                            onChange={onChangeHandler_one}
+                            onKeyPress={handleKeypress_one}
+                            value={inputValue_one}
+                            disabled={disabled_one}
+                        /></td>
                    </tr>
 
                    <tr class="noBorder">
@@ -44,6 +99,14 @@ function AssignmentsT() {
                        <td>11th B</td>
                        <td>23/50</td>
                        <td>View</td>
+                       <td className="grade_input"><input
+                            type="text"
+                            name="name"
+                            onChange={onChangeHandler_two}
+                            onKeyPress={handleKeypress_two}
+                            value={inputValue_two}
+                            disabled={disabled_two}
+                       /></td>
                    </tr>
                    
                    <tr class="noBorder">
@@ -52,6 +115,14 @@ function AssignmentsT() {
                        <td>12th B</td>
                        <td>34/50</td>
                        <td>View</td>
+                       <td className="grade_input"><input
+                            type="text"
+                            name="name"
+                            onChange={onChangeHandler_three}
+                            onKeyPress={handleKeypress_three}
+                            value={inputValue_three}
+                            disabled={disabled_three}
+                        /></td>
                    </tr>
 
                    </table>
