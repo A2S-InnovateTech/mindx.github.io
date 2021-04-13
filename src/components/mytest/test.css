@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&display=swap');
+
+.top-line{
+    background: #10222E;
+    position: absolute;
+    top: 0;
+    height: 10px;
+    width: 80vw;
+}
+
+.assignment{
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-line{
+    background: #10222E;
+    position: absolute;
+    bottom: 0;
+    height: 10px;
+    width: 80vw;
+}
+
+.back{
+width: 46px;
+height: 46px;
+background: #10222E;
+border-radius: 4px;
+align-items: center;
+}
+
+.back-icon{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.head{
+    display: flex;
+    margin-top: 33px;
+    margin-left: 20px;
+}
+
+.title-a{
+font-family: Fredoka One;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 48px;
+text-align: center;
+color: #10222E;
+margin-left: 20px;
+}
+
+.line{
+width: 519px;
+height: 4px;
+background: #10222E;
+border-radius: 10px;
+margin-top: 24px;
+margin-left: 20px;
+}
+
+.table-t{
+width: 924px;
+height: 46px;
+background: #10222E;
+border-radius: 5px 5px 0px 0px;
+margin-left: 20px;
+margin-top: 20px;
+display: flex;
+
+}
+
+.t-1_Assignment, .t-5_Assignment, .t-2_Assignment, .t-3, .t-4, .t-5_Assignment,.t-6{
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+text-align: center;
+color: #FFF5D1;
+width: 10vw;
+margin-top: 10px;
+}
+
+.t-2_Assignment{
+    margin-left: 70px;
+}
+
+.t-3{
+    margin-left: 130px;
+}
+
+.t-1_Assignment{
+    margin-left:20px;
+}
+
+.t-4{
+    margin-left: 90px;
+}
+.t-5_Assignment{
+    margin-left: 50px;
+    margin-right: 40px;
+}
+.t-6{
+    margin-right: 40px;
+}
+
+.table-r{
+    display: flex;
+}
+
+.table-c{
+width: 910px;
+height: 421px;
+background: #EBE7DA;
+border-radius: 5px;
+margin-left: 20px;
+display: flex;
+flex-direction: column;
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+text-align: center;
+overflow-y: scroll;
+}
+
+.first, .second, .third, .fourth, .fifth{
+    display: flex;
+    margin-top: 30px;
+}
+
+.table-line{
+width: 14px;
+height: 360px;
+background: #10222E;
+margin-top: 5px;
+}
+
+
+.footer-a{
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 21px;
+text-align: center;
+margin-top:45px;
+}
+
+table{
+    margin-left: 20px;
+    
+}
+tr.noBorder td {
+    border-style: hidden;
+  }
+
+
+@media only screen and (max-width: 768px){
+    .table-t{
+        font-size: 3vw;
+        width: 90vw;
+    }
+    .table-r{
+        font-size: 3vw;
+    }
+    .table-c{
+        width: 10vw;
+        font-size: 3vw;
+    }
+
+    .bottom-line{
+        display: none;
+    }
+
+    .first-1 .second-1, .third-1, .fourth-1, .fifth-1, .t-1_Assignment{
+        margin-left: 20px;
+        width: 1vw;
+    }
+
+    .first-2, .second-2, .third-2, .fourth-2, .fifth-2, .t-2_Assignment{
+        margin-left: 40px;
+        width: 3vw;
+    
+    }
+
+    .t-3, .t-4{
+        display: none;
+    }
+
+    .t-5_Assignment{
+        margin-left: 100px;
+    }
+    .t-6{
+        margin-left: 40px;
+    }
+
+    .back{
+        height: 30px;
+        width: 30px;
+        margin-top: 10px;
+    }
+
+    .back-icon{
+        height: 15px;
+        width: 15px;
+        margin-top: 5px;
+    }
+
+    .table-c{
+        height: 50vh;
+        width: 90vw;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .footer-a{
+        display: none;
+    }
+
+    .table-line{
+        display: none;
+    }
+
+    table{
+        /* background-color: #EBE7DA; */
+        margin-left: 10px;
+    }
+    
+
+}
+tr:first-child
+{
+    counter-reset: Serial;           /* Set the Serial counter to 0 */
+}
+
+.autoSerial .serial:nth-child(1):before
+{
+  counter-increment: Serial;      /* Increment the Serial counter */
+  content: counter(Serial); /* Display the counter */
+}

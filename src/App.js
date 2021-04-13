@@ -22,6 +22,7 @@ import  Teacherpopup from './components/teacher/popup/index';
 import MobileHeader from './components/MobileHeader';
 import Results from './components/Results';
 import Results2 from './components/Results2';
+import Test from './components/mytest/mytest';
 
 
 function App() {
@@ -54,6 +55,10 @@ function App() {
               <Route path="/notice" exact>
               <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Notice/>
+              </Route>
+              <Route path="/mytest" exact>
+              <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Test/>
               </Route>
               <Route path="/popup" exact>
              
