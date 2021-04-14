@@ -87,7 +87,7 @@ function Dashboard() {
                     <div className="T_Dashboard__subject_3">15/01/2021</div>
                     <div className="T_Dashboard__subject_4">1 hrs</div>
                     <div className="T_Dashboard__subject_5">12th A</div>
-                    <div className="T_Dashboard__subject_5">View</div>
+                    <div className="T_Dashboard__subject_6">View</div>
                 </div>
                <div className="T_Dashboard__subject_body">
                     <div className="T_Dashboard__subject_1">2</div>
@@ -95,7 +95,7 @@ function Dashboard() {
                     <div className="T_Dashboard__subject_3">15/01/2021</div>
                     <div className="T_Dashboard__subject_4">1 hrs</div>
                     <div className="T_Dashboard__subject_5">12th A</div>
-                    <div className="T_Dashboard__subject_5">View</div>
+                    <div className="T_Dashboard__subject_6">View</div>
                 </div>
                 <div className="T_Dashboard__subject_body">
                     <div className="T_Dashboard__subject_1">3</div>
@@ -103,7 +103,7 @@ function Dashboard() {
                     <div className="T_Dashboard__subject_3">15/01/2021</div>
                     <div className="T_Dashboard__subject_4">1 hrs</div>
                     <div className="T_Dashboard__subject_5">12th A</div>
-                    <div className="T_Dashboard__subject_5">View</div>
+                    <div className="T_Dashboard__subject_6">View</div>
                 </div>
                 <div className="T_Dashboard__subject_body">
                     <div className="T_Dashboard__subject_1">4</div>
@@ -111,7 +111,7 @@ function Dashboard() {
                     <div className="T_Dashboard__subject_3">15/01/2021</div>
                     <div className="T_Dashboard__subject_4">1 hrs</div>
                     <div className="T_Dashboard__subject_5">12th A</div>
-                    <div className="T_Dashboard__subject_5">View</div>
+                    <div className="T_Dashboard__subject_6">View</div>
                 </div>
                <div className="T_Dashboard__subject_footer">
                   <div className="T_Dashboard__Button_row">
