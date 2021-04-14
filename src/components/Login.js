@@ -113,8 +113,8 @@ function Login({ history }) {
             </div>
             <div className="right-p">
             <img className="picture" src="https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"></img>
-            {/* <img className="line-1" src={line1}></img>
-            <img className="line-2" src={line2}></img> */}
+             {/* <img className="line-1" src={line1}></img>
+            <img className="line-2" src={line2}></img>  */}
             <div className="blank"></div>
             </div>
             </div>

@@ -208,12 +208,33 @@ display: flex;
         display: none;
     }
 
+    .title-s{
+        margin-top: -20px;
+    }
+
+    .navbar-s{
+        display: none;
+        height: 0px;
+    }
+
     .buttons-s{
         display: none;
         }
 
     .blank-s{
         display: none;
+    }
+
+    .option-1-s{
+    display: none;
+    }
+
+    .option-2-s{
+     display: none;
+    }
+
+    .option-3-s{
+     display: none;
     }
     
     .logo-s{
@@ -222,6 +243,7 @@ display: flex;
 
     .options-s{
         margin-left: 10px;
+        display: none;
     }
 
     .right-p-s{
