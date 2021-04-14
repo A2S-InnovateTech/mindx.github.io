@@ -163,10 +163,11 @@ tr.noBorder td {
   }
 
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px)  {
     .table-t{
-        font-size: 3vw;
+        font-size: 2vw;
         width: 90vw;
+        height: fit-content;
     }
     .table-r{
         font-size: 3vw;
@@ -181,26 +182,60 @@ tr.noBorder td {
         display: none;
     }
 
-    .first-1 .second-1, .third-1, .fourth-1, .fifth-1, .t-1_Assignment{
+    .first-1 .second-1, .third-1, .fourth-1, .fifth-1{
         margin-left: 20px;
         width: 1vw;
     }
 
-    .first-2, .second-2, .third-2, .fourth-2, .fifth-2, .t-2_Assignment{
+    .first-2, .second-2, .third-2, .fourth-2, .fifth-2{
         margin-left: 40px;
         width: 3vw;
     
     }
-
-    .t-3, .t-4{
-        display: none;
+    .t-1_Assignment{
+        font-size: 3.1vw;
+        margin-left: 1vw;
+        padding-left: 2vw;
+        width: fit-content;
+        padding-bottom: 5px;
+        margin-top: 5px;
     }
-
+    .t-2_Assignment{
+        font-size: 3.1vw;
+        margin-left: 2vw;
+        padding-left: 4vw;
+        width: fit-content;
+    }
+    .t-3{
+        font-size: 3.1vw;
+        margin-left: 6vw;
+        padding-left: 4vw;
+        width: fit-content;
+    }
+    
+    .t-4{
+        font-size: 3.1vw;
+        margin-left: 3vw;
+        padding-left: 6vw;
+        width: fit-content;
+    }
+   
     .t-5_Assignment{
-        margin-left: 100px;
+        font-size: 3.1vw;
+        margin-left: 1vw;
+        padding-left: 2vw;
+        width: fit-content;
+        padding-bottom: 5px;
+        margin-top: 5px;
+        margin-right: 1px;
+        
     }
     .t-6{
-        margin-left: 40px;
+        font-size: 3.1vw;
+        margin-left: 1vw;
+        padding-left: 2vw;
+        width: fit-content;
+        margin-right: 5px;
     }
 
     .back{
@@ -236,6 +271,10 @@ tr.noBorder td {
     
 
 }
+
+
+
+
 tr:first-child
 {
     counter-reset: Serial;           /* Set the Serial counter to 0 */
@@ -246,3 +285,4 @@ tr:first-child
   counter-increment: Serial;      /* Increment the Serial counter */
   content: counter(Serial); /* Display the counter */
 }
+

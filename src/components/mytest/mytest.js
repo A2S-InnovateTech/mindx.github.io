@@ -37,7 +37,7 @@ class  Test extends Component {
                     <span className="t-2_Assignment">Subject</span>
                     <span className="t-3">Date</span>
                     <span className="t-4">Duration</span>
-                    <span className="t-5_Assignment">Marks&nbsp;obtained</span>
+                    <span className="t-5_Assignment">Marks obtained</span>
                     <span className="t-6">Action</span>
                 </span>
                 <div className="table-r">
