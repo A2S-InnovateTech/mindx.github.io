@@ -52,10 +52,12 @@
 
 .one {
   margin-top: 50px;
+  text-align: center;
 }
 
 .two {
    margin-top: 50px;
+   text-align: center;
 }
 
 .mySubject {
@@ -113,53 +115,139 @@
   text-align: center;
 }
 
-.testsHistory {
-  background: #EBE7DA;
-  border-radius: 10px;
-  padding-bottom: 10px;
+
+
+
+
+.T_Dashboard__body{
+    background-color: #EBE7DA;
+    /* min-width: 470px; */
+    width: 70.15vw;
+    margin-left: 2.5vw;
+    display: flex;
+    flex-direction: column;
 }
 
-.testsHistory table {
-  width: 100%;
+.T_Dashboard__subject_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 40px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    border-bottom: 1px solid #000000 !important;
 }
 
-.testsHistory th, td {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  color: #10222E;
-  border-right: 1px solid #000000;
+.T_Dashboard__subject_1{
+    flex-basis: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
-.testsHistory th{
-  border-bottom: 1px solid #000000 !important;
+.T_Dashboard__subject_2{
+    flex-basis: 20%;
 }
 
-.testsHistory .btns {
-  width: fit-content;
-  margin: auto;
+.T_Dashboard__subject_3{
+    flex-basis: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.T_Dashboard__subject_4{
+    flex-basis: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.T_Dashboard__subject_5{
+    flex-basis: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
-.testsHistory .btns button{
-  margin: 10px;
-  height: 46px;
-  width: 150px;
-  border: 3px solid #10222E;
-  box-sizing: border-box;
-  border-radius: 4px;
+.T_Dashboard__subject_6{
+    flex-basis: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 23px;
-  text-align: center;
+.T_Dashboard__subject_body{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 40px;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
 
-  color: #FFF5D1;
-  background-color: #10222E;
+.T_Dashboard__subject_footer{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    justify-content: center;
+}
+
+.T_Dashboard__Button_row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.T_Dashboard__Button{
+    width: 150px;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 4px;
+    border: 3px solid #10222E;
+    font-family: 'Roboto';
+    font-weight: 500;
+    margin-right: 20px;
+    background-color: #10222E;
+    color: #FFF5D1;
+    margin-top: 5px;
+}
+
+
+
+@media only screen and (max-width: 600px) 
+{
+
+
+
+  .hrline {
+    display: none;
+  }
+
+  .two button {
+    margin-top: 10px;
+  }
+
+  .mySubject {
+    text-align: center;
+  }
+
+  .physics {
+    margin: auto;
+  }
+
+  .T_Dashboard__body{
+      width: 95vw;
+      margin-left: 0;
+  }
+
+ 
 }
 
 

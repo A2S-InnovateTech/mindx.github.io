@@ -3,9 +3,10 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Row, Col, Table } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 function Dashboard() {
+  
     return (
         <div className="container">
             <section className="one">
@@ -21,15 +22,16 @@ function Dashboard() {
                       <button>My Classes</button>
                     </Link>
                   </Col>
-                  <Col lg={3} md={6} sm={12}>
+                  <Col lg={3} md={6} sm={12} xs={12}>
                     <button>Time Table</button>
                   </Col>
-                  <Col lg={3} md={6} sm={12}>
+                  <Col lg={3} md={6} sm={12} xs={12}>
                     <button>Notices</button>
                   </Col>
-                  <Col lg={3} md={6} sm={12}>
+                  <Col lg={3} md={6} sm={12} xs={12}>
                     <button>My Profile</button>
                   </Col>
+                
                 </Row>
               </div>
             </section>
@@ -38,6 +40,7 @@ function Dashboard() {
                 <Col lg={4} md={5} sm={12} ><h3 className="TeacherDashboard__title">My Subjects</h3></Col>
                 <Col lg={8} md={7}><div className="hrline"></div></Col>
               </Row>
+            
               <div className="mySubject">
                 <Row>
                   <Col lg={3} md={6} sm={12}>
@@ -68,57 +71,63 @@ function Dashboard() {
                 <Col lg={4} md={5} sm={12}><h3 className="TeacherDashboard__title">Tests History</h3></Col>
                 <Col lg={8} md={7}><div className="hrline"></div></Col>
               </Row>
-              <div className="testsHistory">
-            
-
-                 <Table responsive="sm">
-                  <thead>
-                    <tr>
-                      <th>S.No.</th>
-                      <th>Name</th>
-                      <th>Date</th>
-                      <th>Duration</th>
-                      <th>Class Name</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Chapter 1</td>
-                      <td>15/01/2021</td>
-                      <td>1 hrs</td>
-                      <td>12th A</td>
-                      <td>View</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Chapter 2</td>
-                      <td>14/01/2021</td>
-                      <td>1 hrs</td>
-                      <td>12th A</td>
-                      <td>View</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Chapter 3</td>
-                      <td>13/01/2021</td>
-                      <td>1 hrs</td>
-                      <td>12th A</td>
-                      <td>View</td>
-                    </tr>
-                  </tbody>
-                </Table>
-
-                 
-              
-                <div className="btns">
-                  <button>Download</button>
-                  <button>View More</button>
+             
+              <div className="T_Dashboard__body">
+                <div className="T_Dashboard__subject_header">
+                    <div className="T_Dashboard__subject_1">S No.</div>
+                    <div className="T_Dashboard__subject_2">Name</div>
+                    <div className="T_Dashboard__subject_3">Date</div>
+                    <div className="T_Dashboard__subject_4">Duration</div>
+                    <div className="T_Dashboard__subject_5">Class Name</div>
+                    <div className="T_Dashboard__subject_6">Action</div>
                 </div>
+                <div className="T_Dashboard__subject_body">
+                    <div className="T_Dashboard__subject_1">1</div>
+                    <div className="T_Dashboard__subject_2">Chapter 1</div>
+                    <div className="T_Dashboard__subject_3">15/01/2021</div>
+                    <div className="T_Dashboard__subject_4">1 hrs</div>
+                    <div className="T_Dashboard__subject_5">12th A</div>
+                    <div className="T_Dashboard__subject_5">View</div>
+                </div>
+               <div className="T_Dashboard__subject_body">
+                    <div className="T_Dashboard__subject_1">2</div>
+                    <div className="T_Dashboard__subject_2">Chapter 1</div>
+                    <div className="T_Dashboard__subject_3">15/01/2021</div>
+                    <div className="T_Dashboard__subject_4">1 hrs</div>
+                    <div className="T_Dashboard__subject_5">12th A</div>
+                    <div className="T_Dashboard__subject_5">View</div>
+                </div>
+                <div className="T_Dashboard__subject_body">
+                    <div className="T_Dashboard__subject_1">3</div>
+                    <div className="T_Dashboard__subject_2">Chapter 1</div>
+                    <div className="T_Dashboard__subject_3">15/01/2021</div>
+                    <div className="T_Dashboard__subject_4">1 hrs</div>
+                    <div className="T_Dashboard__subject_5">12th A</div>
+                    <div className="T_Dashboard__subject_5">View</div>
+                </div>
+                <div className="T_Dashboard__subject_body">
+                    <div className="T_Dashboard__subject_1">4</div>
+                    <div className="T_Dashboard__subject_2">Chapter 1</div>
+                    <div className="T_Dashboard__subject_3">15/01/2021</div>
+                    <div className="T_Dashboard__subject_4">1 hrs</div>
+                    <div className="T_Dashboard__subject_5">12th A</div>
+                    <div className="T_Dashboard__subject_5">View</div>
+                </div>
+               <div className="T_Dashboard__subject_footer">
+                  <div className="T_Dashboard__Button_row">
+                        <div className="T_Dashboard__Button">
+                            Download 
+                        </div>
 
-              </div> 
+                        <div className="T_Dashboard__Button">
+                           View More
+                        </div>
+                   </div>
+                </div>
+               
+                    
+               
+            </div> 
               
             </section>
         </div>
