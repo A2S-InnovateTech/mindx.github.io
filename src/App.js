@@ -60,6 +60,7 @@ function App() {
               <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Test/>
               </Route>
+              <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
               <Route path="/popup" exact>
              
                 <Popup/>

@@ -9,10 +9,10 @@ const Teacherpopup = () =>  {
   
     return (
       <>
-        <Button variant="primary" onClick={() => setModalShow(true)}>
+       {/* <Button variant="primary" onClick={() => setModalShow(true)}>
           teacher panel popup
         </Button>
-  
+    */}
         <Grid show={modalShow} onHide={() => setModalShow(false) } />
       </>
     );

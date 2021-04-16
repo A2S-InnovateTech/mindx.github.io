@@ -36,7 +36,7 @@ const Profile = () => {
      }
 
     return(
-        <div>
+        <div className="teacher_popup_body">
                 <div className="Dashboard__heading_row">
                    <div className="arrowbox"> <div className="arrow"> </div></div>
                     <div className="Dashboard__title">My&nbsp;Profile</div>
