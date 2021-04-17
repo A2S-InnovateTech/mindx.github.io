@@ -345,16 +345,52 @@ margin-top: 3vh;
         margin-top: 20px;
     }
 
+    .login__dots_1{
+        position: absolute;
+        right: 33vw;
+        top: 17vh;
+        display: none;
+    }
+    
+    .login__dots_2{
+        position: absolute;
+        right: 10vw;
+        bottom: 3vh;
+        display: none;
+    }
+    
+    .line-1, .line-2{
+        display: none;
+    }
+    
+    .option-1, .option-2, .option-3{
+        display: none;
+    }
+    
+    .login__title{
+        margin-left: 80px;
+        margin-top: 0px;
+    }
+    
+    .form-1,.form-2{
+        margin-left: 120px;
+    }
+    
+    .final-btn{
+        width: 180px;
+        margin-left: 140px;
+    }
+    
+    .signup-l{
+        margin-left: 150px;
+    }
+    
+    .social{
+        margin-left: 150px;
+    }
+
 }
 
-.login__dots_1{
-    position: absolute;
-    right: 33vw;
-    top: 17vh;
-}
-
-.login__dots_2{
-    position: absolute;
-    right: 10vw;
-    bottom: 3vh;
+::placeholder{
+    line-height: 2;
 }

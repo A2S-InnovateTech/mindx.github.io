@@ -5,7 +5,7 @@ import app from '../firebase';
 import { withRouter } from "react-router";
 import {Link} from "react-router-dom";
 import firebase from 'firebase';
-import SelectSearch from 'react-select-search';
+// import SelectSearch from 'react-select-search';
 import image from '../images/signup_image.png';
 import dots from '../images/login_background_dots.png';
 import line1 from '../images/signup__line_1.png'
@@ -151,10 +151,10 @@ function Signup({history}) {
                     <input className="signup__form-1-s" type="text" placeholder="  Class" value={Class} onChange={(e)=>{setClass(e.target.value)}} required></input>
                     </span>
                     <form autocomplete="off">
-                    {addSchoolManual
+                    {/* {addSchoolManual
                         ? <input className="signup__form-s" type="text" placeholder="  Enter School Name Manually" value={school} onChange={(e)=>{setSchool(e.target.value)}} required></input> 
                         : <SelectSearch options={schoolNames} value="sv" closeOnSelect={false} name="SchoolName" placeholder="  Select School Name" search autoComplete="on" onChange={(e)=>{setSchool(e)}}/>
-                    }
+                    } */}
                     {!addSchoolManual && <div className="notInList" onClick={()=>setAddSchoolManual(true)}>School not in list?</div>}
                     </form>
                     <label>

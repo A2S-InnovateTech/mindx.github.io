@@ -119,6 +119,7 @@ function App() {
         } exact>
       </Route>
       <Route path="/login" exact>
+      <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
         <Login setUser={setUser}/>
       </Route>
       <Route path="/signup" exact>
@@ -128,7 +129,7 @@ function App() {
         <TeacherSignup/>
       </Route>
       <Route path="/" exact>
-        {user?<Redirect to="/dashboard" />:<Login setUser={setUser}/>}
+        {user?<Redirect to="/dashboard" />:<Redirect to="/login" />}
       </Route>
       <Route path="/signup-details" exact>
         <GoogleSignUpDetails user={user} history={history}/>
