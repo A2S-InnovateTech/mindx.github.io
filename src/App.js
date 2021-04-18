@@ -233,11 +233,10 @@ function App() {
               <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Notice/>
               </Route>
-//               <Route path="/mytest" exact>
-//               <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-//                 <Test/>
-//               </Route>
-              <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+               <Route path="/mytest" exact>
+               <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                 <Test/>
+               </Route>
               <Route path="/popup" exact>
              
                 <Popup/>
