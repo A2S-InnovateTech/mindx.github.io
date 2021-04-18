@@ -171,7 +171,7 @@ text-align: center;
 color: #FFF5D1;
 margin-top: 20px;
 opacity: 0.6;
-margin-left: 60vw;
+margin-left: 67vw;
 }
 
 .right-p-s{
@@ -191,6 +191,9 @@ left: 10vw;
 top: 20vh;
 }
 
+.signup__form-1-s{
+    margin-left: 10px;
+}
 
 
 .buttons-s{
@@ -251,7 +254,59 @@ display: flex;
         margin-left: 370px;
     }
 
+    .option-1-s,.option-2-s,.option-3-s{
+        display: none;
+    }
+
+    .signup__title-s{
+        margin-left: 77vw;
+    }
+
+    .signup__form-s{
+        margin-left: 105px;
+    }
+
+    .signup__form-1-s{
+        width:165px;
+        margin-left: 5px;
+    }
+
+    .signup__final-btn-s{
+        margin-left: 109vw;
+        margin-top: 10px;
+    }
+
+    .form-div{
+        margin-left: 102px;
+    }
+
+    .notInList{
+        margin-left: 109px;
+        padding-left: 95px;
+    }
     
+    .signup__footer-s{
+        margin-left: 444px;
+    }
+
+    .signup__footer_left{
+        margin-left: 91vw;
+        padding-left: 85px;
+    }
+
+
+    
+}
+
+.signup__footer_left{
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 23px;
+text-align: center;
+color: #FFF5D1;
+opacity: 0.6;
 }
 
 .notInList{

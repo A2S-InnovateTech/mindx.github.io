@@ -345,17 +345,7 @@ margin-top: 3vh;
         margin-top: 20px;
     }
 
-    .login__dots_1{
-        position: absolute;
-        right: 33vw;
-        top: 17vh;
-        display: none;
-    }
-    
-    .login__dots_2{
-        position: absolute;
-        right: 10vw;
-        bottom: 3vh;
+    .login__dots_1,.login__dots_2{
         display: none;
     }
     
@@ -389,6 +379,19 @@ margin-top: 3vh;
         margin-left: 150px;
     }
 
+}
+
+.login__dots_1{
+    position: absolute;
+    right: 33vw;
+    top: 17vh;
+    
+}
+
+.login__dots_2{
+    position: absolute;
+    right: 10vw;
+    bottom: 3vh;
 }
 
 ::placeholder{
