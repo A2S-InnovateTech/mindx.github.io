@@ -212,6 +212,10 @@ display: flex;
     opacity: 0.6;
 }
 
+.mobile__head{
+    display: hidden;
+}
+
 @media only screen and (max-width: 768px){
     .signup__picture-s{
         display: none;
@@ -229,12 +233,19 @@ display: flex;
         display: none;
     }
 
+    .mobile__head{
+        position: absolute;
+        top: 0;
+        margin-left: 44px;
+    }
+
     .options-s{
         margin-left: 10px;
     }
 
     .right-p-s{
         margin-left: -350px;
+        padding-top: 30px;
     }
 
     .signup__form-s{
@@ -260,29 +271,32 @@ display: flex;
 
     .signup__title-s{
         margin-left: 77vw;
+        padding-left: 33px;
+        margin-top: 30px;
     }
 
     .signup__form-s{
-        margin-left: 105px;
+        margin-left: 135px;
     }
 
     .signup__form-1-s{
-        width:165px;
+        width:145px;
         margin-left: 5px;
     }
 
     .signup__final-btn-s{
-        margin-left: 109vw;
+        margin-left: 118vw;
         margin-top: 10px;
     }
 
     .form-div{
-        margin-left: 102px;
+        margin-left: 132px;
     }
 
     .notInList{
-        margin-left: 109px;
-        padding-left: 95px;
+        margin-left: 249px;
+        width: 300px;
+        padding-left: 131px;
     }
     
     .signup__footer-s{
@@ -291,7 +305,7 @@ display: flex;
 
     .signup__footer_left{
         margin-left: 91vw;
-        padding-left: 85px;
+        padding-left: 106px;
     }
 
 

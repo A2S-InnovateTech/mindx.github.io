@@ -108,6 +108,7 @@ function Signup({history}) {
 
     return (
         <div className="login">
+            <div className="mobile__head"><img src={logo}></img></div>
            <div className="navbar-s">
                 <div className="logo-s"><img src={logo}></img></div>
                 <div className="options-s">

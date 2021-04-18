@@ -379,6 +379,15 @@ margin-top: 3vh;
         margin-left: 150px;
     }
 
+    .mobile__head{
+        position: absolute;
+        top: 0;
+    }
+
+    .total-p{
+        margin-top: 65px;
+    }
+
 }
 
 .login__dots_1{
