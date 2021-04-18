@@ -119,7 +119,7 @@ function App() {
         } exact>
       </Route>
       <Route path="/login" exact>
-      <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+        <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
         <Login setUser={setUser}/>
       </Route>
       <Route path="/signup" exact>

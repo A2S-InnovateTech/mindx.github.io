@@ -97,7 +97,7 @@ height: 26px;
     text-align: center;
     color: #FFF5D1 !important;
     display: inline-block;
-    margin-top: 10vh;
+    margin-top: 85px;
     justify-self: center;
     align-self: flex-start;
     margin-left: 5.7vw;
@@ -248,7 +248,7 @@ margin-top: 3vh;
 }
 
 .social-icons{
-    margin-top: 26px;
+    margin-top: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -299,6 +299,8 @@ margin-top: 3vh;
         display: none;
     }
 
+    .title{}
+
     .picture{
         display:none;
     }
@@ -310,6 +312,7 @@ margin-top: 3vh;
     .options{
         width: 100%;
         margin-left: 10px;
+        display: none;
     }
 
     .buttons{
