@@ -68,7 +68,7 @@ const Profile = ({userDetails, user}) => {
    }
 
     return(
-        <div>
+        <div className="teacher_popup_body">
                 <div className="Dashboard__heading_row">
                   <Link to="/dashboard">
                      <div className="arrow">

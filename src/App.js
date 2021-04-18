@@ -235,6 +235,11 @@ function App() {
               <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Notice/>
               </Route>
+//               <Route path="/mytest" exact>
+//               <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+//                 <Test/>
+//               </Route>
+              <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
               <Route path="/popup" exact>
              
                 <Popup/>
@@ -272,6 +277,7 @@ function App() {
                 <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <AssignmentsT/>
               </Route>
+            
               <Route path="/myclasses" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>

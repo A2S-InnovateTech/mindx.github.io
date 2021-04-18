@@ -5,14 +5,16 @@ import './tpop.css';
 const Grid =(props) => {
     return (
       <Modal 
-       size="lg"  
-       centered {...props} 
-       dialogClassName="tpop" 
+        size="xl"  
+        {...props} 
+       dialogClassName="tpop modal-90w " 
        aria-labelledby="contained-modal-title-vcenter">
-        <Modal.Header closeButton className="tpopb">
-          <Modal.Title className="modal-title">
-          Create Assignment
+        <Modal.Header  className="tpop-header ">
+          <Modal.Title className="modal-title modal-title-text">
+          Create Assignment 
+          
           </Modal.Title>
+         <div className="crossbox"> <div className="cross"></div></div>
         </Modal.Header>
         <Modal.Body className="tpopb">
           <Container>
@@ -20,39 +22,31 @@ const Grid =(props) => {
               <Col xs={9} md={6}>
               <div className="rec">
               <div className="box"><div className="dog"></div></div>
-              <p className="boxtext">Enter Assignment Name</p>
+              <div className="textbox"><p className="boxtext">Enter Assignment Name</p></div>
               </div>
               </Col>
               <Col xs={9} md={6}>
                 <div  className="rec">
               <div className="box"><div className="upload"></div></div>
-              <p className="boxtext">Upload Assignment</p>
+              <div className="textbox"><p className="boxtext">Upload Assignment</p></div>
               </div>
               </Col>
             </Row>
-            <Row>
-              <Col xs={12} md={8}>
-                
-              </Col>
-              <Col xs={6} md={4}>
-              
-              </Col>
-            </Row>
+            
             <Row>
               <Col xs={9} md={6}>
               <div  className="rec">
               <div className="box"><div className="presentation"></div></div>
-              <p className="boxtext">Select Class</p>
-              <div className="poly"></div>
+              <div className="textbox"><p className="boxtext">Select Class</p></div>
+              <div className="smallbox"><div className="poly"></div></div>
               </div>
               </Col>
               <Col xs={9} md={6}>
               <div  className="rec">
               <div className="box"><div className="calendar"></div></div>
-              <p className="boxtext">Due Date</p>
-              <div className="margincal">
-              <div className="smallcalendar"></div>
-              </div>
+              <div className="textbox"><p className="boxtext">Due Date</p></div>
+              <div className="smallbox"><div className="smallcalendar"></div></div>
+              
               </div>
               </Col>
             </Row>
