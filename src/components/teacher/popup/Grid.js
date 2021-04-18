@@ -89,14 +89,16 @@ const Grid =(props) => {
 
     return (
       <Modal 
-       size="lg"  
-       centered {...props} 
-       dialogClassName="tpop" 
+        size="xl"  
+        {...props} 
+       dialogClassName="tpop modal-90w " 
        aria-labelledby="contained-modal-title-vcenter">
-        <Modal.Header closeButton className="tpopb">
-          <Modal.Title className="modal-title">
-          Create Assignment
+        <Modal.Header  className="tpop-header ">
+          <Modal.Title className="modal-title modal-title-text">
+          Create Assignment 
+          
           </Modal.Title>
+         <div className="crossbox"> <div className="cross"></div></div>
         </Modal.Header>
         <Modal.Body className="tpopb">
           <Container>
@@ -115,14 +117,7 @@ const Grid =(props) => {
               </div>
               </Col>
             </Row>
-            <Row>
-              <Col xs={12} md={8}>
-                
-              </Col>
-              <Col xs={6} md={4}>
-              
-              </Col>
-            </Row>
+            
             <Row>
               <Col xs={9} md={6}>
               <div  className="rec">

@@ -1,0 +1,223 @@
+
+
+.tpop{
+    left : 17.3611vw;
+     border-radius: 20px;
+     margin-left: 0%;
+     margin-right: 0%;
+     margin-top: 0%;
+     padding-bottom: 60px;
+ }
+ .modal-90w{
+    top: 234px;
+     padding-right: 13.83vw;
+ }
+ .teacher_popup_body{
+     position: absolute;
+ width: 1440px;
+ height: 1024px;
+ left: 0px;
+ top: 0px;
+ 
+ background: #C4C4C4;
+ opacity: 0.5;
+ }
+ .modal-title{
+     position: absolute;
+     width: 429px;
+     height: 26px;
+     left: 255px;
+     top: 46px;
+ }
+ .modal-title-text{
+     font-family: Roboto;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 36px;
+     line-height: 42px;
+     display: flex;
+     align-items: center;
+     text-align: center;
+     
+     color: #10222E;
+ }
+ .tpopb{
+     background: #FFF5D1;
+     border: 1px solid #FFF5D1;
+ }
+ .tpop-header{
+     background: #FFF5D1;
+     border: 20px solid #FFF5D1;
+     
+ }
+ 
+ .rec{
+     margin-left: 44px;
+     margin-top: 30px;
+     width: 333px;
+     height: 105px;
+     display: flex;
+     flex-direction: row;
+     border: 4px solid #10222E;
+     border-radius: 10px;
+ }
+ .rec-left{
+     margin-left: 70px;
+     margin-top: 30px;
+     width: 333px;
+     height: 105px;
+     display: flex;
+     flex-direction: row;
+     border: 4px solid #10222E;
+     border-radius: 10px;
+ }
+ .box{
+ width: 100px;
+ height: 100px;
+ background: #10222E;
+ }
+ .textbox{
+     width: 233px;
+     height: 100px;
+ }
+ .boxtext{
+     padding-left: 1.4vw;
+     padding-top: 1.8vw;
+     font-family: Roboto;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 20px;
+     line-height: 23px;
+     text-align: center;
+     color: #10222E;
+ }
+ .dog{
+     margin-top: 14px;
+     margin-left: 10px;
+     width: 42px;
+ height: 42px;
+ background: url("./dog.png");
+ 
+ }
+ .presentation{
+     margin-top: 20px;
+     margin-left: 20px;
+     width: 42px;
+     height: 42px;
+     background: url("./presentation.png");
+    
+ }
+ .calendar{
+     margin-top: 20px;
+     margin-left: 20px;
+     width: 42px;
+     height: 42px;
+     background: url("./calendar.png");
+     
+ }
+ .smallcalendarbox{
+     margin-top: 25px;
+     margin-right: 20px;
+     width: 24px;
+     height: 24px;
+     background-color: #10222E;
+ }
+ .smallcalendar{
+     margin-top: 25px;
+     margin-right: 15px;
+     width: 24px;
+ height: 24px;
+ background: url("./smallcalendar.png");
+ }
+ .margincal{
+     margin-top: 10px;
+     margin-left: 10px ;
+     margin-right: 10px;
+ }
+ .upload{
+     margin-top: 15px;
+     margin-left: 15px;
+     width: 42px;
+     height: 42px;
+     background: url("./upload.png");
+ 
+ }
+ .poly{
+     margin-top: 25px;
+     margin-right: 20px;
+     width: 24px;
+     height: 24px;
+     background: url("./Poly.png");
+ }
+ .creatbox{
+ width: 217px;
+ height: 58px;
+ margin-right: 300px;
+ border: 4px solid #10222E;
+ box-sizing: border-box;
+ border-radius: 10px;
+ }
+ 
+ .creat-text{
+ width: 153px;
+ height: 32px;
+ margin-top: 10px;
+ margin-left: 20px;
+ font-family: Roboto;
+ font-style: normal;
+ font-weight: 500;
+ font-size: 24px;
+ line-height: 28px;
+ display: flex;
+ align-items: center;
+ text-align: center;
+ color: #10222E;
+ }
+ 
+ @media only screen and (min-width:300) and (max-width: 700px){
+     .tpop{
+         left : 0vw;
+          border-radius: 20px;
+          margin-left: 0%;
+          margin-right: 0%;
+          margin-top: 0%;
+          padding-bottom: 60px;
+          
+      }
+      .modal-90w{
+         top: 234px;
+          padding-right: 13.83vw;
+      }
+ 
+ }
+ 
+ @media only screen and (max-width: 1000px)  {
+ 
+     
+     .modal-title{
+         width: 429px;
+         height: 26px;
+         margin-left: 100px;
+         font-weight: 500;
+         font-size: 30px;
+         line-height: 26px;
+     }
+     .creatbox{
+         width: 217px;
+         height: 58px;
+         margin-right: 100px;
+         }
+ 
+         .rec{
+             margin-left: 10px;
+              width: 200px;
+              margin-top: 20px;
+             height: 100px;
+              display: flex;
+              flex-direction: row;
+              border: 5px solid #10222E;
+              border-radius: 10px; 
+          }
+     
+ }
+ 

@@ -119,16 +119,18 @@ function App() {
         } exact>
       </Route>
       <Route path="/login" exact>
+        <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
         <Login setUser={setUser}/>
       </Route>
       <Route path="/signup" exact>
+      <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
         <SignUp/>
       </Route>
       <Route path="/teacher/signup" exact>
         <TeacherSignup/>
       </Route>
       <Route path="/" exact>
-        {user?<Redirect to="/dashboard" />:<Login setUser={setUser}/>}
+        {user?<Redirect to="/dashboard" />:<Redirect to="/login" />}
       </Route>
       <Route path="/signup-details" exact>
         <GoogleSignUpDetails user={user} history={history}/>
@@ -233,6 +235,11 @@ function App() {
               <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Notice/>
               </Route>
+//               <Route path="/mytest" exact>
+//               <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+//                 <Test/>
+//               </Route>
+              <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
               <Route path="/popup" exact>
              
                 <Popup/>
@@ -266,6 +273,7 @@ function App() {
                 <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <AssignmentsT overview userDetails={userDetails} user={user}/>
               </Route>
+            
               <Route path="/myclasses" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
