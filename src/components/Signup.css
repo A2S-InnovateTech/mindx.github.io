@@ -257,7 +257,7 @@ display: flex;
     .mobile__head{
         position: absolute;
         top: 0;
-        margin-left: 44px;
+        margin-left: 10vw;
     }
 
     .options-s{
@@ -266,13 +266,13 @@ display: flex;
     }
 
     .right-p-s{
-        margin-left: -350px;
         padding-top: 90px;
     
     }
 
     .signup__form-s{
         width: 80vw;
+        margin-left: 40vw;
     }
 
     .signup__form-2-s{
@@ -300,9 +300,6 @@ display: flex;
         margin-top: 30px;
     }
 
-    .signup__form-s{
-        margin-left: 135px;
-    }
 
     .signup__form-1-s{
         width:145px;
@@ -315,17 +312,17 @@ display: flex;
     }
 
     .form-div{
-        margin-left: 132px;
+        margin-left: 40vw;
     }
 
     .notInList{
-        margin-left: 249px;
+        margin-left: 90vw;
         width: 300px;
-        padding-left: 131px;
+        padding-left: 40vw;
     }
     
     .signup__footer-s{
-        margin-left: 400px;
+        margin-left: 110vw;
     }
 
     .signup__footer_left{
