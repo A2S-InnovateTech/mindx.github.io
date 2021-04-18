@@ -237,10 +237,6 @@ function App() {
              
                 <Popup/>
               </Route>
-              <Route path="/tpopup" exact>
-             
-                <Teacherpopup/>
-              </Route>
               <Route path="/results" render={(routeProps) => 
                 <>
                   <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
@@ -268,7 +264,7 @@ function App() {
               <Route path="/teacher/assignments" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <AssignmentsT/>
+                <AssignmentsT overview userDetails={userDetails} user={user}/>
               </Route>
               <Route path="/myclasses" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>

@@ -24,6 +24,10 @@
     color:#FFFFFF;
 }
 
+.teacher_assignments__th{
+    color:#FFFFFF;
+}
+
 table{
     margin-left: 0;
     margin-top: 5px;
@@ -35,8 +39,8 @@ table{
   border-radius: 50%;
   background-color: #313131;
   position: absolute;
-  left: 1180px;
-  top: 520px;
+  right: 7vw;
+  bottom: 10vh;
 }
 
 .plus{

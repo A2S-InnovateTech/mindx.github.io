@@ -179,3 +179,17 @@ color: #10222E;
          }
     
 }
+
+.react-datepicker__input-container{
+    width: 120px !important;
+    background-color: #FFF5D1;
+}
+
+.react-datepicker__input-container > input{
+    width: 120px !important;
+    background-color: #FFF5D1;
+}
+.react-datepicker-ignore-onclickoutside{
+    width: 100%;
+    background-color: #FFF5D1;
+}

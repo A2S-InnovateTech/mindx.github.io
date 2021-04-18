@@ -1,21 +1,22 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Back from './images/back-icon.png';
 import "./AssignmentT.css"
 import plus from "./images/plus-icon.png";
 import {Link} from 'react-router-dom';
+import Teacherpopup from './components/teacher/popup';
+import app from './firebase';
 
 
-
-
-function AssignmentsT() {
-
+function AssignmentsT({overview, assignment_id, userDetails, user}) {
+    const [teacherPopupShow,setTeacherPopupShow] = useState(false);
     const [disabled_one, setDisabled_one] = useState(false);
     const [disabled_two, setDisabled_two] = useState(false);
     const [disabled_three, setDisabled_three] = useState(false);
     const [inputValue_one, setInputValue_one] = React.useState("");
     const [inputValue_two, setInputValue_two] = React.useState("");
     const [inputValue_three, setInputValue_three] = React.useState("");
-
+    const [assignments, setAssignments] = useState([]);
+    const [reloadAssignments, setReloadAssignments] = useState(0);
     const onChangeHandler_one = event => {
         setInputValue_one(event.target.value);
     };
@@ -49,7 +50,28 @@ function AssignmentsT() {
             setDisabled_three(true);
         } 
     };
-   
+
+    const getAssignments = () => {
+        if(user!==null && user.uid!==undefined){
+            app.firestore().collection("assignments").where("teacher_id", "==", user.uid)
+            .get()
+            .then((snapshot) => {
+                snapshot.docs.map(
+                    (doc)=>{
+                        setAssignments(oldQuestion => [...oldQuestion, doc.data()])
+                    }
+                )
+            })
+            .catch(e=>console.log(e));
+        }
+    }
+   useEffect(() => {
+       getAssignments();
+   }, [user, reloadAssignments])
+
+   useEffect(() => {
+       console.log(assignments);
+   }, [assignments])
   
     return (
         <div>
@@ -63,67 +85,35 @@ function AssignmentsT() {
             <span className="title-a">My Assignments</span>
             <span className="line"></span>   
             </div>
-            <span className="table-t"><span className="table-at">Previous Assignments</span></span>
+            <span className="table-t"><span className="table-at">{overview?"Previous Assignments":assignment_id}</span></span>
             <span className="content">
             <span className="table-c">
            
             <table>
                    <tr class="noBorder deco">
-                       <td>S No.</td>
-                       <td>Assignment Name</td>
-                       <td>Class</td>
-                       <td>Submissions</td>
-                       <td>Status</td>
-                       <td>Grade</td>
+                       <td className="teacher_assignments__th">S No.</td>
+                       <td className="teacher_assignments__th">{overview?"Assignment Name":"Student Name"}</td>
+                       <td className="teacher_assignments__th">Class</td>
+                       {overview&&<td className="teacher_assignments__th">Submissions</td>}
+                       <td className="teacher_assignments__th">Status</td>
+                       {!overview&&<td className="teacher_assignments__th">Grade</td>}
                    </tr>
 
-                   <tr class="noBorder">
-                       <td>1</td>
-                       <td>Assignment 2</td>
-                       <td>11th A</td>
-                       <td>43/50</td>
-                       <td>View</td>
-                       <td className="grade_input"><input
+                   {assignments.map((assignment, index)=><tr class="noBorder">
+                       <td>{index}</td>
+                       <td>{assignment.name}</td>
+                       <td>{assignment.class}</td>
+                       {overview&&<td>{assignment.submissions?assignment.submissions:0}</td>}
+                       <a href={assignment.url}><td>View</td></a>
+                       {!overview&&<td className="grade_input"><input
                             type="text"
                             name="name"
                             onChange={onChangeHandler_one}
                             onKeyPress={handleKeypress_one}
                             value={inputValue_one}
                             disabled={disabled_one}
-                        /></td>
-                   </tr>
-
-                   <tr class="noBorder">
-                       <td>2</td>
-                       <td>Assignment 2</td>
-                       <td>11th B</td>
-                       <td>23/50</td>
-                       <td>View</td>
-                       <td className="grade_input"><input
-                            type="text"
-                            name="name"
-                            onChange={onChangeHandler_two}
-                            onKeyPress={handleKeypress_two}
-                            value={inputValue_two}
-                            disabled={disabled_two}
-                       /></td>
-                   </tr>
-                   
-                   <tr class="noBorder">
-                       <td>3</td>
-                       <td>Assignment 1</td>
-                       <td>12th B</td>
-                       <td>34/50</td>
-                       <td>View</td>
-                       <td className="grade_input"><input
-                            type="text"
-                            name="name"
-                            onChange={onChangeHandler_three}
-                            onKeyPress={handleKeypress_three}
-                            value={inputValue_three}
-                            disabled={disabled_three}
-                        /></td>
-                   </tr>
+                        /></td>}
+                   </tr>)}
 
                    </table>
             </span>
@@ -131,13 +121,19 @@ function AssignmentsT() {
             </span>
             <div className="bot">
             <span className="circle-add">
-            <img className="plus" src={plus}></img>    
+            <img className="plus" src={plus} onClick={()=>setTeacherPopupShow(true)}></img>    
             </span>    
             </div>
             <span className="footer-a">All rights are reserved MindX 2021</span>
              <div className="bottom-line"></div>   
+             <Teacherpopup setReloadAssignments={setReloadAssignments} teacherPopupShow={teacherPopupShow} setTeacherPopupShow={setTeacherPopupShow} userDetails={userDetails} user={user}/>
         </div>
     )
+}
+
+AssignmentsT.defaultProps = {
+    overview: true,
+    assignment_id: NaN
 }
 
 export default AssignmentsT
