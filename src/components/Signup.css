@@ -221,12 +221,33 @@ display: flex;
         display: none;
     }
 
+    .title-s{
+        margin-top: -20px;
+    }
+
+    .navbar-s{
+        display: none;
+        height: 0px;
+    }
+
     .buttons-s{
         display: none;
         }
 
     .signup__blank-s{
         display: none;
+    }
+
+    .option-1-s{
+    display: none;
+    }
+
+    .option-2-s{
+     display: none;
+    }
+
+    .option-3-s{
+     display: none;
     }
     
     .logo-s{
@@ -241,11 +262,13 @@ display: flex;
 
     .options-s{
         margin-left: 10px;
+        display: none;
     }
 
     .right-p-s{
         margin-left: -350px;
-        padding-top: 30px;
+        padding-top: 90px;
+    
     }
 
     .signup__form-s{
@@ -259,6 +282,8 @@ display: flex;
     .signup__final-btn-s{
         width: max-content;
         margin-top: -20px;
+        font-size: 18px;
+        width: 120px;
     }
 
     .signup__footer-s{
@@ -285,7 +310,7 @@ display: flex;
     }
 
     .signup__final-btn-s{
-        margin-left: 118vw;
+        margin-left: 113vw;
         margin-top: 10px;
     }
 
@@ -300,7 +325,7 @@ display: flex;
     }
     
     .signup__footer-s{
-        margin-left: 444px;
+        margin-left: 400px;
     }
 
     .signup__footer_left{

@@ -1,181 +1,250 @@
 .tpop{
-    background: #FFF5D1;
-    border-radius: 20px;
-   
-    left: 2vw;
-}
-.modal-title{
-
+    top: 16.25vw;
+    left : 17.3611vw;
+     border-radius: 20px;
+     margin-left: 0px;
+     margin-right: 1vw;
+ }
+ .modal-title{
+    position: absolute;
     width: 429px;
-height: 26px;
-
-margin-left: 200px;
-
+    height: 26px;
+    left: 255px;
+    top: 46px;
+}
+.modal-title-text{
     font-family: Roboto;
-font-style: normal;
-font-weight: 500;
-font-size: 36px;
-line-height: 42px;
-display: flex;
-align-items: center;
-text-align: center;
-
-/* 1 */
-
-color: #10222E;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #10222E;
 }
 .tpopb{
     background: #FFF5D1;
     border: 1px solid #FFF5D1;
+    padding-left: 8px;
 }
-.rec{
-   margin-left: 10px;
-   margin-top: 30px;
-    width: 233px;
-height: 100px;
-    display: flex;
-    flex-direction: row;
-    border: 10px solid #10222E;
-    
-    border-radius: 10px;
-   
-    
+.tpop-header{
+    background: #FFF5D1;
+    border: 4px solid #FFF5D1;
 }
 .box{
- 
-width: 100px;
-height: 90px;
-
-
-/* 1 */
-
-background: #10222E;
-}
-.boxtext{
-    margin-top: 10px;
-
-    font-family: Roboto;
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 23px;
-text-align: center;
-justify-content: center;
-
-/* 1 */
-
-color: #10222E;
-}
-.dog{
-    margin-top: 14px;
-    margin-left: 10px;
-    width: 42px;
-height: 42px;
-background: url("./dog.png");
-
-}
-.presentation{
-    margin-top: 20px;
-    margin-left: 20px;
-    width: 42px;
-    height: 42px;
-    background: url("./presentation.png");
-   
-}
-.calendar{
-    margin-top: 20px;
-    margin-left: 20px;
-    width: 42px;
-    height: 42px;
-    background: url("./calendar.png");
-    
-}
-.smallcalendar{
-    width: 24px;
-height: 24px;
-background: url("./calendar.png");
-}
-.margincal{
-    margin-top: 10px;
-    margin-left: 10px ;
-    margin-right: 10px;
-}
-.upload{
-    margin-top: 15px;
-    margin-left: 15px;
-    width: 42px;
-    height: 42px;
-    background: url("./upload.png");
-
-}
-.poly{
-    width: 24px;
-height: 24px;
-    background: url("./Poly.png");
-}
-.creatbox{
-  
-width: 217px;
-height: 58px;
-margin-right: 300px;
-
-/* 1 */
-
-border: 4px solid #10222E;
-box-sizing: border-box;
-border-radius: 10px;
-}
-
-.creat-text{
-   
-width: 153px;
-height: 32px;
-margin-top: 10px;
-margin-left: 20px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 28px;
-display: flex;
-align-items: center;
-text-align: center;
-
-/* 1 */
-
-color: #10222E;
-}
-
-
-@media only screen and (max-width: 1000px) {
-    .modal-title{
-        width: 429px;
-        height: 26px;
-        margin-left: 100px;
+    width: 104px;
+    height: 100px;
+    background: #10222E;
+    padding: 30px;
+    }
+    .rec{
+        margin-left: 44px;
+        margin-top: 30px;
+        width: 333px;
+        height: 105px;
+        display: flex;
+        flex-direction: row;
+        border: 4px solid #10222E;
+        border-radius: 10px;
+    }
+    .textbox{
+        width: 233px;
+        height: 100px;
+    }
+    .boxtext{
+        padding-left: 1.4vw;
+        padding-top: 1.8vw;
+        font-family: Roboto;
+        font-style: normal;
         font-weight: 500;
-        font-size: 30px;
-        line-height: 26px;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+        color: #10222E;
+    }
+    .dog{
+        
+        width: 42px;
+    height: 42px;
+    background: url("./dog.png");
+    
+    }
+    .presentation{
+        
+        width: 42px;
+        height: 42px;
+        background: url("./presentation.png");
+       
+    }
+    .crossbox{
+        width: 24px;
+        height: 24px;
+        margin-left: 60vw;
+    }
+    .cross{
+        width: 20px;
+        height: 20px;
+        background : url("./cross.png");
+    }
+    .calendar{
+        width: 42px;
+        height: 42px;
+        background: url("./calendar.png");
+        
+    }
+    .smallbox{
+        margin-top: 15px;
+        margin-right: 10px;
+        margin-left: 10px;
+        width: 24px;
+        height: 24px;
+    }
+    .smallcalendar{
+        width: 24px;
+        height: 24px;
+        background: url("./smallcalendar.png");
+    }
+   
+    .upload{
+       
+        width: 42px;
+        height: 42px;
+        background: url("./upload.png");
+    
+    }
+    .poly{
+        width: 24px;
+        height: 24px;
+        background: url("./Poly.png");
     }
     .creatbox{
-  
         width: 217px;
         height: 58px;
-        margin-right: 100px;
+        margin-right: 300px;
+        border: 4px solid #10222E;
+        box-sizing: border-box;
+        border-radius: 10px;
+        }
+        
+        .creat-text{
+        width: 153px;
+        height: 32px;
+        margin-top: 10px;
+        margin-left: 20px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #10222E;
         }
 
-        .rec{
-            margin-left: 10px;
-             width: 200px;
-             margin-top: 20px;
-         height: 100px;
-             display: flex;
-             flex-direction: row;
-             border: 5px solid #10222E;
-             
-             border-radius: 10px;
-            
-             
-         }
+ @media screen and  (max-width: 350px){
+    .tpop{
+        left : 1vw;
+        padding: 2vw;
+        margin-top: 40px;
+     }
+     .modal-title{
+        width: 300px;
+        height: 46px;
+        left: 0px;
+        top: 0px;
+        padding: 4vw;
+        padding-left: 13vw;
+    }
+    .modal-title-text{
+        font-weight: 350;
+        font-size: 26px;
+        line-height: 42px;
+    }
+    .rec{
+        margin-left: 0px;
+        margin-top: 20px;
+        width: 80vw;
+        height: 75px;
+    }
+    .box{
+        width: 80px;
+        height: 70px;
+        margin-right: 10px;
+        padding: 11px;
+        }
+        .creatbox{
+           margin-right: 10.5vw;
+           margin-left: 8.5vw;
+            }
+}
+@media screen and (min-width: 351px) and  (max-width: 576px){
+    .tpop{
+        top: 0px;
+        left : 1vw;
+        padding: 12vw;
+        margin-top: 80px;
+     }
+     .modal-title{
+        width: 75vw;
+        height: 46px;
+        left: 0px;
+        top: 0px;
+        padding: 10px;
+        padding-left: 15vw;
+        padding-bottom: 4px;
+    }
+    .modal-title-text{
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 42px;
+    }
+    .rec{
+        margin-left: 0px;
+        margin-top: 20px;
+        width: 60vw;
+        height: 80px;
+    }
+    .box{
+        width: 75px;
+        height: 75px;
+        padding: 11px;
+        }
+        .creatbox{
+            margin-right: 10.5vw;
+            margin-left: 8.5vw;
+             }
+}
+@media screen and (min-width: 600px){
+    .modal-title{
+        position: absolute;
+        width: 429px;
+        height: 36px;
+        left: 255px;
+        top: 16px;
+    }
+    
     
 }
+
+.react-datepicker__input-container{
+    width: 120px !important;
+    background-color: #FFF5D1;
+}
+
+.react-datepicker__input-container > input{
+    width: 120px !important;
+    background-color: #FFF5D1;
+}
+.react-datepicker-ignore-onclickoutside{
+    width: 100%;
+    background-color: #FFF5D1;
+}
+@media screen and (min-width: 1200px) {
+    .tpop{
+        margin-top: 0px;
+        padding-right: 200px;
+     }
+}
+

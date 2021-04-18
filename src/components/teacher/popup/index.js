@@ -4,16 +4,10 @@ import Grid from './Grid';
 
 
 
-const Teacherpopup = () =>  {
-    const [modalShow, setModalShow] = useState(true);
-  
+const Teacherpopup = ({teacherPopupShow, setTeacherPopupShow, userDetails, user, setReloadAssignments}) =>  {
     return (
       <>
-        <Button variant="primary" onClick={() => setModalShow(true)}>
-          teacher panel popup
-        </Button>
-  
-        <Grid show={modalShow} onHide={() => setModalShow(false) } />
+        <Grid show={teacherPopupShow} onHide={() => setTeacherPopupShow(false) } setReloadAssignments={setReloadAssignments} userDetails={userDetails} user={user}/>
       </>
     );
   }

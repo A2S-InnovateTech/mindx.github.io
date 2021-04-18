@@ -1,8 +1,8 @@
 import React, { useCallback, useContext } from 'react'
 import './Login.css'
 import logo from '../images/logo.png';
-import line1 from '../images/line1.png'
-import line2 from '../images/line2.png'
+import line1 from '../images/line1.png';
+import line2 from '../images/line2.png';
 import dots from '../images/login_background_dots.png';
 import GoogleLogo from '../images/google.png';
 import app from '../firebase';

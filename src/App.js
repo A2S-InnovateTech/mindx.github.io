@@ -233,13 +233,14 @@ function App() {
               <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Notice/>
               </Route>
+//               <Route path="/mytest" exact>
+//               <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+//                 <Test/>
+//               </Route>
+              <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
               <Route path="/popup" exact>
              
                 <Popup/>
-              </Route>
-              <Route path="/tpopup" exact>
-             
-                <Teacherpopup/>
               </Route>
               <Route path="/results" render={(routeProps) => 
                 <>
@@ -268,8 +269,9 @@ function App() {
               <Route path="/teacher/assignments" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <AssignmentsT/>
+                <AssignmentsT overview userDetails={userDetails} user={user}/>
               </Route>
+            
               <Route path="/myclasses" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>

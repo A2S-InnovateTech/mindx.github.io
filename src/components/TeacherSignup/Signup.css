@@ -231,7 +231,7 @@ display: flex;
     }
 
     .form-3-s, .form-4-s, .form-7-s,.form-8-s{
-        width: 130%;
+        width: 145%;
     }
 
     .form-3-s{
@@ -243,6 +243,8 @@ display: flex;
         width: max-content;
         margin-top: -20px;
         margin-left: 449px;
+        font-size: 18px;
+        width: 120px;
     }
 
     .footer-s{
@@ -251,6 +253,7 @@ display: flex;
 
     .title-s{
         margin-left: 328px;
+        font-size: 34px;
     }
     
 }
