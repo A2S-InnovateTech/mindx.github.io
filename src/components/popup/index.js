@@ -1,24 +1,23 @@
 import React, {useState}  from 'react';
 import {  Button, Modal} from 'react-bootstrap';
 import './pop.css';
+import {Link} from "react-router-dom";
 
-
-const Popup = () =>  {
+const Popup = ({setIsOpen}) =>  {
     const [show, setShow] = useState(true);
   
     return (
       <>
-        
-        
         <Modal
           size="lg"
           show={show}
-          onHide={() => setShow(false)}
+          style={{fontSize:"15px"}}
+          onHide={() => setIsOpen(false)}
           dialogClassName="pop"
           aria-labelledby="example-custom-modal-styling-title" >
           <Modal.Header closeButton  className="popback">
             <Modal.Title className="title">
-              <p >Welcome&nbsp;new&nbsp;User!!</p>
+              <p >Welcome&nbsp;new&nbsp;User</p>
             </Modal.Title>
           </Modal.Header>
           <Modal.Body className="popback">
@@ -31,14 +30,24 @@ You can click on Practice Now button incase you want to practice some questions 
             </p>
           </Modal.Body>
           <Modal.Footer className="popback-f">
+          <Link to="/test" to={{
+                            pathname:"/test",
+                            state: { subject: "Psychometric", practice: true }
+                        }} style={{textDecoration:"none", color:"white"}}>
           <div className="buttonone">
             <div className="iconone"></div>
            <p className="button-onetext"> Practice Now</p>
           </div>
+          </Link>
+          <Link to="/test" to={{
+                            pathname:"/test",
+                            state: { subject: "Psychometric" }
+                        }} style={{textDecoration:"none", color:"white"}}>
           <div className="buttontwo">
           <div className="icontwo"></div>
            <p className="button-twotext">Take a Test</p>
           </div>
+          </Link>
           
         </Modal.Footer>
         </Modal>

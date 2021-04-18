@@ -1,0 +1,95 @@
+.table-at{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.table-c{
+    height: 321px;
+}
+
+.noBorder{
+    background: #313131, 100%;
+}
+
+.content{
+    display: flex;
+}
+
+.table-line{
+    height: 120px;
+}
+
+.deco{
+    background:#313131;
+    color:#FFFFFF;
+}
+
+table{
+    margin-left: 0;
+    margin-top: 5px;
+}
+
+.circle-add{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #313131;
+  position: absolute;
+  left: 1180px;
+  top: 520px;
+}
+
+.plus{
+    margin-top: 15px;
+    margin-left: 14px;
+}
+
+.noBorder .grade_input {
+    text-align: center;
+    max-width: 10%;
+}
+
+.noBorder .grade_input input[type="text"] {
+   width: 30%;
+   border: 2px solid #313131;
+   border-radius: 2px;
+   background-color: transparent;
+}
+
+.noBorder .grade_input input[type="text"]:disabled {
+  border: none;
+  background-color: transparent;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #10222E;
+  width: 30%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 768px){
+
+    .circle-add{
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: #313131;
+        margin-left: -840px;
+        margin-top: 80px;
+      }
+
+      .plus{
+          height: 15px;
+          width: 15px;
+          margin-top: 10px;
+      }
+
+      .table-c{
+          width: 94vw;
+      }
+}

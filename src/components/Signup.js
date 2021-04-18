@@ -1,25 +1,109 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useState, useEffect } from 'react'
 import './Signup.css';
 import logo from '../images/logo.png';
 import app from '../firebase';
 import { withRouter } from "react-router";
 import {Link} from "react-router-dom";
+import firebase from 'firebase';
+// import SelectSearch from 'react-select-search';
+import image from '../images/signup_image.png';
+import dots from '../images/login_background_dots.png';
+import line1 from '../images/signup__line_1.png'
+import line2 from '../images/signup__line_2.png'
 
 function Signup({history}) {
+        const [fullname, setFullName] = useState("");
+        const [mobile, setMobile] = useState("");
+        const [email, setEmail] = useState("");
+        const [Class, setClass] = useState("");
+        const [school, setSchool] = useState("");
+        const [password, setPassword] = useState("");
+        const [relation, setRelation] = useState("");
+        const [relationNo, setRelationNo] = useState("");
+        const [schoolNames, setSchoolNames] = useState([]);
+        const [addSchoolManual, setAddSchoolManual] = useState(false);
 
-       const handleSignUp = useCallback(async event => {
-           event.preventDefault();
-           const { email, password } = event.target.elements;
+        useEffect(() => {
+            console.log(school);
+        }, [school])
+
+       const handleSignUp = (e) => {
+           e.preventDefault();
            try {
-               await app
+                app
                .auth()
-               .createUserWithEmailAndPassword(email.value, password.value);
-               history.push("/");
+               .createUserWithEmailAndPassword(email, password)
+               .then((authUser) => {
+                    console.log(authUser.user.updateProfile({ displayName:fullname })
+                    .then(()=>{
+                        // history.push("/")
+                        updateUserDetails(authUser.user)
+                    })
+                    .catch(e=>{console.log("Error:",e);}));
+                })
+                .catch(e => console.log(e));
            } catch (error) {
                alert(error);
-           }
-           
-   },[history]);
+           }       
+        };
+
+        const getSchoolDetails = () => {
+            app.firestore().collection("schools")
+            .get()
+            .then((snapshot) => {
+                snapshot.docs.map(
+                    doc => {
+                        var city = doc.data().city?", "+doc.data().city:"";
+                        var finalSchoolName = doc.data().name + city;
+                        var schoolObject = {name: finalSchoolName, value: doc.id};
+                        setSchoolNames(oldSchoolNames => [...oldSchoolNames, schoolObject]);
+                    }
+                )
+            })
+            .catch(e=>console.log(e));
+        }
+
+        useEffect(() => {
+            getSchoolDetails();
+        }, [])
+
+        const updateUserDetails = (user) => {
+
+            if(addSchoolManual){
+                app.firestore().collection("schools").add({
+                    name: school
+                })
+                .then((docRef)=>{
+                    app.firestore().collection("users").doc(user.uid).set({
+                        assessmentTaken: false,
+                        class: Class,
+                        phoneNumber: mobile,
+                        relation,
+                        relativeNumber: relationNo,
+                        school: docRef.id,
+                        userType: "student",
+                        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                    })
+                    .then(()=>history.push('/'))
+                    .catch(e=>console.log("Error in updating details: ", e))
+                })
+                .catch(e=>console.log("Error in updating school details: ", e))
+            }
+            else{
+                app.firestore().collection("users").doc(user.uid).set({
+                    assessmentTaken: false,
+                    class: Class,
+                    phoneNumber: mobile,
+                    relation,
+                    relativeNumber: relationNo,
+                    school,
+                    userType: "student",
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                })
+                .then(()=>history.push('/'))
+                .catch(e=>console.log("Error in updating details: ", e))
+            }
+        }
 
 
     return (
@@ -46,36 +130,47 @@ function Signup({history}) {
             </div>
             <div className="total-p-s">
                 <div className="left-p-s">
-            <img className="picture-s" src="https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"></img>
-            <div className="blank-s"></div>
+            <img src={dots} alt="Dots" className="login__dots_1 signup__dots_1"/>
+            <img src={dots} alt="Dots" className="login__dots_2 signup__dots_2"/>
+            <div className="signup__blank-s"></div>
+            <img className="signup__picture-s" src={image}></img>
+            <img className="line-1 signup__line_1" src={line1}></img>
+            <img className="line-2 signup__line_2" src={line2}></img>
             </div>
                 <div className="right-p-s">
-                <span className="title-s">SIGNUP</span>
-                <form onSubmit={handleSignUp}>
-                <div className="forms-s">
+                <span className="signup__title-s">SIGNUP</span>
+                <form>
+                <div className="signup__forms-s">
                     
-                    <input className="form-1-s" type="text" placeholder="  Full Name" required></input>
+                    <input name="fullname" className="signup__form-s" type="text" placeholder="  Full Name" value={fullname} onChange={(e)=>{setFullName(e.target.value)}} required></input>
                     <label>
-                    <input name="email" className="form-2-s" type="email" placeholder="  Email Id" required></input>
+                    <input name="email" className="signup__form-s" type="email" placeholder="  Email Id" value={email} onChange={(e)=>{setEmail(e.target.value)}} required></input>
                     </label>
                     <span className="form-div">
-                    <input className="form-3-s" type="text" placeholder="  Mobile No." required></input>
-                    <input className="form-4-s" type="text" placeholder="  Class" required></input>
+                    <input className="signup__form-1-s" type="text" placeholder="  Mobile No." value={mobile} onChange={(e)=>{setMobile(e.target.value)}} required></input>
+                    <input className="signup__form-1-s" type="text" placeholder="  Class" value={Class} onChange={(e)=>{setClass(e.target.value)}} required></input>
                     </span>
-                    <input className="form-5-s" type="text" placeholder="  School Name" required></input>
+                    <form autocomplete="off">
+                    {/* {addSchoolManual
+                        ? <input className="signup__form-s" type="text" placeholder="  Enter School Name Manually" value={school} onChange={(e)=>{setSchool(e.target.value)}} required></input> 
+                        : <SelectSearch options={schoolNames} value="sv" closeOnSelect={false} name="SchoolName" placeholder="  Select School Name" search autoComplete="on" onChange={(e)=>{setSchool(e)}}/>
+                    } */}
+                    {!addSchoolManual && <div className="notInList" onClick={()=>setAddSchoolManual(true)}>School not in list?</div>}
+                    </form>
                     <label>
-                    <input name="password" className="form-6-s" type="password" placeholder="  Password" required></input>
+                    <input name="password" className="signup__form-s" type="password" placeholder="  Password" value={password} onChange={(e)=>{setPassword(e.target.value)}} required></input>
                     </label>
                     <span className="form-div">
-                    <input className="form-7-s" type="text" placeholder="  Relation" required></input>
-                    <input className="form-8-s" type="text" placeholder="  Mobile No." required></input>
+                    <input className="signup__form-1-s" type="text" placeholder="  Relation" value={relation} onChange={(e)=>{setRelation(e.target.value)}} required></input>
+                    <input className="signup__form-1-s" type="text" placeholder="  Mobile No." value={relationNo} onChange={(e)=>{setRelationNo(e.target.value)}} required></input>
                     </span>
                     
                 </div>
 
-                <button type="submit" className="final-btn-s">SignUp</button>
+                <button onClick={(e)=>handleSignUp(e)}className="signup__final-btn-s">SignUp</button>
                 </form>
-               <Link to="/login"><span className="footer-s">Already have an account? Login Now</span></Link>
+               <Link to="/login"><span className="signup__footer-s">Already have an account?</span></Link>
+                <Link to="/teacher/signup"><span className="signup__footer_left">Are you a teacher? Sign Up here</span></Link>
 
                 </div>
                 </div>

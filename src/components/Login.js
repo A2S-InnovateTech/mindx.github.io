@@ -3,6 +3,7 @@ import './Login.css'
 import logo from '../images/logo.png';
 import line1 from '../images/line1.png'
 import line2 from '../images/line2.png'
+import dots from '../images/login_background_dots.png';
 import GoogleLogo from '../images/google.png';
 import app from '../firebase';
  import { AuthContext } from '../Auth';
@@ -10,36 +11,44 @@ import { Redirect, withRouter } from 'react-router';
 import firebase from 'firebase/app';
 import {Link} from "react-router-dom";
 
-function Login({ history }) {
-
+function Login({ history, setUser }) {
+    console.log(setUser);
     const handleGoogleLogin = () => {
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth()
-  .signInWithPopup(provider)
-  .then((result) => {
-    /** @type {firebase.auth.OAuthCredential} */
-    var credential = result.credential;
-
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    var token = credential.accessToken;
-    // The signed-in user info.
-    var user = result.user;
-    // ...
-    console.log(user);
-    history.push("/dashboard");
-  }).catch((error) => {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // The email of the user's account used.
-    var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
-    var credential = error.credential;
-    // ...
-    console.log(error);
-  });
-
+            .signInWithPopup(provider)
+            .then((result) => {
+                var user = result.user;
+                setUser(user);
+                console.log(user);
+                updateUserDetails(user);
+            }).catch((error) => {
+                console.log(error);
+            });
     } 
+
+    const updateUserDetails = (user) => {
+        app.firestore().collection("users").doc(user.uid).get()
+            .then(snapshot=>{
+              if(!snapshot.exists){
+                  app.firestore().collection("users").doc(user.uid).set({
+                    assessmentTaken: false,
+                    class: null,
+                    phoneNumber: null,
+                    relation: null,
+                    relativeNumber: null,
+                    school: null,
+                    userType: "student",
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                })
+                .then(()=>history.push("/signup-details"))
+                .catch(e=>console.log("Error in updating details: ", e))
+                }
+                else{
+                    console.log("Old User");
+                }
+            })
+    }
 
     const handleLogin = useCallback(async event => {
         event.preventDefault();
@@ -87,27 +96,24 @@ function Login({ history }) {
              
             <div className="total-p">
             <div className="left-p">
-            <span className="title">LOGIN</span>
-            <form onSubmit={handleLogin}>
-            <label>
+            <span className="login__title">LOGIN</span>
+            <form onSubmit={handleLogin} className="login__form">
             <input name="email" type="email" className="form-1" placeholder="  Enter you mail id" required></input>
-            </label>
-            <label>
             <input name="password" className="form-2" placeholder="  Password" type="password" required></input>
-            </label>
             <button type="submit" className="final-btn">Login</button>
             </form>
             <span className="f-pass">Forgot Password?</span>
             <Link to="/signup"><span className="signup-l">New User? Signup Here</span></Link>
-            <span className="social">Or Login With:</span>
-            <span className="social-icons">
-                <img src={GoogleLogo} width="15px" onClick={()=>handleGoogleLogin()}></img>
-            </span>
+            <div className="social">Or Login With:
+                <img src={GoogleLogo} width="30px" onClick={()=>handleGoogleLogin()}></img>
+            </div>
             </div>
             <div className="right-p">
             <img className="picture" src="https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"></img>
-            {/* <img className="line-1" src={line1}></img>
-            <img className="line-2" src={line2}></img> */}
+            <img src={dots} alt="Dots" className="login__dots_1"/>
+            <img src={dots} alt="Dots" className="login__dots_2"/>
+            <img className="line-1" src={line1}></img>
+            <img className="line-2" src={line2}></img>
             <div className="blank"></div>
             </div>
             </div>
