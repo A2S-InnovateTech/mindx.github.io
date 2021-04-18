@@ -1,25 +1,40 @@
-h3 {
-  font-family: Fredoka One;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 40px;
-  width: fit-content;
-  line-height: 48px;
-  color: #10222E;
-}
 
 .hrline {
-  border-bottom: 2px solid #10222E;
-  height: 0;
+  background-color: #10222E;
+  height: 4px;
   margin-top: 25px;
+  border-radius: 10px;
+}
+
+.TeacherDashboard__heading_row{
+    display: flex;
+    flex-direction: row;
+    margin: 30px 20px 20px 40px;
+    align-items: center;
+    width: 70vw;
+}
+
+.TeacherDashboard__title{
+    font-family: 'Fredoka One';
+    font-size: 40px;
+    color: #10222E;
+    text-align: center;
+}
+
+.TeacherDashboard__line{
+    background-color: #10222E;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    margin-left: 40px;
 }
 
 .one button, .two button {
   /* width: 128px; */
-  width: 100%;
+  width: 90%;
   height: 46px;
   border: 3px solid #10222E;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   border-radius: 4px;
 
   font-family: Roboto;
@@ -89,18 +104,23 @@ h3 {
   margin: auto;
 }
 
-.mySubject button {
+.two button {
   margin-top: 45px;
 }
 
 .three {
   margin: 50px auto;
+  text-align: center;
 }
 
 .testsHistory {
   background: #EBE7DA;
   border-radius: 10px;
   padding-bottom: 10px;
+}
+
+.testsHistory table {
+  width: 100%;
 }
 
 .testsHistory th, td {
@@ -119,12 +139,14 @@ h3 {
 }
 
 .testsHistory .btns {
-  text-align: center;
+  width: fit-content;
+  margin: auto;
 }
 
 .testsHistory .btns button{
   margin: 10px;
   height: 46px;
+  width: 150px;
   border: 3px solid #10222E;
   box-sizing: border-box;
   border-radius: 4px;
@@ -139,4 +161,9 @@ h3 {
   color: #FFF5D1;
   background-color: #10222E;
 }
+
+
+
+
+
 

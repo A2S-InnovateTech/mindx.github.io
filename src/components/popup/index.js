@@ -32,7 +32,7 @@ You can click on Practice Now button incase you want to practice some questions 
           <Modal.Footer className="popback-f">
           <Link to="/test" to={{
                             pathname:"/test",
-                            state: { testNo: 1 }
+                            state: { subject: "Psychometric", practice: true }
                         }} style={{textDecoration:"none", color:"white"}}>
           <div className="buttonone">
             <div className="iconone"></div>
@@ -41,7 +41,7 @@ You can click on Practice Now button incase you want to practice some questions 
           </Link>
           <Link to="/test" to={{
                             pathname:"/test",
-                            state: { testNo: 1 }
+                            state: { subject: "Psychometric" }
                         }} style={{textDecoration:"none", color:"white"}}>
           <div className="buttontwo">
           <div className="icontwo"></div>

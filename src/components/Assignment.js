@@ -2,27 +2,33 @@ import React from 'react'
 import Sidebar from './Sidebar/index'
 import './Assignment.css'
 import Back from '../images/back-icon.png';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 
 
 function Assignment() {
+    const history = useHistory();
+    const goBack = () => {
+        history.goBack()
+    }
+
     return (
         <div className="assignment">
             <div className="top-line"></div>
             <div className="bottom-line"></div>
             <div className="head">
             <span className="back">
-            <Link to="/dashboard" style={{textDecoration:"none", color:"white"}}><img className="back-icon" src={Back}></img></Link>
+            <a onClick={goBack} style={{textDecoration:"none", color:"white", cursor: "pointer"}}><img className="back-icon" src={Back}></img></a>
             </span>
             <span className="title-a">My Assignments</span>
             <span className="line"></span>   
             </div>
             <span className="table-t">
-                <span className="t-1">S No.</span>
-                <span className="t-2">Assignment Name</span>
+                <span className="t-1_Assignment">S No.</span>
+                <span className="t-2_Assignment">Assignment Name</span>
                 <span className="t-3">Date</span>
                 <span className="t-4">Due Date</span>
-                <span className="t-5">Status</span>
+                <span className="t-5_Assignment">Status</span>
+                <span className="t-6">Action</span>
             </span>
             <div className="table-r">
             <span className="table-c">
@@ -31,8 +37,8 @@ function Assignment() {
                    <tr class="noBorder">
                        <td className="serial"></td>
                        <td>English Assignment</td>
-                       <td>11/03/21</td>
-                       <td>15/03/21</td>
+                       <td  className="hide_on_mobile">11/03/21</td>
+                       <td className="hide_on_mobile">15/03/21</td>
                        <td>Not Done</td>
                        <Link 
                         to={{
@@ -47,8 +53,8 @@ function Assignment() {
                    <tr class="noBorder">
                        <td className="serial"></td>
                        <td>Physics Assignment</td>
-                       <td>11/03/21</td>
-                       <td>15/03/21</td>
+                       <td className="hide_on_mobile">11/03/21</td>
+                       <td className="hide_on_mobile">15/03/21</td>
                        <td>Graded</td>
                        <Link 
                         to={{
@@ -63,8 +69,8 @@ function Assignment() {
                    <tr class="noBorder">
                        <td className="serial"></td>
                        <td>English Assignment</td>
-                       <td>11/03/21</td>
-                       <td>15/03/21</td>
+                       <td className="hide_on_mobile">11/03/21</td>
+                       <td className="hide_on_mobile">15/03/21</td>
                        <td>Not Done</td>
                        <Link 
                         to={{
@@ -79,8 +85,8 @@ function Assignment() {
                    <tr class="noBorder">
                        <td className="serial"></td>
                        <td>Physics Assignment</td>
-                       <td>11/03/21</td>
-                       <td>15/03/21</td>
+                       <td className="hide_on_mobile">11/03/21</td>
+                       <td className="hide_on_mobile">15/03/21</td>
                        <td>Graded</td>
                        <Link 
                         to={{
@@ -95,8 +101,8 @@ function Assignment() {
                    <tr class="noBorder">
                        <td className="serial"></td>
                        <td>English Assignment</td>
-                       <td>11/03/21</td>
-                       <td>15/03/21</td>
+                       <td className="hide_on_mobile">11/03/21</td>
+                       <td className="hide_on_mobile">15/03/21</td>
                        <td>Not Done</td>
                        <Link 
                         to={{
@@ -111,8 +117,8 @@ function Assignment() {
                    <tr class="noBorder">
                        <td className="serial"></td>
                        <td>Physics Assignment</td>
-                       <td>11/03/21</td>
-                       <td>15/03/21</td>
+                       <td className="hide_on_mobile">11/03/21</td>
+                       <td className="hide_on_mobile">15/03/21</td>
                        <td>Graded</td>
                        <Link 
                         to={{

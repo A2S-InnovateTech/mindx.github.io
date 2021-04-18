@@ -20,9 +20,9 @@ import StudentPanel from './components/StudentPanel/StudentPanel';
 import TeacherDashboard from './components/TeacherDashboard/Dashboard';
 import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
-
-import Mobile from './components/profile/mobile';
+import Profile from './components/profile/index';
 import Popup from './components/popup/';
+import Notice from './components/notice/index';
 import  Teacherpopup from './components/teacher/popup/index';
 import MobileHeader from './components/MobileHeader';
 import Results from './components/Results';
@@ -36,9 +36,11 @@ import Test from './components/Test';
 import firebase from 'firebase';
 import app from './firebase';
 import TeacherSignup from './components/TeacherSignup';
-// import Test from './components/TestScreen/Test';
 import MyClasses from './components/MyClasses/MyClasses';
 import Feedback from './components/Feedback';
+import GoogleSignUpDetails from "./components/GoogleSignUpDetails";
+import AssignmentsT from './AssignmentsT';
+import PracticeTestTopic from './components/PracticeTestTopic';
 
 function App() {
   const [userDetails, setUserDetails] = useState([]);
@@ -47,6 +49,7 @@ function App() {
   const [tookAssessment, setTookAssessment] = useState(false);
   let history = useHistory();
   const [isLoading, setIsLoading] = useState(true);
+  const [openFeedback,setOpenFeedback] = useState(false);
 
   const fetchUserDetails = () => {
     console.log("fetching...");
@@ -56,11 +59,31 @@ function App() {
       .then((snapshot) => {
         setUserDetails(snapshot.data());
         console.log("Details", userDetails);
-        setIsLoading(false);
         console.log(isLoading);
       })
       .catch(e=>console.log(e));
   }
+
+  const getSchoolName = (id) =>{
+    app.firestore().collection("schools").doc(id)
+    .get()
+    .then((doc) => {
+        if(doc.exists)  {
+          setUserDetails(oldUserDetails=>{
+            let oldObj = Object.assign({}, oldUserDetails);
+            oldObj.school = doc.data().name;
+            return oldObj;
+          })
+        }
+    })
+    .catch(e=>console.log(e));
+  }
+
+  useEffect(() => {
+    if(userDetails!==[] && userDetails!==undefined)
+      setIsLoading(false);
+    getSchoolName(userDetails?.school);
+  }, [userDetails])
 
   useEffect(() => {
     setIsLoading(true);
@@ -91,13 +114,13 @@ function App() {
 
     <Router>
     <div className="OuterApp">
-       <Route path="/test" render={(routeProps) => 
+      <Route path="/test" render={(routeProps) => 
           <Test props={routeProps.location.state} user={user} fetchUserDetails={fetchUserDetails}/>
         } exact>
-      </Route> 
+      </Route>
       <Route path="/login" exact>
-      <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-        <Login/>
+        <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+        <Login setUser={setUser}/>
       </Route>
       <Route path="/signup" exact>
       <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
@@ -106,9 +129,12 @@ function App() {
       <Route path="/teacher/signup" exact>
         <TeacherSignup/>
       </Route>
-       <Route path="/" exact>
-        {user?<Redirect to="/dashboard" />:<Login/>}
-      </Route> 
+      <Route path="/" exact>
+        {user?<Redirect to="/dashboard" />:<Redirect to="/login" />}
+      </Route>
+      <Route path="/signup-details" exact>
+        <GoogleSignUpDetails user={user} history={history}/>
+      </Route>
 
       <Route 
         path="/logout" 
@@ -149,12 +175,23 @@ function App() {
                 <>
                   <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
-                <StudentPanel props={routeProps.location.state}/>
+                <StudentPanel props={routeProps.location.state} userDetails={userDetails}/>
                 </>  
                 } exact>
                 
               </Route>
-               <Route path="/dashboard" exact>{
+
+              <Route path="/practice-topic" render={(routeProps) => 
+                <>
+                  <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                  <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
+                  <PracticeTestTopic props={routeProps.location.state} userDetails={userDetails}/>
+                </>  
+                } exact>
+                
+              </Route>
+
+              <Route path="/dashboard" exact>{
                 isLoading?(
                   <div className="LoadingScreen">
                     <div className="LoadingText">Loading</div>
@@ -170,23 +207,33 @@ function App() {
                   :userDetails.userType=="teacher"?<Redirect to="/teacher/dashboard" />:
                   <>
                     <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                    <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
-                    <Dashboard user={user} userDetails={userDetails} setUserDetails={setUserDetails}/>
+                    <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser} setOpenFeedback={setOpenFeedback}/>
+                    <Dashboard user={user} userDetails={userDetails} setUserDetails={setUserDetails} openFeedback={openFeedback} setOpenFeedback={setOpenFeedback}/>
                   </>
               }
-                {
-                }
-              </Route> 
+              </Route>
             
             <Route path="/teacher/dashboard" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser} setOpenFeedback={setOpenFeedback}/>
+                <TeacherDashboard user={user} userDetails={userDetails} setUserDetails={setUserDetails} openFeedback={openFeedback}/>
+              </Route>
+
+            <Route path="/teacher/classes" exact>
+                <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
-                <TeacherDashboard user={user} userDetails={userDetails} setUserDetails={setUserDetails}/>
+                <MyClasses user={user} userDetails={userDetails} setUserDetails={setUserDetails}/>
               </Route>
               
+              
               <Route path="/profile" exact>
+                <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} userDetails={userDetails}/>
+                <Profile user={user} userDetails={userDetails}/>
+              </Route>
+              <Route path="/notice" exact>
               <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                <Mobile/>
+                <Notice/>
               </Route>
               <Route path="/popup" exact>
              
@@ -220,10 +267,15 @@ function App() {
                 <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
                 <Performance/>
               </Route>
-              <Route path="/feed" exact>
+              <Route path="/teacher/assignments" exact>
+                <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <AssignmentsT/>
+              </Route>
+              <Route path="/myclasses" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
-                <Feedback/>                 {/*for testing the popup*/}
+                <MyClasses/>
               </Route>
           </div>
         </Switch>

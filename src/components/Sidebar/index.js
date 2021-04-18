@@ -1,14 +1,14 @@
 import React, {useState, useEffect} from 'react'
 import './Sidebar.css';
 import Logo from '../../logo.png';
-import ProfilePic from './profile_pic.png';
+import ProfilePic from './profile_pic.svg';
 import Close from './close.svg';
 import {Link, useHistory} from "react-router-dom";
 import firebase from 'firebase';
 import app from '../../firebase';
 import EditIcon from './edit.png';
 
-function Sidebar({showSidebar, setShowSidebar, user, setUser, userDetails, fetchUserDetails}) {
+function Sidebar({showSidebar, setShowSidebar, user, setUser, userDetails, fetchUserDetails, setOpenFeedback}) {
     let history = useHistory();
     const [schoolEdit, setSchoolEdit] = useState(false);
     const [classEdit, setClassEdit] = useState(false);
@@ -29,12 +29,16 @@ function Sidebar({showSidebar, setShowSidebar, user, setUser, userDetails, fetch
         }
     }, [image])
 
-    const updateSchool = (e) =>{
-        e.preventDefault();
-        app.firestore().collection("users").doc(user?.uid).update("school", school)
-            .then(()=>{setSchoolEdit(false); fetchUserDetails();})
-            .catch(e=>console.log("Error in updating details: ", e))
-    }
+    // const updateSchool = (e) =>{
+    //     e.preventDefault();
+    //     app.firestore().collection("users").doc(user?.uid).get()
+    //         .then((doc)=>{
+    //             app.firestore().collection("schools").doc(doc.data().school).update(
+
+    //             )
+    //         })
+    //         .catch(e=>console.log("Error in updating details: ", e))
+    // }
     const updateClass = (e) =>{
         e.preventDefault();
         app.firestore().collection("users").doc(user.uid).update("class", Class)
@@ -77,7 +81,8 @@ function Sidebar({showSidebar, setShowSidebar, user, setUser, userDetails, fetch
                 </>
             }
             <p className="Sidebar__name">{user?.displayName || "Student"}</p>
-            <p className="Sidebar__school">School: {schoolEdit? <><input type="text" value={school} onChange={(e)=>setSchool(e.target.value)}/> <button onClick={(e)=>updateSchool(e)}>Set</button> </>: <>{userDetails?.school||"Not Set"} <img src={EditIcon} alt="Edit" className="Sidebar__edit" onClick={()=>setSchoolEdit(true)}/></>}</p>
+            {/* <p className="Sidebar__school">School: {schoolEdit? <><input type="text" value={school} onChange={(e)=>setSchool(e.target.value)}/> <button onClick={(e)=>updateSchool(e)}>Set</button> </>: <>{userDetails?.school||"Not Set"} <img src={EditIcon} alt="Edit" className="Sidebar__edit" onClick={()=>setSchoolEdit(true)}/></>}</p> */}
+            <p className="Sidebar__school">School: {userDetails?.school||"Not Set"}</p>            
             <p className="Sidebar__class">Class:  {classEdit? <><input type="text" value={Class} onChange={(e)=>setClass(e.target.value)}/> <button onClick={(e)=>updateClass(e)}>Set</button> </>: <>{userDetails?.class||"Not Set"} <img src={EditIcon} alt="Edit" className="Sidebar__edit" onClick={()=>setClassEdit(true)}/></>}</p>
             <p className="Sidebar__class clickable" onClick={
                 (e)=>{
@@ -92,12 +97,10 @@ function Sidebar({showSidebar, setShowSidebar, user, setUser, userDetails, fetch
             }><b>Logout</b></p>
 
             <div className="Sidebar__buttons">
-                <Link to="/dashboard" style={{textDecoration:"none", color:"white"}}><div className="Sidebar__button active">Dashboard</div></Link>
-                <div className="Sidebar__button">Timetable</div>
+                <Link to="/dashboard" style={{textDecoration:"none", color:"white"}}><div className="Sidebar__button">Dashboard</div></Link>
                 <Link to="/test" style={{textDecoration:"none", color:"white"}}><div className="Sidebar__button">Tests</div></Link>
-                <div className="Sidebar__button">Attendance</div>
                 <div className="Sidebar__button">Help</div>
-                <div className="Sidebar__button">Feedback</div>
+                <div className="Sidebar__button" onClick={()=>setOpenFeedback(true)} style={{cursor: "pointer"}}>Feedback</div>
                 <div className="Sidebar__button">Settings</div>
             </div>
         </div>
@@ -112,7 +115,7 @@ function Sidebar({showSidebar, setShowSidebar, user, setUser, userDetails, fetch
                 </>
             }
             <p className="Sidebar__name">{user?.displayName || "Student"}</p>
-            <p className="Sidebar__school">School: {schoolEdit? <><input type="text" value={school} onChange={(e)=>setSchool(e.target.value)}/> <button onClick={(e)=>updateSchool(e)}>Set</button> </>: <>{userDetails?.school||"Not Set"} <img src={EditIcon} alt="Edit" className="Sidebar__edit" onClick={()=>setSchoolEdit(true)}/></>}</p>
+            <p className="Sidebar__school">School: {userDetails?.school||"Not Set"}</p>
             <p className="Sidebar__class">Class:  {classEdit? <><input type="text" value={Class} onChange={(e)=>setClass(e.target.value)}/> <button onClick={(e)=>updateClass(e)}>Set</button> </>: <>{userDetails?.class||"Not Set"} <img src={EditIcon} alt="Edit" className="Sidebar__edit" onClick={()=>setClassEdit(true)}/></>}</p>
             <p className="Sidebar__class clickable" onClick={
                 (e)=>{
@@ -132,7 +135,7 @@ function Sidebar({showSidebar, setShowSidebar, user, setUser, userDetails, fetch
                 <Link to="/test" style={{textDecoration:"none", color:"white"}}><div className="Sidebar__button">Tests</div></Link>
                 <div className="Sidebar__button">Attendance</div>
                 <div className="Sidebar__button">Help</div>
-                <div className="Sidebar__button">Feedback</div>
+                <div className="Sidebar__button" onClick={()=>setOpenFeedback(true)}>Feedback</div>
                 <div className="Sidebar__button">Settings</div>
             </div>
 

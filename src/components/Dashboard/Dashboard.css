@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
+.Dashboard{
+    height: 100%;
+    min-height: 100vh;
+    overflow-y: scroll;
+}
+
+.Dashboard::-webkit-scrollbar {
+    display: none;
+}
+
 .Dashboard__heading_row{
     display: flex;
     flex-direction: row;
@@ -71,6 +81,10 @@
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 table { border-collapse: collapse; }
@@ -106,4 +120,27 @@ th{
 
 td{
     text-align: center;
+}
+
+@media only screen and (max-width: 600px){
+    .Dashboard__button_row{
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .Dashboard__button{
+        width: 80vw;
+    }
+
+    .Dashboard__subject{
+        margin-bottom: 20px;
+    }
+
+    .Dashboard__table{
+        max-width: 100vw;
+    }
+
+    .hide_on_mobile{
+        display: none;
+    }
 }
