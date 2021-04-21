@@ -14,6 +14,10 @@
     justify-content: space-between;
 }
 
+.mobile__head__login{
+    display: none;
+}
+
 .options{
     display: flex;
     margin-top: 35px;
@@ -321,12 +325,12 @@ margin-top: 3vh;
         margin-top: 20px;
     }
 
-    .left-p{
-        margin-left: -70px;
+    .left-p__login{
+        margin-left: -30vw;
     }
 
     .form-1, .form-2{
-        width: 100%;
+        width: 80vw;
     }
 
     .final-btn{
@@ -351,8 +355,7 @@ margin-top: 3vh;
     }
     
     .login__title{
-        margin-left: 22vw;
-        margin-top: 0px;
+        margin-left: 38vw;
     }
     
     .form-1,.form-2{
@@ -369,22 +372,20 @@ margin-top: 3vh;
         margin-left: 45vw;
     }
 
-    .mobile__head{
+    .mobile__head__login{
         position: absolute;
         top: 0;
-        margin-left: 100vw;
     }
+    
 
-    .total-p{
-        margin-top: 100px;
-    }
+
 
     .f-pass{
-        margin-left: 45vw;
+        margin-left: 54vw;
     }
 
     .signup-l{
-        margin-left: 45vw;
+        margin-left: 62vw;
     }
 
 }

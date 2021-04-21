@@ -73,7 +73,7 @@ function Login({ history, setUser }) {
 
     return (
         <div className="login">
-            <div className="mobile__head"><img src={logo}></img></div>
+            <div className="mobile__head__login"><img src={logo}></img></div>
             <div className="navbar">
                 <div className="logo"><img src={logo}></img></div>
                 <div className="options">
@@ -96,7 +96,7 @@ function Login({ history, setUser }) {
             </div>
              
             <div className="total-p">
-            <div className="left-p">
+            <div className="left-p__login">
             <span className="login__title">LOGIN</span>
             <form onSubmit={handleLogin} className="login__form">
             <input name="email" type="email" className="form-1" placeholder="  Enter you mail id" required></input>

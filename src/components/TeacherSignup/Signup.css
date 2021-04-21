@@ -201,6 +201,10 @@ display: flex;
     opacity: 0.6;
 }
 
+.mobile__head-teach{
+    display: none;
+}
+
 @media only screen and (max-width: 768px){
     .picture-s{
         display: none;
@@ -226,12 +230,12 @@ display: flex;
         margin-left: -350px;
     }
 
-    .form-1-s, .form-2-s, .form-5-s, .form-6-s, .form-6-s{
-        width: 110%;
+    .form-1-s, .form-2-s, .form-5-s, .form-6-s{
+        width: 70vw;
     }
 
     .form-3-s, .form-4-s, .form-7-s,.form-8-s{
-        width: 195%;
+        width: 70vw;
     }
 
     .form-3-s{
@@ -252,8 +256,25 @@ display: flex;
     }
 
     .title-s{
-        margin-left: 90vw;
+        margin-left: 95vw;
         font-size: 34px;
     }
     
+    .signup__title-s{
+        margin-left: 83vw;
+    }
+
+    .signup__forms-s{
+        margin-left: 52vw;
+    }
+
+    .forms-s{
+        margin-left: 100vw;
+    }
+
+    .mobile__head-teach{
+        position: absolute;
+        top: 0;
+        margin-left: 100vw;
+    }
 }
