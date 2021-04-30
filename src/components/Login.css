@@ -104,7 +104,7 @@ height: 26px;
     margin-top: 85px;
     justify-self: center;
     align-self: flex-start;
-    margin-left: 5.7vw;
+    margin-left: -0.3vw;
 }
 
 .form-1{
@@ -153,6 +153,10 @@ height: 26px;
     
 }
 
+.left-p__login{
+    margin-left: 10vw;
+}
+
 .f-pass{
   display: flex;
   flex-direction: column;
@@ -168,6 +172,7 @@ height: 26px;
   color: #FFF5D1;
   margin-bottom: 25px;
   opacity: 0.6;
+  margin-left: 9vw;
   
 }
 
@@ -181,7 +186,7 @@ height: 26px;
     line-height: 23px;
     text-align: center;
     color: #FFF5D1;
-
+    margin-left: 11vw;
 
 }
 
@@ -242,7 +247,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
-margin-top: 7vh;
+margin-top: 3vh;
 }
 
 .social> img{
@@ -308,7 +313,7 @@ margin-top: 3vh;
     }
 
     .logo{
-        display: none;
+        margin-left: 10vw;
     }
 
     .options{
@@ -327,6 +332,7 @@ margin-top: 3vh;
 
     .left-p__login{
         margin-left: -30vw;
+        margin-top: -5vh;
     }
 
     .form-1, .form-2{
@@ -406,3 +412,4 @@ margin-top: 3vh;
 ::placeholder{
     line-height: 2;
 }
+

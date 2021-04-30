@@ -73,7 +73,7 @@ function Login({ history, setUser }) {
 
     return (
         <div className="login">
-            <div className="mobile__head__login"><img src={logo}></img></div>
+            {/* <div className="mobile__head__login"><img src={logo}></img></div> */}
             <div className="navbar">
                 <div className="logo"><img src={logo}></img></div>
                 <div className="options">

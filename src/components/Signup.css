@@ -122,6 +122,8 @@ height: 40px;
 background: #EBE7DA;
 border-radius: 10px;
 margin-top: -5px;
+margin-left: 0px;
+margin-right: 9px;
 }
 
 
@@ -185,9 +187,6 @@ left: 10vw;
 top: 20vh;
 }
 
-.signup__form-1-s{
-    margin-left: 10px;
-}
 
 
 .buttons-s{
@@ -245,7 +244,7 @@ display: flex;
     }
     
     .logo-s{
-        display: none;
+        margin-left: 12vw;
     }
 
     .mobile__head{
@@ -313,6 +312,7 @@ display: flex;
         margin-left: 90vw;
         width: 300px;
         padding-left: 40vw;
+        padding-top: 11px;
     }
     
     .signup__footer-s{
@@ -343,6 +343,7 @@ opacity: 0.6;
     color: white;
     margin-left: 10px;
     margin-bottom: 20px;
+    padding-top: 11px;
 }
 
 .select-search__option{
@@ -385,4 +386,8 @@ opacity: 0.6;
     z-index: 0;
     height: 60vh;
     object-fit: contain;
+}
+
+::placeholder{
+    line-height: 2;
 }
