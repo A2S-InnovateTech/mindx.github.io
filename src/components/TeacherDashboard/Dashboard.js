@@ -26,10 +26,10 @@ function Dashboard() {
                     <button>Time Table</button>
                   </Col>
                   <Col lg={3} md={6} sm={12} xs={12}>
-                    <button>Notices</button>
+                    <Link to="/notice" style={{textDecoration:"none", color:"white"}}><button>Notices</button></Link>
                   </Col>
                   <Col lg={3} md={6} sm={12} xs={12}>
-                    <button>My Profile</button>
+                    <Link to="/profile" style={{textDecoration:"none", color:"white"}}><button>My Profile</button></Link>
                   </Col>
                 
                 </Row>

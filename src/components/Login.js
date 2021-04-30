@@ -46,6 +46,7 @@ function Login({ history, setUser }) {
                 }
                 else{
                     console.log("Old User");
+                    history.push("/dashboard")
                 }
             })
     }
