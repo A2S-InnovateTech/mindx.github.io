@@ -67,6 +67,7 @@ function App() {
   }
 
   const getSchoolName = (id) =>{
+    if(id)
     app.firestore().collection("schools").doc(id)
     .get()
     .then((doc) => {
