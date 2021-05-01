@@ -7,6 +7,8 @@ import file from "../images/file.png";
 import upload from '../images/upload.png'
 import rect from '../images/rect.png';
 import {Link, withRouter} from 'react-router-dom';
+import down from "../images/down.png"
+import grade from "../images/grade.png";
 
 function Assesment(props) {
     console.log(props);
@@ -45,12 +47,12 @@ function Assesment(props) {
                 </span>
                 <span className="ass-btn-3">
                 <span className="rect"></span>
-                {/* <img  className="icon-btn" src={file}></img> */}
+                <img  className="icon-btn" src={down}></img>
                 <span className="ass-btn-3-info">Download My Solution</span>
                 </span>
                 <span className="ass-btn-4">
                 <span className="rect"></span>
-                {/* <img  className="icon-btn" src={file}></img> */}
+                <img  className="icon-btn" src={grade}></img>
                     <span className="ass-btn-4-info">View My Grade</span>
                 </span>
             </div>
@@ -62,7 +64,7 @@ function Assesment(props) {
 
 
          <span className="footer-a">All rights are reserved MindX 2021</span>    
-        <div className="bottom-line"></div>   
+        <div className="bottom-line"></div>    
             
         </div>
     )
