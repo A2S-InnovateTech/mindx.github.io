@@ -1,0 +1,321 @@
+.PrincipalDashboard {
+  margin-top: 50px;
+  margin-left: 30px;
+  text-align: center;
+}
+
+.PrincipalDashboard__heading_row{
+    display: flex;
+    flex-direction: row;
+    margin: 30px 20px 20px 10px;
+    align-items: center;
+    width: 70vw;
+}
+
+.PrincipalDashboard__title{
+    font-family: 'Fredoka One';
+    font-size: 40px;
+    color: #10222E;
+    text-align: left;
+    width: 32%;
+}
+
+.PrincipalDashboard__line{
+    background-color: #10222E;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    margin-left: 40px;
+}
+
+.PrincipalDashboard button{
+  width: 90%;
+  height: 46px;
+  border: 3px solid #10222E;
+  border-radius: 4px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #FFF5D1;
+  background-color: #10222E;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+.PrincipalDashboard_rec{
+  margin-bottom: 10px;
+  margin-left: 33px;
+  width: 95%;
+  background: #10222E ;
+  height: 50px;
+}
+
+.PrincipalDashboard_row{
+  display: flex;
+  background-color: #10222E;
+  height: 50px;
+  justify-content: space-between;
+}
+
+.PrincipalDashboard_text{
+  margin-top: 13px;  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: left;
+  color: #FFF5D1;
+}
+
+
+@media screen and (max-width: 576px) and (min-width: 400px) {
+  .PrincipalDashboard_rec{
+   
+    margin-bottom: 10px;
+    margin-left: 8%;
+    width: 85%;
+
+  }
+  .PrincipalDashboard_text{
+    margin-top: 13px;  
+    margin-right: 15%;
+    margin-left: 5%;
+    width: 90%;
+    height: 26px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+  
+  }
+  .PrincipalDashboard_texttime{
+    margin-top: 13px;  
+    margin-right: 5%;
+    margin-left: 30%;
+    width: 90%;
+    height: 26px;
+    
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .PrincipalDashboard_icon_box{
+    margin-top: 25px;
+    margin-bottom: 16px;
+    margin-left: 60px;
+    
+  }
+  
+}
+
+@media screen and (max-width: 700px) and (min-width: 577px) {
+  .PrincipalDashboard_rec{
+   
+    margin-bottom: 10px;
+    margin-left: 8%;
+    width: 95%;
+ 
+  }
+  .PrincipalDashboard_text{
+    margin-top: 13px;  
+    margin-right: 2%;
+    margin-left: 1%;
+    width: 90%;
+    height: 26px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+  
+  }
+  .PrincipalDashboard_texttime{
+    margin-top: 13px;  
+    margin-right: 5%;
+    margin-left: 0%;
+   
+  }
+  .PrincipalDashboard_icon_box{
+    margin-top: 22px;
+    margin-bottom: 16px;
+    margin-left: 10px;
+    margin-right: 15px;
+    
+  }
+  
+}
+
+@media screen and (max-width: 400px) and (min-width: 300px) {
+  .PrincipalDashboard_rec{
+    margin-bottom: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+  
+  }
+  .PrincipalDashboard_icon_box{
+    margin-top: 27px;
+    margin-bottom: 28px;
+    margin-left: 40px;
+  }
+  .PrincipalDashboard_text{
+    margin-top: 13px;  
+    margin-right: 5%;
+    margin-left: 5%;
+    width: 90%;
+    height: 26px;
+    
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 20px;
+  }
+  .PrincipalDashboard_texttime{
+    margin-top: 13px;  
+    margin-right: 5%;
+    margin-left: 35%;
+    width: 90%;
+    height: 26px;
+    
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 20px;
+  }
+  
+}
+
+@media screen and (max-width: 1168px) and (min-width: 1000px) {
+  .PrincipalDashboard_rec{
+   
+    margin-bottom: 10px;
+    margin-left: 8%;
+    width: 85%;
+ 
+  }
+
+  .PrincipalDashboard__line{
+   
+    height: 4px;
+    width: 55%;
+    border-radius: 10px;
+    margin-left: 30px;
+  }
+
+  .PrincipalDashboard__heading_row{
+    
+    margin-left: 75px;
+   
+  }
+  .PrincipalDashboard_text{
+    margin-top: 13px;  
+    margin-right: 15%;
+    margin-left: 5%;
+    width: 90%;
+    height: 26px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+  
+  }
+  .PrincipalDashboard_texttime{
+    margin-top: 13px;  
+    margin-right: 5%;
+    margin-left: 30%;
+    width: 90%;
+    height: 26px;
+    
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .PrincipalDashboard_icon_box{
+    margin-top: 25px;
+    margin-bottom: 16px;
+    margin-left: 20px;
+    
+  }
+  
+}
+@media screen and (max-width: 1340px) and (min-width: 1169px) {
+  .PrincipalDashboard_texttime{
+    margin-top: 13px;  
+    margin-right: 5%;
+    margin-left: 3%;
+    width: 90%;
+    height: 26px;
+    
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+  }
+  
+  .PrincipalDashboard_icon_box{
+    margin-top: 25px;
+    margin-bottom: 16px;
+    margin-left: 20px;
+    
+  }
+  
+}
+
+
+
+.PrincipalDashboard__body{
+  width: 95%;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  margin-left: 33px;
+  padding: 20px;
+  background-color: #FFF5D1;
+
+}
+
+.PrincipalDashboard_class_teacher{
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 10px auto;
+}
+
+.PrincipalDashboard_class_strength{
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 10px auto;
+}
+
+.PrincipalDashboard_view_detail{
+    float: right;
+    border: 2px solid #10222E;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: transparent;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    margin-top: 10px;
+    color: #10222E;
+    width: 150px;
+    height: 40px;
+    padding-top: 4px;
+    text-align: center;
+}
+

@@ -1,0 +1,135 @@
+.up{
+    height: 20px;
+    width: 20px;
+    margin-left: 568px;
+    margin-top: 10px;
+}
+
+.head{
+    margin-top: 20px;
+}
+
+.table-c-1 {
+    margin-left: 2.5vw;
+    width: 95%;
+}
+
+.chart{
+    width: 50vw;
+    height: 40vh;
+    margin-left: 140px;
+    margin-top: 40px;
+}
+
+.x-info, .y-info{
+display: flex;
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 26px;
+margin-left: 170px;
+}
+
+.line-p{
+border: 2px solid #000000;
+box-sizing: border-box;
+width: 409px;
+height: 0px;
+margin-top: 13px;
+margin-left: 12px;
+}
+
+.y-info{
+    transform: rotate(-90deg);
+    margin-left: -700px;
+    margin-top: -850px;
+}
+
+.line-p-2{
+border: 2px solid #000000;
+box-sizing: border-box;
+width: 150px;
+height: 0px;
+margin-top: 12px;
+margin-left: 20px;
+}
+
+.pdf-btn{
+    width: 180px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 4px;
+    border: 3px solid #10222E;
+    font-family: 'Roboto';
+    font-weight: 500;
+    margin-right: 20px;
+    background: transparent;
+}
+
+.pdf-btn:hover{
+    opacity: 0.6;
+}
+
+@media only screen and (max-width: 768px){
+    .pdf-btn{
+        left: 130px;
+        top: 550px;
+    }
+
+    .table-c-1{
+        width: 90vw;
+    }
+
+    .y-info{
+        margin:0;
+        position: aboslute;
+        left: 70px;
+        margin-top: -300px;
+        margin-left: -190px;
+        width: 500px;
+    }
+
+    .chart{
+        margin-left: 90px;
+    }
+
+    .x-info{
+        margin-left: 50px;
+    }
+
+    .line-p{
+        width: 200px;
+    }
+
+    .t-2{
+        width: 70px;
+        margin-left: 300px;
+        margin-top: 5px;
+    }
+
+    .t-1{
+        width: 70px;
+        margin-top: 5px;
+    }
+}
+
+
+
+.Performance__title{
+    background-color: #10222E;
+    color: #FFF5D1;
+    font-size: 20px;
+    font-family: 'Roboto';
+    margin-left: 2.5vw; 
+    margin-top: 20px;
+    min-width: 470px;
+    width: 70.15vw;
+    padding: 5px 0px 5px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
