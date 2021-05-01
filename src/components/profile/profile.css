@@ -218,7 +218,7 @@ height: 46px;
     
     
     .form-body{
-        height: 400px;
+        height: 420px;
         margin-right: 10px;  
     }
     .forminput{
@@ -234,6 +234,7 @@ height: 46px;
     .forminput-mobile{
         min-width: 165px;
         max-width: 350px;
+        margin-left: 20px;
      }
      .formlabel-email{
         margin-top: 10px;
@@ -248,7 +249,7 @@ height: 46px;
     
     
     .form-body{
-        height: 400px;
+        height: 420px;
         margin-right: 10px;  
     }
     .forminput{

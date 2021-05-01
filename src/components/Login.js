@@ -28,6 +28,7 @@ function Login({ history, setUser }) {
     } 
 
     const updateUserDetails = (user) => {
+        if(user?.uid)
         app.firestore().collection("users").doc(user.uid).get()
             .then(snapshot=>{
               if(!snapshot.exists){
@@ -46,6 +47,7 @@ function Login({ history, setUser }) {
                 }
                 else{
                     console.log("Old User");
+                    history.push("/dashboard")
                 }
             })
     }

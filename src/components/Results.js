@@ -9,7 +9,6 @@ function Results(props) {
     return (
         <div className="result">
             <div className="header">
-            <img src={Logo} alt="MindX Logo"/>
         </div>
             <div className="info">Congratulations !! You passed the test 1</div>
             <img className="check-icon" src={check}></img>

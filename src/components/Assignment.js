@@ -12,7 +12,7 @@ function Assignment() {
     }
 
     return (
-        <div className="assignment">
+        <div className="assignment"> 
             <div className="top-line"></div>
             <div className="bottom-line"></div>
             <div className="head">

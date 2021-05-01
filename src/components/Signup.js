@@ -147,7 +147,7 @@ function Signup({history}) {
                     <label>
                     <input name="email" className="signup__form-s" type="email" placeholder="  Email Id" value={email} onChange={(e)=>{setEmail(e.target.value)}} required></input>
                     </label>
-                    <span className="form-div">
+                    <span className="form-div-s">
                     <input className="signup__form-1-s" type="text" placeholder="  Mobile No." value={mobile} onChange={(e)=>{setMobile(e.target.value)}} required></input>
                     <input className="signup__form-1-s" type="text" placeholder="  Class" value={Class} onChange={(e)=>{setClass(e.target.value)}} required></input>
                     </span>
@@ -161,7 +161,7 @@ function Signup({history}) {
                     <label>
                     <input name="password" className="signup__form-s" type="password" placeholder="  Password" value={password} onChange={(e)=>{setPassword(e.target.value)}} required></input>
                     </label>
-                    <span className="form-div">
+                    <span className="form-div-s">
                     <input className="signup__form-1-s" type="text" placeholder="  Relation" value={relation} onChange={(e)=>{setRelation(e.target.value)}} required></input>
                     <input className="signup__form-1-s" type="text" placeholder="  Mobile No." value={relationNo} onChange={(e)=>{setRelationNo(e.target.value)}} required></input>
                     </span>

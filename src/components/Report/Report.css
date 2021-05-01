@@ -151,4 +151,8 @@
         width: 95vw;
         min-width: 10px;
     }
+
+    .Report__Button{
+        margin-top:5px;
+    }
 } 

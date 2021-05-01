@@ -19,7 +19,7 @@ const Popup = ({setIsOpen}) =>  {
             <Modal.Title className="title">
               <p >Welcome&nbsp;new&nbsp;User</p>
             </Modal.Title>
-          </Modal.Header>
+          </Modal.Header> 
           <Modal.Body className="popback">
             <p  className="p1">
             As a new user we first evaluate you using a small test

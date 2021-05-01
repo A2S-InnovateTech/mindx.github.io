@@ -104,29 +104,41 @@ margin-left: 335px;
     
 }
 
-.form-1-s, .form-2-s, .form-5-s, .form-6-s{
-    width: 548px;
-    height: 40px;
-    background: #EBE7DA;
-    border-radius: 10px;
-    margin-bottom: 8px;
-}
+
 
 .form-div{
     display: flex;
+    margin-top: 0;
 
 }
 
-.form-3-s, .form-4-s, .form-7-s, .form-8-s{
-width: 265px;
-height: 40px;
-background: #EBE7DA;
-border-radius: 10px;
-margin-bottom: 8px;
+
+.form-1-si{
+    width: 40vw;
+    height: 50px;
+    background: #EBE7DA;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vh;
 }
 
-.form-3-s, .form-7-s{
-margin-right: 10px;
+.form-2-si{
+    width: 50vw;
+    height: 50px;
+    background: #EBE7DA;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 22px;
+}
+
+.form-3-si{
+    width: 20vw;
+    height: 50px;
+    background: #EBE7DA;
+    border-radius: 10px;
+    margin-bottom: 2vh;
 }
 
 .picture-s{
@@ -170,7 +182,7 @@ opacity: 0.6;
 }
 
 .right-p-s{
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .blank-s{
@@ -228,18 +240,17 @@ display: flex;
         margin-left: -350px;
     }
 
-    .form-1-s, .form-2-s, .form-5-s, .form-6-s{
-        width: 70vw;
-    }
+   .form-div{
+       margin-left: -1vw;
+   }
 
-    .form-3-s, .form-4-s, .form-7-s,.form-8-s{
-        width: 70vw;
-    }
+   .form-1-si{
+       width: 60vw;
+   }
 
-    .form-3-s{
-        margin-left: -40vw;
-        margin-top: -6px;
-    }
+   .form-3-si{
+       width: 31vw;
+   }
     
     .final-btn-s{
         width: max-content;

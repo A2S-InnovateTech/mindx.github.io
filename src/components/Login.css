@@ -107,26 +107,6 @@ height: 26px;
     margin-left: -0.3vw;
 }
 
-.form-1{
-    width: 448px;
-    height: 50px;
-    background: #EBE7DA;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 5vh;
-}
-
-.form-2{
-    width: 448px;
-    height: 50px;
-    background: #EBE7DA;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 22px;
-}
-
 .login__form{
     display: flex;
     flex-direction: column;
@@ -188,6 +168,13 @@ height: 26px;
     color: #FFF5D1;
     margin-left: 11vw;
 
+}
+
+.form-1, .form-2{
+    width: 30vw;
+    background: #EBE7DA;
+    border-radius: 10px;
+    height: 7vh;
 }
 
 .blank{
@@ -254,6 +241,11 @@ margin-top: 3vh;
 width: 28px;
 height: 28px;
 margin-top: 3vh;
+}
+
+.form-1{
+    margin-top:3vh ;
+    margin-bottom: 2vh;
 }
 
 .social-icons{
@@ -337,6 +329,14 @@ margin-top: 3vh;
 
     .form-1, .form-2{
         width: 80vw;
+        background: #EBE7DA;
+        border-radius: 10px;
+        height: 7vh;
+    }
+
+    .form-1{
+        margin-top:3vh ;
+        margin-bottom: 2vh;
     }
 
     .final-btn{
@@ -366,12 +366,15 @@ margin-top: 3vh;
     
     .form-1,.form-2{
         margin-left: 40vw;
+
     }
     
     .final-btn{
         width: 180px;
         margin-left: 45vw;
     }
+
+    
     
    
     .social{
@@ -381,6 +384,18 @@ margin-top: 3vh;
     .mobile__head__login{
         position: absolute;
         top: 0;
+    }
+
+    .left-p__login{
+        margin-left: -30vw;
+    }
+
+    .f-pass{
+        margin-left: 8vw;
+    }
+
+    .signup-l{
+        margin-left: 9.5vw;
     }
     
 

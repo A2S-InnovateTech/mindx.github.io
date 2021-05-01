@@ -183,11 +183,20 @@ line-height: 35px;
 
   @media only screen and (max-width: 600px) {
     .pop{
-        width: 400px;
+        width: 96vw;
     }
     .title{
-        font-size: 30px;
-line-height: 35px;
+        font-size: 25px;
+        line-height: 25px;
+        margin-top: 20px;
+        margin-left: 10px;
+        
     }
+    
+    .p1{
+     font-size: 18px;
+     margin-top: 10px;
+    }
+
     
   }

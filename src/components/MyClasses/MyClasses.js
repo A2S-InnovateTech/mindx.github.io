@@ -16,7 +16,7 @@ function MyClasses() {
     const [open3, setOpen3] = useState(false);
      
     return (
-        <div className="container">
+        <div className="container"> 
          
          <div className="Dashboard__heading_row">
             <div className="arrow">

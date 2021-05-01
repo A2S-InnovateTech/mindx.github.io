@@ -8,7 +8,6 @@ function Results2(props) {
     return (
         <div className="r-screen">
             <div className="header">
-            <img src={Logo} alt="MindX Logo"/>
         </div>
             <div className="info">Congratulations !! You passed the test 2</div>
             <img className="check-icon" src={check}></img>

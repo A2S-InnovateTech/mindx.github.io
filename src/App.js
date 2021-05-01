@@ -52,7 +52,8 @@ function App() {
   const [openFeedback,setOpenFeedback] = useState(false);
 
   const fetchUserDetails = () => {
-    console.log("fetching...");
+    if(user?.uid){
+      console.log("fetching...");
       app.firestore().collection("users")
       .doc(user.uid)
       .get()
@@ -62,9 +63,11 @@ function App() {
         console.log(isLoading);
       })
       .catch(e=>console.log(e));
+    }
   }
 
   const getSchoolName = (id) =>{
+    if(id)
     app.firestore().collection("schools").doc(id)
     .get()
     .then((doc) => {
@@ -82,7 +85,8 @@ function App() {
   useEffect(() => {
     if(userDetails!==[] && userDetails!==undefined)
       setIsLoading(false);
-    getSchoolName(userDetails?.school);
+    if(user?.uid && userDetails?.school)
+      getSchoolName(userDetails?.school);
   }, [userDetails])
 
   useEffect(() => {
@@ -139,7 +143,7 @@ function App() {
         render={ ()=>{
           firebase.auth().signOut().then(function() {
             firebase.auth().onAuthStateChanged((authUser) => {
-            if (authUser) {
+            if (authUser) { 
               //user logged in
               console.log(authUser);
               setUser(authUser);

@@ -84,19 +84,23 @@ margin-top: 10px;
 }
 
 .t-2_Assignment{
-    margin-left: 70px;
+    margin-left: 31px;
 }
 
 .t-3{
-    margin-left: 130px;
+    margin-left: 54px;
 }
 
 .t-1_Assignment{
-    margin-left:20px;
+    margin-left:-21px;
 }
 
 .t-4, .t-5_Assignment{
-    margin-left: 90px;
+    margin-left: 17px;
+}
+
+.t-6{
+    margin-right: 17px;
 }
 
 .table-r{
@@ -155,6 +159,10 @@ tr.noBorder td {
 @media only screen and (max-width: 768px){
     .table-t{
         font-size: 3vw;
+    }
+
+    .title-a{
+        margin-left: 4px;
     }
     .table-r{
         font-size: 3vw;
@@ -219,6 +227,18 @@ tr.noBorder td {
     table{
         /* background-color: #EBE7DA; */
         margin-left: 10px;
+    }
+    
+    .t-1_Assignment, .t-2_Assignment, .t-3, .t-4, .t-5_Assignment, .t-6{
+        font-size: 13px;
+    }
+
+    .t-2_Assignment{
+        margin-left: 16vw;
+    }
+
+    .t-5_Assignment{
+        margin-left: 35vw;
     }
     
 

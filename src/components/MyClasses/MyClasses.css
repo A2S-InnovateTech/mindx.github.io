@@ -147,4 +147,10 @@
     .Class__Button{
         margin-top: 10px;
     }
+
+    .Class__subject_1, .Class__subject_2, .Class__subject_3, .Class__subject_4, .Class__subject_5{
+        font-size: 10px;
+    }
+
+    
 } 

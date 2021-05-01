@@ -75,20 +75,21 @@ function TeacherSignup({history}) {
             <div className="blank-s"></div>
             </div>
                 <div className="right-p-s">
-                <span className="title-s">TEACHER SIGNUP</span>
+                <span className="title-s">SIGNUP</span>
                 <form>
                 <div className="forms-s">
                     
-                    <input name="fullname" className="form-1-s" type="text" placeholder="  Full Name" value={fullname} onChange={(e)=>{setFullName(e.target.value)}} required></input>
+                    <input name="fullname" className="form-1-si" type="text" placeholder="  Full Name" value={fullname} onChange={(e)=>{setFullName(e.target.value)}} required></input>
                     <label>
-                    <input name="email" className="form-2-s" type="email" placeholder="  Email Id" value={email} onChange={(e)=>{setEmail(e.target.value)}} required></input>
+                    <input name="email" className="form-1-si" type="email" placeholder="  Email Id" value={email} onChange={(e)=>{setEmail(e.target.value)}} required></input>
                     </label>
                     <span className="form-div">
-                    <input className="form-3-s" type="text" placeholder="  Mobile No." value={mobile} onChange={(e)=>{setMobile(e.target.value)}} required></input>
+                    <input className="form-3-si" type="text" placeholder="  Mobile No." value={mobile} onChange={(e)=>{setMobile(e.target.value)}} required></input>
+                    <input className="form-3-si" type="text" placeholder="  Subject" value={mobile} onChange={(e)=>{setMobile(e.target.value)}} required></input>
                     </span>
-                    <input className="form-5-s" type="text" placeholder="  School Name" value={school} onChange={(e)=>{setSchool(e.target.value)}} required></input>
+                    <input className="form-1-si" type="text" placeholder="  School Name" value={school} onChange={(e)=>{setSchool(e.target.value)}} required></input>
                     <label>
-                    <input name="password" className="form-6-s" type="password" placeholder="  Password" value={password} onChange={(e)=>{setPassword(e.target.value)}} required></input>
+                    <input name="password" className="form-1-si" type="password" placeholder="  Password" value={password} onChange={(e)=>{setPassword(e.target.value)}} required></input>
                     </label>
                     
                 </div>
