@@ -256,7 +256,30 @@
       margin-left: 0;
   }
 
- 
+  .T_Dashboard__subject_1{
+      }
+}
+
+@media only screen and (max-width: 400px) 
+{
+
+.T_Dashboard__body {
+  font-size: 14px;
+}
+
+.T_Dashboard__subject_1{
+    flex-basis: 8%;
+}
+
+.T_Dashboard__subject_2{
+    flex-basis: 15%;
+}    
+
+.T_Dashboard__subject_3{
+    flex-basis: 22%;
+}
+
+
 }
 
 

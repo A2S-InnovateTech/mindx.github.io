@@ -149,3 +149,14 @@
         margin-top: 10px;
     }
 } 
+
+@media only screen and (max-width: 400px) 
+{  
+  .Class__title {
+      font-size: 12px;
+    }
+
+  .Class__body{
+        font-size: 14px;
+    }
+}
