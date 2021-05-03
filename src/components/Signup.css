@@ -168,7 +168,7 @@ text-align: center;
 color: #FFF5D1;
 margin-top: 20px;
 opacity: 0.6;
-margin-left: 62vw;
+margin-left: 1vw;
 }
 
 .right-p-s{
@@ -188,7 +188,17 @@ left: 10vw;
 top: 20vh;
 }
 
-
+.signup__footer_left{
+    font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 23px;
+text-align: center;
+color: #FFF5D1;
+margin-top: 20px;
+opacity: 0.6;
+}
 
 .buttons-s{
 display: flex;
@@ -318,11 +328,20 @@ display: flex;
     }
     
     .signup__footer-s{
-        margin-left: 110vw;
+        margin-left: 43vw;
     }
 
     .signup__footer_left{
-        margin-left: 95vw;
+        margin-left: 10vw;
+        font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 23px;
+text-align: center;
+color: #FFF5D1;
+margin-top: 20px;
+opacity: 0.6;
         padding-left: 106px;
     }
 
@@ -330,16 +349,6 @@ display: flex;
     
 }
 
-.signup__footer_left{
-font-family: Roboto;
-font-style: normal;
-font-weight: 500;
-font-size: 15px;
-line-height: 23px;
-text-align: center;
-color: #FFF5D1;
-opacity: 0.6;
-}
 
 .notInList{
     color: white;
@@ -372,8 +381,11 @@ opacity: 0.6;
     z-index: 2;
 }
 
-.signup__footer_left{
-    margin-left: 61vw;
+.end-s{
+    display: flex;
+    flex-direction: column;
+    margin-left: 64vw;
+    margin-top: -15px;
 }
 
 .signup__line_1{

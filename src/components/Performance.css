@@ -71,6 +71,26 @@ text-align: center;
     opacity: 0.6;
 }
 
+.table-tp{
+color: #EBE7DA;
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 1;
+width: 924px;
+height: 46px;
+background: #10222E;
+border-radius: 5px 5px 0px 0px;
+margin-left: 20px;
+margin-top: 20px;
+display: flex;
+}
+
+.t-2-p{
+    margin-left: 50vw;
+}
+
 @media only screen and (max-width: 768px){
     .pdf-btn{
         left: 100px;
@@ -78,6 +98,10 @@ text-align: center;
     }
 
     .table-c-1{
+        width: 90vw;
+    }
+
+    .table-tp{
         width: 90vw;
     }
 
@@ -107,7 +131,7 @@ text-align: center;
 
     .t-2-p{
         width: 70px;
-        margin-left: 250px;
+        margin-left: 220px;
         margin-top: 5px;
         line-height: 1.3;
         font-size: 14px;

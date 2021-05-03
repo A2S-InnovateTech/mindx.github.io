@@ -18,7 +18,7 @@ function Performance() {
             <span className="title-a">Performance</span>
             <span className="line"></span>   
             </div>
-            <span className="table-t">
+            <span className="table-tp">
                 <span className="t-1-p">Class: 12th</span>
                 <span className="t-2-p">Section: A</span>
                 <img src={up} className="up"></img>
