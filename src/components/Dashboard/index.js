@@ -53,7 +53,7 @@ function Dashboard({user, userDetails, setUserDetails, openFeedback, setOpenFeed
             </div>
 
             <div className="Dashboard__button_row">
-                {classSubject[userDetails.class.split(" ")[0]]?.map((item, i)=>(
+                {classSubject[userDetails?.class?.split(" ")[0]]?.map((item, i)=>(
                     <Link 
                         to={{
                             pathname:"/s",
