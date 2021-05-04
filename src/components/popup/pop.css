@@ -1,6 +1,7 @@
 
 .pop{
-    
+    margin-top: 15vh;
+    margin-left: 25vw;
     width: 1120px;
     background-color:  #FFF5D1;
 }
@@ -17,7 +18,7 @@
 }
 .title{
     
-    left: 622px; 
+left: 622px; 
 font-family: Fredoka One;
 font-style: normal;
 font-weight: bold;
@@ -184,6 +185,8 @@ line-height: 35px;
   @media only screen and (max-width: 600px) {
     .pop{
         width: 96vw;
+        margin-left: 2vw;
+        margin-top: 3vh;
     }
     .title{
         font-size: 25px;

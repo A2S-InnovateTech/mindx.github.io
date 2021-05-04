@@ -87,6 +87,16 @@ color: #FFF5D1;
   margin-left: 30px;
   
 }
+
+.Notice__body{
+  width: 95%;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  margin-left: 33px;
+  padding: 20px;
+  background-color: rgb(245, 223, 161);
+}
+
 .notice_icon{
   width: 20px;
   height: 20px;
@@ -138,6 +148,7 @@ color: #FFF5D1;
 
   .Notice__body{
     width: 80%;
+    margin-left: 10vw;
   }
   
 }
@@ -182,7 +193,8 @@ color: #FFF5D1;
   }
 
   .Notice__body{
-    width: 81%;
+    width: 80%;
+    margin-left: 10vw;
   }
 
   
@@ -192,7 +204,8 @@ color: #FFF5D1;
 @media screen and (max-width: 400px) and (min-width: 300px) {
   
   .Notice__body{
-    width: 70%;
+    width: 80%;
+    margin-left: 10vw;
 
   }
   
@@ -308,11 +321,3 @@ color: #FFF5D1;
   
 }
 
-.Notice__body{
-  width: 80%;
-  margin-top: -10px;
-  margin-bottom: 10px;
-  margin-left: 38px;
-  padding: 20px;
-  background-color: rgb(245, 223, 161);
-}

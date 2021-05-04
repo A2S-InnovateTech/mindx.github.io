@@ -5,6 +5,9 @@ import app from '../../firebase';
 import { withRouter } from "react-router";
 import {Link} from "react-router-dom";
 import firebase from 'firebase';
+import dots from '../../images/login_background_dots.png';
+import line1 from '../../images/signup__line_1.png';
+import line2 from '../../images/signup__line_2.png'
 
 function TeacherSignup({history}) {
         const [fullname, setFullName] = useState("");
@@ -69,14 +72,18 @@ function TeacherSignup({history}) {
 
                 </div>
             </div>
-            <div className="total-p-s">
+            <div className="total-p-s"> 
                 <div className="left-p-s">
+                <img src={dots} alt="Dots" className="login__dots_1 signup__dots_1 index-d"/>
+            <img src={dots} alt="Dots" className="login__dots_2 signup__dots_2 index-d"/>
             <img className="picture-s" src="https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"></img>
             <div className="blank-s"></div>
+            <img className="line-1 signup__line_1 index-l" src={line1}></img>
+            <img className="line-2 signup__line_2 index-l" src={line2}></img>
             </div>
                 <div className="right-p-s">
                 <span className="title-s">SIGNUP</span>
-                <form>
+                <form> 
                 <div className="forms-s">
                     
                     <input name="fullname" className="form-1-si" type="text" placeholder="  Full Name" value={fullname} onChange={(e)=>{setFullName(e.target.value)}} required></input>

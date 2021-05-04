@@ -3,7 +3,7 @@ import {Link, useHistory} from 'react-router-dom';
 import Back from '../../images/back-icon.png';
 import Noticerow from './notice';
 
-function Notice() {
+function Notice() { 
 
   /*  const [row, setRow] = useState();
 
@@ -25,10 +25,10 @@ function Notice() {
         return (
             <div>
     
-            <div className="notice__heading_row">
-                   <span className="back">
-                        <a onClick={goBack} style={{textDecoration:"none", color:"white", cursor: "pointer"}}><img className="back-icon" src={Back}></img></a>
-                    </span>
+            <div className="Dashboard__heading_row">
+            <div className="arrow">
+                  <Link to="/dashboard"><img src={require('../../assets/images/arrow.png').default}  alt="arrow" width="40px"/></Link>
+               </div>
                     <div className="Dashboard__title">Notices</div>
                     <div className="notice__line" />
             </div>

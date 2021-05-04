@@ -148,13 +148,13 @@
 }
 
 .T_Dashboard__subject_2{
-    flex-basis: 30%;
+    flex-basis: 21%;
     height: 100%;
     border-right: 1px solid #000000;
 }    
 
 .T_Dashboard__subject_3{
-    flex-basis: 15%;
+    flex-basis: 28%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -163,7 +163,7 @@
 }
 
 .T_Dashboard__subject_4{
-    flex-basis: 15%;
+    flex-basis: 21%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -172,7 +172,7 @@
 }
 
 .T_Dashboard__subject_5{
-    flex-basis: 15%;
+    flex-basis: 16%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,7 +181,7 @@
 }
 
 .T_Dashboard__subject_6{
-    flex-basis: 15%;
+    flex-basis: 22%;
     display: flex;
     align-items: center;
     justify-content: center;

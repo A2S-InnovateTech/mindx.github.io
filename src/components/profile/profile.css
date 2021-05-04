@@ -9,6 +9,10 @@
 .pad{
     padding-right: 0px;
 }
+
+.form-control{
+    width: 95%;
+}
 .arrowbox{
     margin-right: 30px;
     width: 46px;

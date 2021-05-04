@@ -1,9 +1,9 @@
 .popup-feedback{
 position: absolute;
-width: 920px;
+width: 900px;
 height: 380.86px;
-left: 380px;
-top: 231.55px;
+left: 240px;
+top: 145.55px;
 background: #FFF5D1;
 border-radius: 15px;
 z-index: 3;
@@ -109,14 +109,14 @@ margin-top: 40px;
         top: 130px;
         font-size: 10px;
         width:  90vw;
-        height: 80vh;
+        height: 40vh;
     }
 
 
     .popup-title{
         font-size: 30px;
         line-height: 30px;
-        margin-left: 50px;
+        margin-left: 18vw;
         margin-top: 40px;
     }
     .question{
