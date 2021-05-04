@@ -41,6 +41,7 @@ import Feedback from './components/Feedback';
 import GoogleSignUpDetails from "./components/GoogleSignUpDetails";
 import AssignmentsT from './AssignmentsT';
 import PracticeTestTopic from './components/PracticeTestTopic';
+import AdminDashboard from './components/admin/Dashboard';
 
 function App() {
   const [userDetails, setUserDetails] = useState([]);
@@ -213,6 +214,12 @@ function App() {
                     <Dashboard user={user} userDetails={userDetails} setUserDetails={setUserDetails} openFeedback={openFeedback} setOpenFeedback={setOpenFeedback}/>
                   </>
               }
+              </Route>
+
+              <Route path="/admin/dashboard" exact>
+                    <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                    <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser} setOpenFeedback={setOpenFeedback}/>
+                    <AdminDashboard user={user} userDetails={userDetails} setUserDetails={setUserDetails} openFeedback={openFeedback} setOpenFeedback={setOpenFeedback}/>    
               </Route>
             
             <Route path="/teacher/dashboard" exact>

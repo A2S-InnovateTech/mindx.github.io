@@ -1,0 +1,109 @@
+.justifyLeft{
+    justify-content: flex-start;
+    padding-left: 50px;
+}
+
+.AdminDashboard__button_column{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 0px 30px;
+}
+
+.AdminDashboard__account_row{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    /* justify-content: space-around; */
+    margin-top: 10px;
+}
+
+.AdminDashboard__account_row_role{
+    background-color: #10222E;
+    color: white;
+    border-radius: 10px 0px 0px 10px;
+    flex: 2;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.AdminDashboard__account_row_link{
+    background-color: #FFF5D1;
+    flex: 10;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 2vw;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 500;
+    max-width: 50vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.AdminDashboard__account_row_share{
+    flex: 1;
+    background-color: #10222E;
+    border-radius: 0px 10px 10px 0px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.admin{
+    width: 70vw;
+    margin-left: 1vw;
+    margin-top: 30px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.admin>tr>th{
+    background-color: #10222E;
+    color: white;
+}
+
+.table_body{
+    max-height: 40vh;
+    overflow-y: scroll;
+}
+
+thead{
+    background-color: #10222E;
+    color: white;
+}
+
+.scrollit{
+    max-height: 20vh;
+    overflow-y: scroll;
+}
+
+.inner{
+    display: flex;
+    flex-direction: row;
+    width: 64vw;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+}
+
+.inner > td{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto';
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.admin>thead>tr>th{
+    width: auto;
+}
