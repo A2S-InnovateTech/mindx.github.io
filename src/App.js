@@ -41,6 +41,7 @@ import Feedback from './components/Feedback';
 import GoogleSignUpDetails from "./components/GoogleSignUpDetails";
 import AssignmentsT from './AssignmentsT';
 import PracticeTestTopic from './components/PracticeTestTopic';
+import AdminDashboard from './components/admin/Dashboard';
 
 function App() {
   const [userDetails, setUserDetails] = useState([]);
@@ -214,6 +215,12 @@ function App() {
                   </>
               }
               </Route>
+
+              <Route path="/admin/dashboard" exact>
+                    <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                    <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser} setOpenFeedback={setOpenFeedback}/>
+                    <AdminDashboard user={user} userDetails={userDetails} setUserDetails={setUserDetails} openFeedback={openFeedback} setOpenFeedback={setOpenFeedback}/>    
+              </Route>
             
             <Route path="/teacher/dashboard" exact>
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
@@ -234,8 +241,8 @@ function App() {
                 <Profile user={user} userDetails={userDetails}/>
               </Route>
               <Route path="/notice" exact>
-              <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-              <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+              <MobileHeader userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
+              <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
                 <Notice/>
               </Route>
                <Route path="/mytest" exact>
