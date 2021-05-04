@@ -241,8 +241,8 @@ function App() {
                 <Profile user={user} userDetails={userDetails}/>
               </Route>
               <Route path="/notice" exact>
-              <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-              <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+              <MobileHeader userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
+              <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
                 <Notice/>
               </Route>
                <Route path="/mytest" exact>
