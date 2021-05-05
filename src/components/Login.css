@@ -238,9 +238,9 @@ margin-top: 3vh;
 }
 
 .social> img{
-width: 28px;
-height: 28px;
-margin-top: 3vh;
+    width: 28px;
+    height: 28px;
+    margin-top: 3vh;
 }
 
 .form-1{
@@ -348,20 +348,33 @@ margin-top: 3vh;
         margin-top: 20px;
     }
 
-    .login__dots_1,.login__dots_2{
+    .login__dots_1{
+        /* display: none; */
+        position: none;
+        right: 25vw!important;
+        top: 28vh!important;
+    }
+
+    .login__dots_2 {
         display: none;
     }
-    
+
     .line-1, .line-2{
-        display: none;
+        /* display: none; */
+        width: 100vw;
+        right: 0vw;
+        bottom: 55vw;
+        position: absolute;
     }
+
     
     .option-1, .option-2, .option-3{
         display: none;
     }
     
     .login__title{
-        margin-left: 38vw;
+        margin-left: 30vw;
+        margin-top: 0px;
     }
     
     .form-1,.form-2{
@@ -415,7 +428,6 @@ margin-top: 3vh;
     position: absolute;
     right: 33vw;
     top: 17vh;
-    
 }
 
 .login__dots_2{

@@ -31,3 +31,28 @@
     color: white;
     margin-bottom: 50px;
 }
+
+
+@media only screen and (max-width: 600px) 
+{
+   .GoogleSignUp__form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        text-align: center;
+    }  
+
+    .form-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: first baseline;
+        margin-right: 36vw;
+    }
+
+    .GoogleSignUp__form_3{
+        margin-left: 0vw;
+        margin-top: 0px;
+    }
+}
