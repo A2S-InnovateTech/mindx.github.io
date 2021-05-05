@@ -3,6 +3,23 @@
     justify-content: space-between;
 }
 
+.right-p-s-t{
+    margin-left: 200px;
+    margin-top: 40px;
+}
+
+
+.index-d{
+    z-index: 1;
+}
+
+.index-b{
+    z-index: 2;
+}
+
+.index-p{
+    z-index: 3;
+}
 
 .options-s{
     display: flex;
