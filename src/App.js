@@ -43,6 +43,14 @@ import AssignmentsT from './AssignmentsT';
 import PracticeTestTopic from './components/PracticeTestTopic';
 import AdminDashboard from './components/admin/Dashboard';
 
+
+import PrincipalProfile from './Principal Panel/Profile/index';
+import PrincipalDashboard from './Principal Panel/Dashboard/index';
+import PrincipalNotice from './Principal Panel/notice/index';
+import ClassDetails from './Principal Panel/ClassDetails/ClassDetails';
+import PrincipalPanel_Performance from '././Principal Panel/Performance/Performance';
+
+
 function App() {
   const [userDetails, setUserDetails] = useState([]);
   var [showSidebar, setShowSidebar] = useState(true);
@@ -288,6 +296,38 @@ function App() {
                 <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
                 <MyClasses/>
               </Route>
+
+
+
+              <Route path="/principal/profile" exact>
+                <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} userDetails={userDetails}/>
+                <PrincipalProfile user={user} userDetails={userDetails}/>
+              </Route>
+
+              <Route path="/principal/dashboard" exact>
+                <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser} setOpenFeedback={setOpenFeedback}/>
+                <PrincipalDashboard user={user} userDetails={userDetails} setUserDetails={setUserDetails} openFeedback={openFeedback}/>
+              </Route>
+
+               <Route path="/principal/notice" exact>
+                <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <PrincipalNotice/>
+              </Route>
+
+              <Route path="/principal/class-details" exact>
+                <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
+                <ClassDetails/>
+              </Route>
+
+              <Route path="/principal/performance" exact>
+                <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
+                <PrincipalPanel_Performance/>
+              </Route>
+              
           </div>
         </Switch>
       </div>
