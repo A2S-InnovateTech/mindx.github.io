@@ -1,9 +1,34 @@
 import './Dashboard.css';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import ShareIcon from './share.png';
+import firebase from 'firebase';
+import app from '../../../firebase';
 
-function AdminDashboard(user, userDetails, setUserDetails, openFeedback, setOpenFeedback) {
+function AdminDashboard({user, userDetails, setUserDetails, openFeedback, setOpenFeedback}) {
+    const [users, setUsers] = useState([]);
+
+    useEffect(() => {
+        console.log(userDetails);
+    }, [userDetails])
+
+    useEffect(() => {
+        if(userDetails?.school)
+            app.firestore().collection("users").where("school", "==", userDetails.school)
+            .get()
+            .then((snapshot) => {
+                snapshot.docs.map(
+                        (doc)=>{
+                            setUsers(oldUsers => [...oldUsers, doc.data()])
+                        }
+                    )
+            })
+    }, [userDetails])
+
+    useEffect(() => {
+        console.log(users);
+    }, [users])
+
     return (
         <div className="AdminDash">
             <div className="Dashboard__heading_row">
@@ -54,72 +79,20 @@ function AdminDashboard(user, userDetails, setUserDetails, openFeedback, setOpen
                     <tbody>
                     <tr>
                     <td colspan="5">
-                    <div class="scrollit">
+                    <div className="scrollit">
                         <table>
-                            <tr className="inner">
-                                <td>Rajesh Sharma</td>
-                                <td>Class Teacher</td>
-                                <td>D.S.B.M Sr. Sec School</td>
-                                <td className="hide_on_mobile">29/04/2021</td>
-                                <td className="hide_on_mobile">11:30 A.M.</td>
-                            </tr>
-                            <tr className="inner">
-                                <td>Rajesh Sharma</td>
-                                <td>Class Teacher</td>
-                                <td>D.S.B.M Sr. Sec School</td>
-                                <td className="hide_on_mobile">29/04/2021</td>
-                                <td className="hide_on_mobile">11:30 A.M.</td>
-                            </tr>
-                            <tr className="inner">
-                                <td>Rajesh Sharma</td>
-                                <td>Class Teacher</td>
-                                <td>D.S.B.M Sr. Sec School</td>
-                                <td className="hide_on_mobile">29/04/2021</td>
-                                <td className="hide_on_mobile">11:30 A.M.</td>
-                            </tr>
-                            <tr className="inner">
-                                <td>Rajesh Sharma</td>
-                                <td>Class Teacher</td>
-                                <td>D.S.B.M Sr. Sec School</td>
-                                <td className="hide_on_mobile">29/04/2021</td>
-                                <td className="hide_on_mobile">11:30 A.M.</td>
-                            </tr>
-                            <tr className="inner">
-                                <td>Rajesh Sharma</td>
-                                <td>Class Teacher</td>
-                                <td>D.S.B.M Sr. Sec School</td>
-                                <td className="hide_on_mobile">29/04/2021</td>
-                                <td className="hide_on_mobile">11:30 A.M.</td>
-                            </tr>
-                            <tr className="inner">
-                                <td>Rajesh Sharma</td>
-                                <td>Class Teacher</td>
-                                <td>D.S.B.M Sr. Sec School</td>
-                                <td className="hide_on_mobile">29/04/2021</td>
-                                <td className="hide_on_mobile">11:30 A.M.</td>
-                            </tr>
-                            <tr className="inner">
-                                <td>Rajesh Sharma</td>
-                                <td>Class Teacher</td>
-                                <td>D.S.B.M Sr. Sec School</td>
-                                <td className="hide_on_mobile">29/04/2021</td>
-                                <td className="hide_on_mobile">11:30 A.M.</td>
-                            </tr>
-                            <tr className="inner">
-                                <td>Rajesh Sharma</td>
-                                <td>Class Teacher</td>
-                                <td>D.S.B.M Sr. Sec School</td>
-                                <td className="hide_on_mobile">29/04/2021</td>
-                                <td className="hide_on_mobile">11:30 A.M.</td>
-                            </tr>
-                            <tr className="inner">
-                                <td>Rajesh Sharma</td>
-                                <td>Class Teacher</td>
-                                <td>D.S.B.M Sr. Sec School</td>
-                                <td className="hide_on_mobile">29/04/2021</td>
-                                <td className="hide_on_mobile">11:30 A.M.</td>
-                            </tr>
-                           
+                            <tbody>
+                                {users?.map((item, index)=>(
+                                    <tr className="inner">
+                                        <td>{item.name?item.name:"User"}</td>
+                                        <td>{item.userType?item.userType:"Role"}</td>
+                                        <td>{item.school?item.school:"School"}</td>
+                                        <td className="hide_on_mobile">29/04/2021</td>
+                                        <td className="hide_on_mobile">11:30 A.M.</td>
+                                    </tr>
+                                ))
+                                }
+                           </tbody>
                         </table>
                     </div>
                     </td>

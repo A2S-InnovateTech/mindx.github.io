@@ -20,6 +20,7 @@ function GoogleSignUpDetails({user}) {
             return;
         }
         app.firestore().collection("users").doc(user?.uid).set({
+            name: fullname,
             assessmentTaken: false,
             class: Class,
             phoneNumber: mobile,

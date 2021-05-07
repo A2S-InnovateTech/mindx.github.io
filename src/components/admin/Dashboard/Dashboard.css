@@ -102,6 +102,7 @@ thead{
     font-family: 'Roboto';
     font-size: 17px;
     font-weight: 500;
+    width: 15vw;
 }
 
 .admin>thead>tr>th{

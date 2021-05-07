@@ -75,6 +75,7 @@ function Signup({history}) {
                 })
                 .then((docRef)=>{
                     app.firestore().collection("users").doc(user.uid).set({
+                        name: fullname,
                         assessmentTaken: false,
                         class: Class,
                         phoneNumber: mobile,

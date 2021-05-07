@@ -52,7 +52,7 @@ import PrincipalPanel_Performance from '././Principal Panel/Performance/Performa
 
 
 function App() {
-  const [userDetails, setUserDetails] = useState([]);
+  const [userDetails, setUserDetails] = useState(null);
   var [showSidebar, setShowSidebar] = useState(true);
   const [user, setUser] = useState(null);
   const [tookAssessment, setTookAssessment] = useState(false);
@@ -215,7 +215,8 @@ function App() {
                     />
                   </div>
                 )
-                  :userDetails.userType=="teacher"?<Redirect to="/teacher/dashboard" />:
+                  :userDetails.userType=="teacher"?<Redirect to="/teacher/dashboard" />
+                  :userDetails.userType=="admin"?<Redirect to="/admin/dashboard" />:
                   <>
                     <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                     <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser} setOpenFeedback={setOpenFeedback}/>
