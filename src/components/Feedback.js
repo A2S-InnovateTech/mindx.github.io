@@ -1,14 +1,31 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import '../components/Feedback.css'
 import Close from "../images/close-icon.png";
+import app from '../firebase';
+import firebase from 'firebase';
 
-function Feedback({setOpenFeedback}) {
+function Feedback({setOpenFeedback, userDetails, user}) {
     const [highlightedStars, setHighlightedStars] = useState(0);
     const [selectedStars, setSelectedStars] = useState(0);
     
     const highlightStars = (starNumber) =>{
         setHighlightedStars(starNumber);
     }
+
+    useEffect(() => {
+        if(selectedStars && userDetails){
+            app.firestore().collection("feedbacks").doc(user?.uid).set({
+                name: user?.displayName,
+                school: userDetails?.school,
+                role: userDetails?.userType,
+                feedback: selectedStars,
+                timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            })
+            .then(()=>console.log("Feedback sent"))
+            .catch((e)=>alert(e))
+        }
+    }, [selectedStars])
+
     return (
         <div className="feedback__background">
         <div className="popup-feedback">
@@ -17,7 +34,7 @@ function Feedback({setOpenFeedback}) {
                 User Feedback
             </div>
             <div className="question">
-                Q1. How did you like the app?
+                How did you like the app?
             </div>
             <div className="stars">
                 <span onMouseEnter={()=>highlightStars(1)} onMouseLeave={()=>{highlightStars(selectedStars)}} onClick={()=>setSelectedStars(1)} style={{color:highlightedStars>=1?"gold":"black", cursor:"pointer"}}>★</span>
@@ -36,7 +53,7 @@ function Feedback({setOpenFeedback}) {
                 <span className="rate-2">Average</span>
                 <span className="rate-3">Excellent</span>
             </div>
-            <button className="feedback-btn">Next</button>
+            <button className="feedback-btn" onClick={()=>setOpenFeedback(false)}>Done</button>
             
         </div>
         </div>

@@ -4,8 +4,9 @@ import {Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Row, Col } from 'react-bootstrap';
+import Feedback from '../Feedback';
 
-function Dashboard() {
+function Dashboard({openFeedback, setOpenFeedback, userDetails, user}) {
   
     return (
         <div className="container">
@@ -130,6 +131,8 @@ function Dashboard() {
             </div> 
               
             </section>
+            {openFeedback&&<Feedback userDetails={userDetails} user={user} setOpenFeedback={setOpenFeedback}/>}
+
         </div>
     )
 }

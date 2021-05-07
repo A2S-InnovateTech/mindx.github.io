@@ -14,7 +14,7 @@ function AdminDashboard({user, userDetails, setUserDetails, openFeedback, setOpe
 
     useEffect(() => {
         if(userDetails?.school)
-            app.firestore().collection("users").where("school", "==", userDetails.school)
+            app.firestore().collection("users")
             .get()
             .then((snapshot) => {
                 snapshot.docs.map(
@@ -37,7 +37,7 @@ function AdminDashboard({user, userDetails, setUserDetails, openFeedback, setOpe
             </div>
 
             <div className="Dashboard__button_row justifyLeft">
-                <Link to="/" style={{textDecoration:"none", color:"white"}}><div className="Dashboard__button">Feedbacks</div></Link>
+                <Link to="/admin/feedback" style={{textDecoration:"none", color:"white"}}><div className="Dashboard__button">Feedbacks</div></Link>
                 <Link to="/" style={{textDecoration:"none", color:"white"}}><div className="Dashboard__button">My Database</div></Link>
             </div>
             

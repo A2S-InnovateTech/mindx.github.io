@@ -115,7 +115,7 @@ function Dashboard({user, userDetails, setUserDetails, openFeedback, setOpenFeed
                     >
                         <Popup setIsOpen={setIsOpen}/>
                     </Modal>
-                {openFeedback&&<Feedback setOpenFeedback={setOpenFeedback}/>}
+                {openFeedback&&<Feedback userDetails={userDetails} user={user} setOpenFeedback={setOpenFeedback}/>}
         </div>
     )
 }
