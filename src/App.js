@@ -48,6 +48,7 @@ import PrincipalDashboard from './Principal Panel/Dashboard/index';
 import PrincipalNotice from './Principal Panel/notice/index';
 import ClassDetails from './Principal Panel/ClassDetails/ClassDetails';
 import PrincipalPanel_Performance from '././Principal Panel/Performance/Performance';
+import Popup2 from './components/popup2/';
 
 
 function App() {
@@ -318,6 +319,10 @@ function App() {
                 <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                 <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser}/>
                 <PrincipalPanel_Performance/>
+              </Route>
+
+              <Route path="/popup2" exact>
+                <Popup2/>
               </Route>
               
           </div>

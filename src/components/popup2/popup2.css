@@ -1,0 +1,172 @@
+.subscribe_pop{
+    width: 1120px;
+    background-color:  #FFF5D1;
+}
+
+.subscribe_popback_header{
+    background-color:  #FFF5D1; 
+    border: 0px solid  #FFF5D1;
+    text-align: center;
+    min-height: 80px;
+}
+
+
+.subscribe_popback{
+    background-color:  #FFF5D1; 
+    border: 0px solid  #FFF5D1;
+    text-align: center;
+}
+
+.subscribe_title{
+    font-family: Fredoka One;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    text-align: center;
+    color: #10222E;
+    margin: auto;
+    width: fit-content;
+    height: 60px;
+    padding: 0;
+    margin-left: -8%;
+}
+
+.subscribe_p{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 35px;
+    color: #10222E;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.subscribe_btn, .verify_btn{
+    width: 300px;
+    height: 70px;
+    background: #10222E;
+    border-radius: 10px;
+    margin:25px auto;
+}
+
+
+.button-text{
+    width: 247px;
+    height: 76px;
+    left: 404px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: 10px;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #FFF5D1;
+}
+
+.key_input {
+    width: 60%;
+    height: 50px;
+    background: #FFF5D1;
+    border: 2px solid #10222E;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin: auto;
+}
+
+.input-text {
+    width: 100%;
+    height: 100%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: grey;
+    padding-left: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+/* ( min-width: 800px ) and */
+
+
+@media only screen and  (max-width: 1000px) {
+    .subscribe_pop{
+        width: 800px;
+    }
+    .subscribe_title{
+        margin-left: -45%; 
+    }
+    .subscribe_p{  
+        font-size: 22px;
+        line-height: 25px;
+    }
+    .subscribe_btn {
+        width: 280px;
+        height: 70px;
+        border-radius: 9px;
+    }
+    .verify_btn{
+        width: 280px;
+        height: 70px;
+        border-radius: 9px;
+    }
+    .button-text{
+        width: 230px;
+        height: 76px;
+        font-size: 30px;
+        line-height: 45px;
+    }
+    .key_input {
+        width: 80%;
+    }
+   
+  }
+
+  
+  @media only screen and ( max-width: 600px ){
+
+    .subscribe_pop{
+        width: 350px;
+    }
+
+    .subscribe_popback_header{
+        min-height: 40px;
+    }
+    .subscribe_title{
+        font-size: 30px;
+        line-height: 35px;
+        margin-left: 6%; 
+        margin-top: 15px;
+    }
+    .subscribe_p{  
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .subscribe_btn,.verify_btn {
+        width: 60%;
+        height: 50px;
+        text-align: center;
+    }
+
+    .button-text{
+        width: fit-content;
+        height: 100%;
+        font-size: 25px;
+        line-height: 25px;
+        margin: auto;
+    }
+
+    .key_input {
+        width: 100%;
+    }
+
+  }
+
