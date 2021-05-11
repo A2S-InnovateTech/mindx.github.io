@@ -225,6 +225,8 @@ display: flex;
         display: none;
     }
 
+    
+
     .title-s{
         margin-top: -20px;
     }
@@ -367,6 +369,8 @@ opacity: 0.6;
 .select-search__input{
     min-width: 460px;
     width: 35.5vw;
+    margin-top: 10px;
+    margin-left: 27vw;
 }
 
 .signup__dots_1{
