@@ -43,7 +43,7 @@ import AssignmentsT from './AssignmentsT';
 import PracticeTestTopic from './components/PracticeTestTopic';
 import AdminDashboard from './components/admin/Dashboard';
 import ViewFeedback from './components/admin/ViewFeedback';
-
+import Verify from './components/admin/Verify';
 
 import PrincipalProfile from './Principal Panel/Profile/index';
 import PrincipalDashboard from './Principal Panel/Dashboard/index';
@@ -236,6 +236,24 @@ function App() {
                     <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                     <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser} setOpenFeedback={setOpenFeedback}/>
                     <ViewFeedback user={user} userDetails={userDetails}/>    
+              </Route>
+
+              <Route path="/admin/verify/teacher" exact>
+                    <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                    <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser} setOpenFeedback={setOpenFeedback}/>
+                    <Verify type="teacher" user={user} userDetails={userDetails}/>    
+              </Route>
+
+              <Route path="/admin/verify/class-teacher" exact>
+                    <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                    <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser} setOpenFeedback={setOpenFeedback}/>
+                    <Verify type="class-teacher" user={user} userDetails={userDetails}/>    
+              </Route>
+
+              <Route path="/admin/verify/principal" exact>
+                    <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                    <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser} setOpenFeedback={setOpenFeedback}/>
+                    <Verify type="principal" user={user} userDetails={userDetails}/>    
               </Route>
 
               {/* Admin Routes end */}

@@ -42,27 +42,16 @@ function AdminDashboard({user, userDetails, setUserDetails, openFeedback, setOpe
             </div>
             
             <div className="Dashboard__heading_row">
-                <div className="Dashboard__title">Manage&nbsp;Accounts</div>
+                <div className="Dashboard__title">Verify&nbsp;Accounts</div>
                 <div className="Dashboard__line" />
             </div>
 
             <div className="AdminDashboard__button_column">
-                <div className="AdminDashboard__account_row">
-                    <div className="AdminDashboard__account_row_role">Teacher</div>
-                    <div className="AdminDashboard__account_row_link">https://www.mindx.com/teacher/signup</div>
-                    <div className="AdminDashboard__account_row_share"><img src={ShareIcon} alt="Share"/></div>
+                <div className="Dashboard__button_row justifyLeft">
+                    <Link to="/admin/verify/teacher" style={{textDecoration:"none", color:"white"}}><div className="Dashboard__button">Teacher</div></Link>
+                    <Link to="/admin/verify/class-teacher" style={{textDecoration:"none", color:"white"}}><div className="Dashboard__button">Class Teacher</div></Link>
+                    <Link to="/admin/verify/principal" style={{textDecoration:"none", color:"white"}}><div className="Dashboard__button">Principal</div></Link>
                 </div>
-                <div className="AdminDashboard__account_row">
-                    <div className="AdminDashboard__account_row_role">Class Teacher</div>
-                    <div className="AdminDashboard__account_row_link">https://www.mindx.com/classteacher/signup</div>
-                    <div className="AdminDashboard__account_row_share"><img src={ShareIcon} alt="Share"/></div>
-                </div>
-                <div className="AdminDashboard__account_row">
-                    <div className="AdminDashboard__account_row_role">Principal</div>
-                    <div className="AdminDashboard__account_row_link">https://www.mindx.com/principal/signup</div>
-                    <div className="AdminDashboard__account_row_share"><img src={ShareIcon} alt="Share"/></div>
-                </div>
-
             </div>
 
             <div className="Dashboard__table">
