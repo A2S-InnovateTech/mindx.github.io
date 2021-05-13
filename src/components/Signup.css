@@ -241,6 +241,7 @@ display: flex;
         display: none;
     }
 
+    
 
     .select-search__select{
         margin-left: 10vw;
@@ -309,6 +310,9 @@ display: flex;
         margin-left: 40vw;
     }
 
+    .right-p-s-t{
+        margin-left: -50vw;
+    }
     
     
     .signup__final-btn-s{

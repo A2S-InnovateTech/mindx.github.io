@@ -248,6 +248,15 @@ display: flex;
         display: none;
     }
     
+    .right-p-s-t{
+        margin-left: -70vw;
+        margin-top: 120px !important;
+    }
+
+    .title-s{
+        margin-left: 77vw !important;
+        margin-top: 30vh;
+    }
    
 
     .options-s{
@@ -267,37 +276,38 @@ display: flex;
    }
 
    .form-3-si{
-       width: 31vw;
+       width: 60vw;
+       margin-left: 1vw;
    }
     
     .final-btn-s{
         width: max-content;
         margin-top: -20px;
-        margin-left: 120vw;
+        margin-left: 96vw;
         font-size: 18px;
         width: 120px;
     }
 
     .footer-s{
-        margin-left: 100vw;
+        margin-left: 81vw;
     }
 
-    .title-s{
+    /* .title-s{
         margin-left: 95vw;
         font-size: 34px;
-    }
+    } */
     
-    .signup__title-s{
+    /* .signup__title-s{
         margin-left: 83vw;
-    }
+    } */
 
-    .signup__forms-s{
+    /* .signup__forms-s{
         margin-left: 52vw;
-    }
+    } */
 
-    .forms-s{
+    /* .forms-s{
         margin-left: 100vw;
-    }
+    } */
 
     .mobile__head-teach{
         position: absolute;
