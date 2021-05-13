@@ -65,4 +65,12 @@ h3{
   .hideOnMobile{
     display: none !important;
   }
+
+  .align{
+    margin-left: 18vw;
+  }
+
+  .arrow{
+    margin-left: -5vw !important;
+  }
 } 

@@ -29,7 +29,7 @@ function StudentPanel({props, userDetails}) {
            </select>
          </section>
 
-         <section>
+         <section className="align">
            <h3>Subject : {selectedSubject}</h3>
            <Row >
                <Col lg={3} md={4} sm={6} xs={12}>
