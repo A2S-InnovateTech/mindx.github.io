@@ -220,11 +220,6 @@ height: 46px;
 
 @media only screen and (min-width: 370px)  and (max-width: 476px){
     
-    
-    .form-body{
-        height: 420px;
-        margin-right: 10px;  
-    }
     .forminput{
         min-width: 275px;
         max-width: 350px;
