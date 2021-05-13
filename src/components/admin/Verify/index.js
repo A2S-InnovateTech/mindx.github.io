@@ -4,7 +4,7 @@ import app from '../../../firebase';
 import './Verify.css';
 import Moment from 'react-moment';
 import {Link} from 'react-router-dom';
-
+import Loader from "react-loader-spinner";
 
 Moment.globalFormat = 'DD/MM/YYYY';
 
@@ -75,6 +75,18 @@ function Verify({type, user, userDetails}) {
                                             </tr>
                                         )}
                                 })
+                                }
+                                {
+                                    (users.length===0||users===undefined)&&
+                                        <div className="loader_center">
+                                            <Loader
+                                                type="ThreeDots"
+                                                color="#00BFFF"
+                                                height={50}
+                                                width={50}
+                                                timeout={3000} //3 secs
+                                            />
+                                        </div>
                                 }
                            </tbody>
                         </table>

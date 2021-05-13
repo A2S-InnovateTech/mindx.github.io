@@ -108,3 +108,17 @@ thead{
 .admin>thead>tr>th{
     width: auto;
 }
+
+.loader_center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70vw;
+}
+
+@media only screen and (max-width: 600px){
+    .justifyLeft {
+        justify-content: center;
+        margin-right: 15vw;
+    }
+}

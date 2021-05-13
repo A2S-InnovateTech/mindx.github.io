@@ -44,6 +44,7 @@ import PracticeTestTopic from './components/PracticeTestTopic';
 import AdminDashboard from './components/admin/Dashboard';
 import ViewFeedback from './components/admin/ViewFeedback';
 import Verify from './components/admin/Verify';
+import Database from './components/admin/Database';
 
 import PrincipalProfile from './Principal Panel/Profile/index';
 import PrincipalDashboard from './Principal Panel/Dashboard/index';
@@ -254,6 +255,12 @@ function App() {
                     <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
                     <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser} setOpenFeedback={setOpenFeedback}/>
                     <Verify type="principal" user={user} userDetails={userDetails}/>    
+              </Route>
+
+              <Route path="/admin/database" exact>
+                    <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                    <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser} setOpenFeedback={setOpenFeedback}/>
+                    <Database user={user} userDetails={userDetails}/>    
               </Route>
 
               {/* Admin Routes end */}

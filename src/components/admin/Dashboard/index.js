@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import ShareIcon from './share.png';
 import firebase from 'firebase';
 import app from '../../../firebase';
+import Loader from "react-loader-spinner";
 
 function AdminDashboard({user, userDetails, setUserDetails, openFeedback, setOpenFeedback}) {
     const [users, setUsers] = useState([]);
@@ -38,7 +39,7 @@ function AdminDashboard({user, userDetails, setUserDetails, openFeedback, setOpe
 
             <div className="Dashboard__button_row justifyLeft">
                 <Link to="/admin/feedback" style={{textDecoration:"none", color:"white"}}><div className="Dashboard__button">Feedbacks</div></Link>
-                <Link to="/" style={{textDecoration:"none", color:"white"}}><div className="Dashboard__button">My Database</div></Link>
+                <Link to="/admin/database" style={{textDecoration:"none", color:"white"}}><div className="Dashboard__button">My Database</div></Link>
             </div>
             
             <div className="Dashboard__heading_row">
@@ -80,6 +81,18 @@ function AdminDashboard({user, userDetails, setUserDetails, openFeedback, setOpe
                                         <td className="hide_on_mobile">11:30 A.M.</td>
                                     </tr>
                                 ))
+                                }
+                                {
+                                    (users.length===0||users===undefined)&&
+                                        <div className="loader_center">
+                                            <Loader
+                                                type="ThreeDots"
+                                                color="#00BFFF"
+                                                height={50}
+                                                width={50}
+                                                timeout={3000} //3 secs
+                                            />
+                                        </div>
                                 }
                            </tbody>
                         </table>

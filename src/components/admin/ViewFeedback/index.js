@@ -2,6 +2,7 @@ import './ViewFeedback.css';
 import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import app from '../../../firebase';
+import Loader from "react-loader-spinner";
 
 function ViewFeedback({userDetails}) {
     const [feedback, setFeedback] = useState([]);
@@ -51,6 +52,18 @@ function ViewFeedback({userDetails}) {
                                         <td>{item.feedback?item.feedback:"Feedback"}/10</td>
                                     </tr>
                                 ))
+                                }
+                                {
+                                    (feedback.length===0||feedback===undefined)&&
+                                        <div className="loader_center">
+                                            <Loader
+                                                type="ThreeDots"
+                                                color="#00BFFF"
+                                                height={50}
+                                                width={50}
+                                                timeout={3000} //3 secs
+                                            />
+                                        </div>
                                 }
                            </tbody>
                         </table>
