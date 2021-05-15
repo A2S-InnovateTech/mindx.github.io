@@ -29,7 +29,7 @@ const Popup = ({setIsOpen}) =>  {
 You can click on Practice Now button incase you want to practice some questions before giving the test
             </p>
           </Modal.Body>
-          <Modal.Footer className="popback-f">
+          <Modal.Footer className="popback-f"> 
           <Link to="/test" to={{
                             pathname:"/test",
                             state: { subject: "Psychometric", practice: true }

@@ -27,6 +27,22 @@
     height: 80vh;
 }
 
+.form-1-gs{
+    width: 40vw;
+    height: 50px;
+    background: #EBE7DA;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.form-3-gs{
+    width: 20vw;
+    height: 50px;
+    background: #EBE7DA;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
 .h1__white{
     color: white;
     margin-bottom: 50px;
