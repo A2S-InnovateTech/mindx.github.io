@@ -16,6 +16,7 @@ function TeacherSignup({history}) {
         const [email, setEmail] = useState("");
         const [school, setSchool] = useState("");
         const [password, setPassword] = useState("");
+        const [role, setRole] = useState("");
 
        const handleSignUp = (e) => {
            e.preventDefault();
@@ -99,6 +100,12 @@ function TeacherSignup({history}) {
                     <label>
                     <input name="password" className="form-1-si" type="password" placeholder="  Password" value={password} onChange={(e)=>{setPassword(e.target.value)}} required></input>
                     </label>
+
+                    <select className="form-1-si signup_as" value={role} onChange={(e)=>{setRole(e.target.value)}}required> 
+                        <option>Teacher</option>
+                        <option>Class Teacher</option>
+                        <option>Principal</option>
+                    </select>
                     
                 </div>
 
