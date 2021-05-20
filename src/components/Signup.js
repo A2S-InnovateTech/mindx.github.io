@@ -149,7 +149,7 @@ function Signup({history}) {
                     <input name="email" className="signup__form-s" type="email" placeholder="  Email Id" value={email} onChange={(e)=>{setEmail(e.target.value)}} required></input>
                     </label>
                     <span className="form-div-s">
-                    <input className="signup__form-1-s" type="text" placeholder="  Mobile No." value={mobile} onChange={(e)=>{setMobile(e.target.value)}} required></input>
+                    <input className="signup__form-1-s" type="text" placeholder="  Section"  required></input>
                     <input className="signup__form-1-s" type="text" placeholder="  Class" value={Class} onChange={(e)=>{setClass(e.target.value)}} required></input>
                     </span>
                     <form autocomplete="off">
@@ -159,6 +159,7 @@ function Signup({history}) {
                     }
                     {!addSchoolManual && <div className="notInList" onClick={()=>setAddSchoolManual(true)}>School not in list?</div>}
                     </form>
+                    <input className="signup__form-s" type="text" placeholder="  Mobile No." value={mobile} onChange={(e)=>{setMobile(e.target.value)}} required></input>
                     <label>
                     <input name="password" className="signup__form-s" type="password" placeholder="  Password" value={password} onChange={(e)=>{setPassword(e.target.value)}} required></input>
                     </label>

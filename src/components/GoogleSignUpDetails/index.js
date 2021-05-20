@@ -57,9 +57,11 @@ function GoogleSignUpDetails({user}) {
                 <input name="fullname" className="form-1-gs" type="text" placeholder="  Full Name" value={fullname} onChange={(e)=>{setFullName(e.target.value)}} required></input>
 
                 <span className="form-div">
-                    <input className="GoogleSignUp__form_3 form-3-gs" type="text" placeholder="  Mobile No." value={mobile} onChange={(e)=>{setMobile(e.target.value)}} required></input>
+                <input className="GoogleSignUp__form_3 form-3-gs" type="text" placeholder="  Section" required></input>
                     <input className="form-3-gs" type="text" placeholder="  Class" value={Class} onChange={(e)=>{setClass(e.target.value)}} required></input>
                 </span>
+
+                <input className="GoogleSignUp__form_3 form-1-gs" type="text" placeholder="  Mobile No." value={mobile} onChange={(e)=>{setMobile(e.target.value)}} required></input>
 
                 <input className="form-1-gs" type="text" placeholder="  School Name" value={school} onChange={(e)=>{setSchool(e.target.value)}} required></input>
 
@@ -67,6 +69,7 @@ function GoogleSignUpDetails({user}) {
                     <input className="form-3-gs" type="text" placeholder="  Relation" value={relation} onChange={(e)=>{setRelation(e.target.value)}} required></input>
                     <input className="form-3-gs" type="text" placeholder="  Mobile No." value={relationNo} onChange={(e)=>{setRelationNo(e.target.value)}} required></input>
                 </span>
+                
 
                 <button onClick={(e)=>updateUserDetails(e)} className="final-btn-s" style={{marginLeft: "-1px", marginTop: "20px"}}>Continue</button>
             </div>
