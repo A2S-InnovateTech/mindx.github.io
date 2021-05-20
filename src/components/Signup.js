@@ -155,7 +155,7 @@ function Signup({history}) {
                     <form autocomplete="off">
                     {addSchoolManual
                         ? <input className="signup__form-s" type="text" placeholder="  Enter School Name Manually" value={school} onChange={(e)=>{setSchool(e.target.value)}} required></input> 
-                        : <SelectSearch options={schoolNames} value="sv" closeOnSelect={false} name="SchoolName" placeholder="  Select School Name" search autoComplete="on" onChange={(e)=>{setSchool(e)}}/>
+                        : <SelectSearch options={schoolNames} value="sv" closeOnSelect={true} name="SchoolName" placeholder="  Select School Name" search autoComplete="on" onChange={(e)=>{setSchool(e)}}/>
                     }
                     {!addSchoolManual && <div className="notInList" onClick={()=>setAddSchoolManual(true)}>School not in list?</div>}
                     </form>
