@@ -43,7 +43,7 @@ function TeacherSignup({history}) {
                 assessmentTaken: false,
                 phoneNumber: mobile,
                 school,
-                userType: "teacher",
+                userType: role,
                 timestamp: firebase.firestore.FieldValue.serverTimestamp(),
             })
             .then(()=>history.push('/teacher/dashboard'))
@@ -102,9 +102,9 @@ function TeacherSignup({history}) {
                     </label>
 
                     <select className="form-1-si signup_as" value={role} onChange={(e)=>{setRole(e.target.value)}}required> 
-                        <option>Teacher</option>
-                        <option>Class Teacher</option>
-                        <option>Principal</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="class-teacher">Class Teacher</option>
+                        <option value="principal">Principal</option>
                     </select>
                     
                 </div>
