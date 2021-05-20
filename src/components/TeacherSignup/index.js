@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useState, useEffect } from 'react'
 import './Signup.css';
 import logo from '../../images/logo.png';
 import app from '../../firebase';
@@ -9,14 +9,38 @@ import dots from '../../images/login_background_dots.png';
 import line1 from '../../images/signup__line_1.png';
 import line2 from '../../images/signup__line_2.png'
 import image from '../../images/signup_image.png';
+import SelectSearch from 'react-select-search';
 
 function TeacherSignup({history}) {
+        const [schoolNames, setSchoolNames] = useState([]);
+        const [addSchoolManual, setAddSchoolManual] = useState(false);
         const [fullname, setFullName] = useState("");
         const [mobile, setMobile] = useState("");
         const [email, setEmail] = useState("");
         const [school, setSchool] = useState("");
         const [password, setPassword] = useState("");
         const [role, setRole] = useState("");
+        const [subject, setSubject] = useState("");
+        const getSchoolDetails = () => {
+            app.firestore().collection("schools")
+            .get()
+            .then((snapshot) => {
+                snapshot.docs.map(
+                    doc => {
+                        var city = doc.data().city?", "+doc.data().city:"";
+                        var finalSchoolName = doc.data().name + city;
+                        var schoolObject = {name: finalSchoolName, value: doc.id};
+                        setSchoolNames(oldSchoolNames => [...oldSchoolNames, schoolObject]);
+                    }
+                )
+            })
+            .catch(e=>console.log(e));
+        }
+
+        
+        useEffect(() => {
+            getSchoolDetails();
+        }, [])
 
        const handleSignUp = (e) => {
            e.preventDefault();
@@ -39,15 +63,38 @@ function TeacherSignup({history}) {
         };
 
         const updateUserDetails = (user) => {
-            app.firestore().collection("users").doc(user.uid).set({
-                assessmentTaken: false,
-                phoneNumber: mobile,
-                school,
-                userType: role,
-                timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-            })
-            .then(()=>history.push('/teacher/dashboard'))
-            .catch(e=>console.log("Error in updating details: ", e))
+            if(addSchoolManual){
+                app.firestore().collection("schools").add({
+                    name: school
+                })
+                .then((docRef)=>{
+                    app.firestore().collection("users").doc(user.uid).set({
+                        name: fullname,
+                        assessmentTaken: false,
+                        subject: subject,
+                        phoneNumber: mobile,
+                        school_id: docRef.id,
+                        school: school,
+                        userType: role,
+                        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                    })
+                    .then(()=>history.push('/'))
+                    .catch(e=>console.log("Error in updating details: ", e))
+                })
+                .catch(e=>console.log("Error in updating school details: ", e))
+            }
+            else{
+                app.firestore().collection("users").doc(user.uid).set({
+                    assessmentTaken: false,
+                    subject: subject,
+                    phoneNumber: mobile,
+                    school,
+                    userType: role,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                })
+                .then(()=>history.push('/'))
+                .catch(e=>console.log("Error in updating details: ", e))
+            }
         }
 
 
@@ -94,9 +141,29 @@ function TeacherSignup({history}) {
                     </label>
                     <span className="form-div">
                     <input className="form-3-si" type="text" placeholder="  Mobile No." value={mobile} onChange={(e)=>{setMobile(e.target.value)}} required></input>
-                    <input className="form-3-si" type="text" placeholder="  Subject" value={mobile} onChange={(e)=>{setMobile(e.target.value)}} required></input>
+                    {/* <input className="form-3-si" type="text" placeholder="  Subject" value={subject} onChange={(e)=>{setSubject(e.target.value)}} required></input> */}
+                    <select className="form-3-si signup_as" value={role} onChange={(e)=>{setSubject(e.target.value)}}required> 
+                        <option value="" disabled selected>Subject</option>
+                        <option value="english">English</option>
+                        <option value="hindi">Hindi</option>
+                        <option value="maths">Maths</option>
+                        <option value="evs">EVS</option>
+                        <option value="science">Science</option>
+                        <option value="social-science">Social Science</option>
+                        <option value="physics">Physics</option>
+                        <option value="chemistry">Chemistry</option>
+                        <option value="maths">Maths</option>
+                        <option value="biology">Biology</option>
+                    </select>
                     </span>
-                    <input className="form-1-si" type="text" placeholder="  School Name" value={school} onChange={(e)=>{setSchool(e.target.value)}} required></input>
+                    {/* <input className="form-1-si" type="text" placeholder="  School Name" value={school} onChange={(e)=>{setSchool(e.target.value)}} required></input> */}
+                    <form autocomplete="off" className="teacher_school">
+                    {addSchoolManual
+                        ? <input className="signup__form-s" type="text" placeholder="  Enter School Name Manually" value={school} onChange={(e)=>{setSchool(e.target.value)}} required></input> 
+                        : <SelectSearch options={schoolNames} value="sv" closeOnSelect={true} name="SchoolName" placeholder="  Select School Name" search autoComplete="on" onChange={(e)=>{setSchool(e)}}/>
+                    }
+                    {!addSchoolManual && <div className="notInList" onClick={()=>setAddSchoolManual(true)}>School not in list?</div>}
+                    </form>
                     <label>
                     <input name="password" className="form-1-si" type="password" placeholder="  Password" value={password} onChange={(e)=>{setPassword(e.target.value)}} required></input>
                     </label>
