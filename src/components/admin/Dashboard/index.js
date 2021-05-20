@@ -14,7 +14,7 @@ function AdminDashboard({user, userDetails, setUserDetails, openFeedback, setOpe
     }, [userDetails])
 
     useEffect(() => {
-        if(userDetails?.school)
+        if(userDetails)
             app.firestore().collection("users")
             .get()
             .then((snapshot) => {

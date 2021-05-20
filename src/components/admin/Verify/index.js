@@ -16,7 +16,7 @@ function Verify({type, user, userDetails}) {
     }, [userDetails])
 
     useEffect(() => {
-        if(userDetails?.school)
+        if(userDetails)
             app.firestore().collection("users")
             .get()
             .then((snapshot) => {
