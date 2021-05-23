@@ -105,18 +105,78 @@ function Database() {
                                     }
                                 </div>
                                 {openIndex===index && <div className="Database__search_result_body">
-                                    <div className="Database__search_result_class">Class 1st</div>
-                                    <div className="Database__search_result_class">Class 2nd</div>
-                                    <div className="Database__search_result_class">Class 3rd</div>
-                                    <div className="Database__search_result_class">Class 4th</div>
-                                    <div className="Database__search_result_class">Class 5th</div>
-                                    <div className="Database__search_result_class">Class 6th</div>
-                                    <div className="Database__search_result_class">Class 7th</div>
-                                    <div className="Database__search_result_class">Class 8th</div>
-                                    <div className="Database__search_result_class">Class 9th</div>
-                                    <div className="Database__search_result_class">Class 10th</div>
-                                    <div className="Database__search_result_class">Class 11th</div>
-                                    <div className="Database__search_result_class">Class 12th</div>
+                                    <Link to={{
+                                        pathname:"/admin/classes",
+                                        state: {school: school.data(), class: 1}
+                                    }} style={{textDecoration:"none", color:"white"}}>
+                                        <div className="Database__search_result_class">Class 1st</div>
+                                    </Link>
+                                    <Link to={{
+                                        pathname:"/admin/classes",
+                                        state: {school: school.data(), class: 2}
+                                    }} style={{textDecoration:"none", color:"white"}}>
+                                        <div className="Database__search_result_class">Class 2nd</div>
+                                    </Link>
+                                    <Link to={{
+                                        pathname:"/admin/classes",
+                                        state: {school: school.data(), class: 3}
+                                    }} style={{textDecoration:"none", color:"white"}}>
+                                        <div className="Database__search_result_class">Class 3rd</div>
+                                    </Link>
+                                    <Link to={{
+                                        pathname:"/admin/classes",
+                                        state: {school: school.data(), class: 4}
+                                    }} style={{textDecoration:"none", color:"white"}}>
+                                        <div className="Database__search_result_class">Class 4th</div>
+                                    </Link>
+                                    <Link to={{
+                                        pathname:"/admin/classes",
+                                        state: {school: school.data(), class: 5}
+                                    }} style={{textDecoration:"none", color:"white"}}>
+                                        <div className="Database__search_result_class">Class 5th</div>
+                                    </Link>
+                                    <Link to={{
+                                        pathname:"/admin/classes",
+                                        state: {school: school.data(), class: 6}
+                                    }} style={{textDecoration:"none", color:"white"}}>
+                                        <div className="Database__search_result_class">Class 6th</div>
+                                    </Link>
+                                    <Link to={{
+                                        pathname:"/admin/classes",
+                                        state: {school: school.data(), class: 7}
+                                    }} style={{textDecoration:"none", color:"white"}}>
+                                        <div className="Database__search_result_class">Class 7th</div>
+                                    </Link>
+                                    <Link to={{
+                                        pathname:"/admin/classes",
+                                        state: {school: school.data(), class: 8}
+                                    }} style={{textDecoration:"none", color:"white"}}>
+                                        <div className="Database__search_result_class">Class 8th</div>
+                                    </Link>
+                                    <Link to={{
+                                        pathname:"/admin/classes",
+                                        state: {school: school.data(), class: 9}
+                                    }} style={{textDecoration:"none", color:"white"}}>
+                                        <div className="Database__search_result_class">Class 9th</div>
+                                    </Link>
+                                    <Link to={{
+                                        pathname:"/admin/classes",
+                                        state: {school: school.data(), class: 10}
+                                    }} style={{textDecoration:"none", color:"white"}}>
+                                        <div className="Database__search_result_class">Class 10th</div>
+                                    </Link>
+                                    <Link to={{
+                                        pathname:"/admin/classes",
+                                        state: {school: school.data(), class: 11}
+                                    }} style={{textDecoration:"none", color:"white"}}>
+                                        <div className="Database__search_result_class">Class 11th</div>
+                                    </Link>
+                                    <Link to={{
+                                        pathname:"/admin/classes",
+                                        state: {school: school.data(), class: 12}
+                                    }} style={{textDecoration:"none", color:"white"}}>
+                                        <div className="Database__search_result_class">Class 12th</div>
+                                    </Link>
                                     
                                 </div>}
                             </>

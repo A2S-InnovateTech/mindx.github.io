@@ -15,7 +15,7 @@ function GoogleSignUpDetails({user}) {
     let history = useHistory();
 
     const updateUserDetails = (e) => {
-        if(fullname || mobile || Class || school || relation || relationNo === ""){
+        if(fullname === ""|| mobile === ""|| Class === ""|| school === ""|| relation === ""|| relationNo === ""){
             alert("Please enter all the details!");
             return;
         }

@@ -5,6 +5,9 @@ import ShareIcon from './share.png';
 import firebase from 'firebase';
 import app from '../../../firebase';
 import Loader from "react-loader-spinner";
+import Moment from 'react-moment';
+
+Moment.globalFormat = 'DD/MM/YYYY';
 
 function AdminDashboard({user, userDetails, setUserDetails, openFeedback, setOpenFeedback}) {
     const [users, setUsers] = useState([]);
@@ -77,8 +80,8 @@ function AdminDashboard({user, userDetails, setUserDetails, openFeedback, setOpe
                                         <td>{item.name?item.name:"User"}</td>
                                         <td>{item.userType?item.userType:"Role"}</td>
                                         <td>{item.school?item.school:"School"}</td>
-                                        <td className="hide_on_mobile">29/04/2021</td>
-                                        <td className="hide_on_mobile">11:30 A.M.</td>
+                                        <td className="hide_on_mobile"><Moment unix>{item.timestamp?.seconds || 'NA'}</Moment></td>
+                                        <td className="hide_on_mobile"><Moment unix format="LT">{item.timestamp?.seconds || 'NA'}</Moment></td>
                                     </tr>
                                 ))
                                 }

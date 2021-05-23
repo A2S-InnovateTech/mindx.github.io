@@ -45,6 +45,7 @@ import AdminDashboard from './components/admin/Dashboard';
 import ViewFeedback from './components/admin/ViewFeedback';
 import Verify from './components/admin/Verify';
 import Database from './components/admin/Database';
+import Classes from './components/admin/Classes';
 
 import PrincipalProfile from './Principal Panel/Profile/index';
 import PrincipalDashboard from './Principal Panel/Dashboard/index';
@@ -263,6 +264,14 @@ function App() {
                     <Database user={user} userDetails={userDetails}/>    
               </Route>
 
+              <Route path="/admin/classes" render={(routeProps) => 
+                <>
+                  <MobileHeader showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                  <Sidebar userDetails={userDetails} fetchUserDetails={fetchUserDetails} showSidebar={showSidebar} setShowSidebar={setShowSidebar} user={user} setUser={setUser} setOpenFeedback={setOpenFeedback}/>
+                  <Classes props={routeProps.location.state} user={user} userDetails={userDetails}/>
+                </>
+              } exact>
+              </Route>
               {/* Admin Routes end */}
 
             <Route path="/teacher/dashboard" exact>

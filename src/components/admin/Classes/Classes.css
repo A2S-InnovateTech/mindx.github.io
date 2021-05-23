@@ -1,0 +1,135 @@
+.Classes{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Classes__school_name{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 33px;
+    display: flex;
+    align-items: center;
+    color: #10222E;
+}
+
+.Classes__column{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 70vw;
+}
+
+@media only screen and (max-width: 600px){
+    .Classes__column{
+        width: 90vw;
+    }
+}
+
+.Classes__class_header{
+    height: 60px;
+    background: #10222E;
+    border: 2px solid #10222E;
+    box-sizing: border-box;
+    border-radius: 0px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFF5D1;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.Classes__class_body{
+    background: #EBE7DA;
+    padding: 20px 25px 20px 25px;
+}
+
+.Classes__section_header{
+    font-family: Roboto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    padding: 10px;
+    line-height: 26px;
+    color: #FFF5D1;
+    background: #10222E;
+    border: 2px solid #10222E;
+    box-sizing: border-box;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-between;
+}
+
+.Classes__section_body{
+    background-color: #fff;
+    padding: 20px 25px 20px 25px;
+}
+
+.Classes__teacher_column{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.Classes__table_header{
+    background-color: #313131;
+    margin: 25px -25px 0px -25px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+
+}
+
+.Classes__table_body{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #10222E;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    padding-bottom: 0px;
+}
+
+.Classes__table_row{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.Classes__table_row_roll{
+    flex: 5vw;
+    text-align: center;
+}
+
+.Classes__table_row_name{
+    flex: 40vw;
+    text-align: start;
+}
+
+.Classes__table_row_details{
+    flex: 7vw;
+}
