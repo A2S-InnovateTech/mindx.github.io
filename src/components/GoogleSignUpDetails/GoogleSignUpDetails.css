@@ -25,11 +25,14 @@
     justify-content: center;
     align-items: center;
     height: 80vh;
+    margin-top: 15vh;
+    background-color: #10222E;
+    padding-bottom: 20vh;
 }
 
 .form-1-gs{
     width: 40vw;
-    height: 50px;
+    min-height: 50px;
     background: #EBE7DA;
     border-radius: 10px;
     margin-bottom: 5px;
@@ -49,7 +52,8 @@
 }
 
 
-@media only screen and (max-width: 600px) 
+
+@media only screen and (max-width: 700px) 
 {
    .GoogleSignUp__form{
         display: flex;
@@ -70,5 +74,32 @@
     .GoogleSignUp__form_3{
         margin-left: 0vw;
         margin-top: 0px;
+        
     }
+
+    .vert-center-align{
+        display: none;
+    }
+
+    .logo-gs > img{
+        width: 284px;
+        height: 84px;
+    }
+
+    .form-1-gs{
+        width: 70vw;
+    }
+
+    .form-3-gs{
+        margin-left: 37vw;
+        width: 70vw;
+    }
+
+    .gs-form{
+        margin-left: -88vw;
+    }
+
+
+
+    
 }

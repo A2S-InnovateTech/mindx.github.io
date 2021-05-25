@@ -101,12 +101,12 @@ function GoogleSignUpDetails({user}) {
                 })
             }
         }
-    
+     
 
     return (
         <div className = "GoogleSignUp">
             <div className="navbar-s dark-bg pt-5">
-                <div className="logo-s"><img src={logo}></img></div>
+                <div className="logo-gs"><img src={logo}></img></div>
                 <div className="options-s vert-center-align">
                     <div className="option-1-s vert-center-align">
                         <Link to="/" style={{textDecoration:"none", color:"#FFF5D1"}}>Home</Link>
@@ -133,7 +133,7 @@ function GoogleSignUpDetails({user}) {
                 <input className="GoogleSignUp__form_3 form-1-gs" type="text" placeholder="  Mobile No." value={mobile} onChange={(e)=>{setMobile(e.target.value)}} required></input>
 
                 {/* <input className="form-1-gs" type="text" placeholder="  School Name" value={school} onChange={(e)=>{setSchool(e.target.value)}} required></input> */}
-                <form autocomplete="off">
+                <form className="gs-form" autocomplete="off">
                     {addSchoolManual
                         ? <input className="signup__form-s" type="text" placeholder="  Enter School Name Manually" value={school} onChange={(e)=>{setSchool(e.target.value)}} required></input> 
                         : <SelectSearch options={schoolNames} value="sv" closeOnSelect={true} name="SchoolName" placeholder="  Select School Name" search autoComplete="on" onChange={(e)=>{setSchool(e)}}/>
