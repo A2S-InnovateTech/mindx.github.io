@@ -1,14 +1,16 @@
 import firebase from 'firebase/app'
 import "firebase/auth";
 
-const app = firebase.initializeApp({
-  apiKey: "AIzaSyBFmET3qo70KcYSiK_9ezPaN1wNEYfiWU8",
-  authDomain: "mindx-a5e55.firebaseapp.com",
-  projectId: "mindx-a5e55",
-  storageBucket: "mindx-a5e55.appspot.com",
-  messagingSenderId: "378543165315",
-  appId: "1:378543165315:web:b55d7a2a95294f173830b6",
-  measurementId: "G-RFRT9SLM74"
-});
+const firebaseConfig = {
+  apiKey: "AIzaSyB2WKjFkP3UqkVnGor8VCtLeh5iTQ637Po",
+  authDomain: "mindx-app.firebaseapp.com",
+  projectId: "mindx-app",
+  storageBucket: "mindx-app.appspot.com",
+  messagingSenderId: "500225466743",
+  appId: "1:500225466743:web:324967bca43007f689c172",
+  measurementId: "G-0BFHW3S73N"
+};
+
+const app = firebase.initializeApp(firebaseConfig);
 
 export default app;

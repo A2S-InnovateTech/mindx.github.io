@@ -90,7 +90,7 @@ function Dashboard({user, userDetails, setUserDetails, openFeedback, setOpenFeed
                         <tr>
                             <td>1</td>
                             <td>Assessment&nbsp;1</td>
-                            <td className="hide_on_mobile">{toDateTime(userDetails?.timestamp.seconds)}</td>
+                            {/* <td className="hide_on_mobile">{toDateTime(userDetails?.timestamp.seconds)}</td> */}
                             <td className="hide_on_mobile">10 mins</td>
                             <td>{userDetails?.test1}/15</td>
                             <td>View</td>
@@ -100,7 +100,7 @@ function Dashboard({user, userDetails, setUserDetails, openFeedback, setOpenFeed
                         <tr>
                             <td>2</td>
                             <td>Assessment&nbsp;2</td>
-                            <td className="hide_on_mobile">{toDateTime(userDetails?.timestamp.seconds)}</td>
+                            {/* <td className="hide_on_mobile">{toDateTime(userDetails?.timestamp.seconds)}</td> */}
                             <td className="hide_on_mobile">10 mins</td>
                             <td>{userDetails?.test2}/15</td>
                             <td>View</td>
